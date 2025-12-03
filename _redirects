@@ -1,0 +1,23 @@
+# Redirects for havocsec.me
+# Ensure clean URLs without trailing slashes cause no issues
+
+# Force HTTPS (if using Netlify or similar)
+http://havocsec.me/* https://havocsec.me/:splat 301!
+http://www.havocsec.me/* https://havocsec.me/:splat 301!
+https://www.havocsec.me/* https://havocsec.me/:splat 301!
+
+# Handle old paths (if any exist) - Add any old URLs you want to redirect
+# /old-path /new-path 301
+
+# Ensure trailing slash consistency
+/blog /blog/ 301
+/ctf /ctf/ 301
+/pentesting /pentesting/ 301
+/chitchat /chitchat/ 301
+/about /about/ 301
+/pentesting/htb /pentesting/htb/ 301
+/pentesting/offsec /pentesting/offsec/ 301
+/pentesting/tryhackme /pentesting/tryhackme/ 301
+
+# 404 page
+/* /404.html 404

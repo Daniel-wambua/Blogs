@@ -1,0 +1,508 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=generator content="Qubt theme for Hugo"><title>Hacking Articles</title>
+<meta name=title content="Hacking Articles"><meta name=author content="Richie-Havoc"><meta name=description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta name=google-adsense-account content="ca-pub-4834846196060641"><link type=text/css rel=stylesheet href=/css/main.bundle.min.c34ab593f7850b8e7984a77537a338f026bd2efcfe1715fbab66bda06475ab85.css integrity="sha256-w0q1k/eFC455hKd1N6M48Ca9Lvz+FxX7q2a9oGR1q4U="><script defer src=/js/main.bundle.min.5a00293bacd8510f50add105212cea76d541a955f6693035ef3128b638a21619.js integrity="sha256-WgApO6zYUQ9QrdEFISzqdtVBqVX2aTA17zEotjiiFhk="></script><link rel=apple-touch-icon sizes=180x180 href=/icon_hu74b16e164104d2d61e05b7604a924e01_486235_180x180_resize_box_3.png><link rel=icon type=image/png sizes=32x32 href=/icon_hu74b16e164104d2d61e05b7604a924e01_486235_32x32_resize_box_3.png><meta property="og:url" content="https://havocsec.me/ctf/writeup2/"><meta property="og:site_name" content="Hacking Articles"><meta property="og:title" content="NAHAMCON-CTF - 2025"><meta property="og:description" content="The 2025 challenges were really cool"><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="ctf"><meta property="article:published_time" content="2025-06-04T00:00:00+00:00"><meta property="article:modified_time" content="2025-12-03T14:00:30+03:00"><meta property="og:image" content="https://havocsec.me/thumbnail.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://havocsec.me/thumbnail.png"><meta name=twitter:title content="NAHAMCON-CTF - 2025"><meta name=twitter:description content="The 2025 challenges were really cool"><meta name=description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta name=keywords content="hacking articles,hacking articles blog,hacking articles tutorials,hacking articles writeups,ethical hacking articles,cybersecurity articles,security hacking articles,penetration testing articles,infosec articles,cyber security hacking articles,cybersecurity,ethical hacking,CTF writeups,penetration testing,security research,bug bounty,offensive security,infosec,hackthebox,web exploitation,havoc,Richie havoc,htb,learn ethical hacking,hacking tutorials for beginners,cybersecurity tutorials,how to hack ethically,penetration testing course,security researcher blog,hacking step by step guide,ethical hacking examples,real world hacking scenarios,practical hacking exercises,Hercules,Soulmate,Darkcorp,Darkzero,Writeup,Bugbounty,htb writeups,hackthebox walkthrough,hackthebox solutions,penetration testing tutorials,linux privilege escalation,windows privilege escalation,active directory hacking,OSCP preparation,cyber security blog,vulnerability research,exploit development,reverse engineering,binary exploitation,pwn challenges,web security,network security,cryptography challenges,tryhackme,offsec labs,BoardLight HTB,Instant HTB,Sea HTB,Cicada HTB,Intuition HTB,Sightless HTB,Editorial HTB,Runner HTB,Greenhorn HTB,Blazorized HTB,Surveillance HTB,Headless HTB,Crafty HTB,Bizness HTB,Mist HTB,Usage HTB,Perfection HTB,Builder HTB,WifineticTwo HTB,Cap HTB,Analysis HTB,Keeper HTB,ctf challenges,capture the flag,cyber defense,red team operations,blue team defense,malware analysis,forensics challenges,steganography,OSINT techniques,kali linux tutorials,metasploit framework,burp suite tutorials,nmap scanning,sql injection,xss exploitation,privilege escalation techniques,buffer overflow,rop chain,shellcode development,reverse shell,web shell,docker security,kubernetes pentesting,cloud security,aws security,azure pentesting,api security testing,jwt exploitation,owasp top 10,security certifications,CEH preparation,OSWE preparation,OSCE preparation,NanoCorp HTB,NanoCorp walkthrough,NanoCorp writeup,NanoCorp HTB writeup,HTB NanoCorp exploitation,HTB NanoCorp solution,HackTheBox NanoCorp,NTLM relay attacks,NTLM relay exploitation,responder NTLM relay,ntlmrelayx tutorial,windows active directory exploitation,windows privilege escalation techniques,windows enumeration techniques,SMB relay attacks,credential discovery techniques,hard difficulty HTB machines,advanced windows hacking,active directory pentesting guide,windows security assessment,windows post exploitation,domain controller exploitation,kerberos attacks,pass the hash,lateral movement techniques,bloodhound enumeration,impacket tools,windows pentesting,HTB hard machines 2025,HTB season 9 machines,advanced AD attacks,HTB NanoCorp writeup,HTB NanoCorp Machine writeup,nanocorp.htb,CVE-2025-24071,HTB NanoCorp exploitation,DCOM exploitation,Windows DCOM attacks,DACL Abuse,best hacking articles website,top cybersecurity writeup blogs,where to find CTF writeups,detailed penetration testing tutorials,comprehensive hacking guides,step by step hacking tutorials,beginner to advanced ethical hacking,free hacking learning resources,cybersecurity blog 2025,latest hacking techniques,modern exploitation methods,practical security research,how to solve CTF challenges,how to hack hackthebox machines,privilege escalation methods explained,web application security testing,how to find vulnerabilities,penetration testing methodology,OSCP exam preparation tips,HTB machine walkthrough,CTF challenge solutions,security assessment guide,metasploit tutorials,burp suite guides,nmap cheat sheet,gobuster usage,hydra brute force,sqlmap injection,netcat reverse shell,wireshark packet analysis,john the ripper tutorial,hashcat cracking guide,OSCP certification preparation,CEH study materials,bug bounty hunter tips,cybersecurity career guide,penetration tester roadmap,ethical hacker certification,security researcher career path,infosec job preparation,2025 hacking tutorials,latest CVE exploits,zero day vulnerabilities,current cybersecurity threats,modern web exploitation,cloud security testing,API security vulnerabilities,container security hacking,AI security research,machine learning vulnerabilities,alternative to ippsec,similar to hackingarticles,best ctf writeup sites,top penetration testing blogs,ethical hacking resources,cybersecurity learning platforms,hacking practice labs,hacking community,infosec community blog,cybersecurity forum,ethical hacking discord,CTF community,bug bounty community,security researchers network"><meta name=author content="Richie-Havoc"><link rel=canonical href=https://havocsec.me/ctf/writeup2/><meta name=google-site-verification content="5kNQmF94i_v9xe8c753YHZ660ypehgkIpd5I_5VOPL0"><meta name=msvalidate.01 content="FC9BD45C329063D600401FC9551479B8"><meta property="og:type" content="article"><meta property="og:url" content="https://havocsec.me/ctf/writeup2/"><meta property="og:title" content="NAHAMCON-CTF - 2025"><meta property="og:description" content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta property="og:image" content><meta property="og:site_name" content="Hacking Articles"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2025-06-04T00:00:00Z"><meta property="article:modified_time" content="2025-12-03T14:00:30+03:00"><meta property="article:author" content="Richie-Havoc"><meta name=twitter:card content="summary_large_image"><meta name=twitter:url content="https://havocsec.me/ctf/writeup2/"><meta name=twitter:title content="NAHAMCON-CTF - 2025"><meta name=twitter:description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta name=twitter:image content><meta name=twitter:site content="@HavocRichie?t=smiK1Is6LAWykS9FlJg4eQ&amp;s=09"><meta name=twitter:creator content="@HavocRichie?t=smiK1Is6LAWykS9FlJg4eQ&amp;s=09"><meta name=robots content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=yandex content="index, follow"><meta name=baiduspider content="index, follow"><meta name=language content="English"><meta name=revisit-after content="7 days"><meta name=rating content="General"><meta name=tagline content="Advanced Ethical Hacking & Security Research Platform"><meta name=slogan content="Learn. Hack. Share. Repeat."><meta name=category content="Technology"><meta name=topic content="Cybersecurity, Ethical Hacking, Penetration Testing"><meta name=coverage content="Worldwide"><meta name=distribution content="Global"><meta name=target content="all"><meta name=audience content="Security Researchers, Ethical Hackers, CTF Players, Penetration Testers, Bug Bounty Hunters, Cybersecurity Students"><meta name=geo.region content="US"><meta name=geo.placename content="United States"><meta name=mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black-translucent"><meta name=apple-mobile-web-app-title content="Hacking Articles"><meta name=article:section content="ctf"><meta name=article:subtitle content="⚡ Hosted by JUSTHACKING TEAM AND THERE FRIENDS ⚡"><meta name=article:summary content="*The 2025 challenges were really cool*"><meta property="article:publisher" content="https://havocsec.me"><meta name=publisher content="Hacking Articles"><meta name=copyright content="© 2025 Hacking Articles. All rights reserved."><meta name=alexaVerifyID content><meta name=norton-safeweb-site-verification content><meta name=thumbnail content><meta itemprop=name content="NAHAMCON-CTF - 2025"><meta itemprop=description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta itemprop=image content><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/havocsec.me\/"},{"@type":"ListItem","position":2,"name":"Ctf","item":"https:\/\/havocsec.me\/ctf/"},{"@type":"ListItem","position":3,"name":"NAHAMCON-CTF - 2025","item":"https:\/\/havocsec.me\/ctf\/writeup2\/"}]}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-M2657LXPFW"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-M2657LXPFW",{anonymize_ip:!0,send_page_view:!0})</script><script>localStorage.getItem("color-theme")==="dark"||!("color-theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex h-screen flex-col justify-between bg-neutral-100 dark:bg-neutral-800"><div><header class="sticky top-0 z-10 bg-neutral-100 dark:bg-neutral-800"><section class="mx-auto flex max-w-(--breakpoint-xl) items-center justify-between p-4"><a href=https://havocsec.me/ class="flex items-center space-x-3"><img src=/logo_hu74b16e164104d2d61e05b7604a924e01_486235_filter_7015326143714700434.webp class="h-8 w-8" alt=Logo>
+<span class="self-center whitespace-nowrap text-2xl font-semibold text-slate-700 dark:text-slate-400">Hacking Articles</span></a><div class="flex flex-row space-x-8"><nav class="hidden space-x-8 text-xl md:block" aria-label=main><a href=/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Home
+</a><a href=/about/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Whoami
+</a><a href=/blog/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Blog
+</a><a href=/ctf/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">CTF
+</a><a href=/pentesting/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Pentesting
+</a><a href=/chitchat/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Chitchat</a></nav><button id=theme-toggle type=button class="rounded-lg text-sm text-slate-700 hover:text-indigo-500 dark:text-slate-400" aria-label=theme-switcher>
+<svg id="theme-toggle-dark-icon" class="hidden h-6 w-6" fill="currentcolor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001.0 1010.586 10.586z"/></svg>
+<svg id="theme-toggle-light-icon" class="hidden h-6 w-6" fill="currentcolor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1A1 1 0 119 4V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707A1 1 0 1113.536 5.05l.707-.707a1 1 0 011.414.0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707A1 1 0 004.343 5.757l.707.707zm1.414 8.486-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+</button>
+<button id=hamburger-button class="relative h-8 w-8 cursor-pointer text-3xl md:hidden" aria-label=hamburger-button><div class="absolute top-4 -mt-0.5 h-[3px] w-8 rounded-sm bg-slate-700 transition-all duration-500 before:absolute before:h-[3px] before:w-8 before:-translate-x-4 before:-translate-y-2.5 before:rounded-sm before:bg-slate-700 before:transition-all before:duration-500 before:content-[''] after:absolute after:h-[3px] after:w-8 after:-translate-x-4 after:translate-y-2.5 after:rounded-sm after:bg-slate-700 after:transition-all after:duration-500 after:content-[''] dark:bg-slate-400 dark:before:bg-slate-400 dark:after:bg-slate-400"></div></button></div></section><section id=mobile-menu class="absolute hidden w-full origin-top animate-open-menu flex-col justify-center bg-neutral-100 text-4xl dark:bg-neutral-800"><nav class="flex min-h-screen flex-col items-center py-8" aria-label=mobile><a href=/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Home
+</a><a href=/about/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Whoami
+</a><a href=/blog/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Blog
+</a><a href=/ctf/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">CTF
+</a><a href=/pentesting/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Pentesting
+</a><a href=/chitchat/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Chitchat</a></nav></section></header><main><div class="justify-left mx-auto mt-8 flex max-w-(--breakpoint-md) px-4"><article><h1 class="text-4xl font-extrabold text-slate-700 dark:text-slate-200">NAHAMCON-CTF - 2025</h1><h2 class="mt-4 text-2xl text-slate-500 dark:text-slate-400">⚡ Hosted by JUSTHACKING TEAM AND THERE FRIENDS ⚡</h2><div class="mb-4 mt-2 text-sm text-slate-500 dark:text-slate-400">Jun 4, 2025 - 11 minute read</div><div class="flex flex-col"><img class="mt-4 h-full w-full object-cover" src=/nahamcon-ctf_hu69c563849b501030e4c3e2d4c766fdd8_6471078_filter_11492400015018413633.webp alt="feature image" height=414 width=736>
+<span class="mb-4 mt-1 text-center text-sm text-slate-700 dark:text-slate-200">CTF Challenges</span></div><span class="prose prose-slate break-words text-lg text-slate-700 dark:prose-invert prose-pre:max-w-[90vw] dark:text-slate-200 md:prose-pre:max-w-(--breakpoint-md) prose-code:before:hidden prose-code:after:hidden"><p>i had the opportunity to participate in <strong>NAHAMCON CTF</strong> this year.It was organised by <strong>JUSTHACKING</strong> .</p><hr><h3 id=1the-odyssey>1.The odyssey</h3><h1 id=description-recap>Description Recap:</h1><blockquote><p><em>The challenge server reads out The Odyssey… very slowly. Your job is to connect and read the content chunk by chunk. Somewhere deep within this stream lies the</em> <strong><em>real flag</em></strong> <em>— not the fake one early in the output.</em></p></blockquote><h1 id=observations-from-the-challenge>Observations from the Challenge:</h1><ul><li>The challenge provides a host and port (e.g., <code>challenge.nahamcon.com port</code>) to connect to using <code>netcat (nc)</code>.</li><li>Upon connection, the server prints a chunk of The Odyssey.</li><li>You need to press <strong>Enter</strong> to load the next chunk.</li><li>A <strong>fake flag</strong> appears early — ignore it!</li><li>The <strong>real flag</strong> appears much later — likely hidden deep inside the data stream.</li></ul><p><img src=https://miro.medium.com/v2/resize:fit:1400/format:webp/1*XHnKTtU__aXvz08VOoD7Vg.png alt=hello></p><h1 id=goal>Goal:</h1><p>Automate the process of reading data and pressing Enter repeatedly until the real flag appears (in the form <code>flag{...}</code>).</p><h1 id=exploitation-approach>Exploitation Approach:</h1><p>Since manually pressing Enter thousands of times is impractical, we automate using a Python script with the <code>socket</code> module.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> socket  
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> time  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>host <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;challenge.nahamcon.com&#34;</span>  
+</span></span><span style=display:flex><span>port <span style=color:#f92672>=</span> <span style=color:#ae81ff>30407</span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>s <span style=color:#f92672>=</span> socket<span style=color:#f92672>.</span>socket()  
+</span></span><span style=display:flex><span>s<span style=color:#f92672>.</span>connect((host, port))  
+</span></span><span style=display:flex><span>s<span style=color:#f92672>.</span>settimeout(<span style=color:#ae81ff>2</span>)  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span><span style=color:#66d9ef>try</span>:  
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> <span style=color:#66d9ef>True</span>: 
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span>:  
+</span></span><span style=display:flex><span>            data <span style=color:#f92672>=</span> s<span style=color:#f92672>.</span>recv(<span style=color:#ae81ff>4096</span>)  
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> data:  
+</span></span><span style=display:flex><span>                text <span style=color:#f92672>=</span> data<span style=color:#f92672>.</span>decode(errors<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;ignore&#34;</span>)  
+</span></span><span style=display:flex><span>                print(text, end<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;&#34;</span>)  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#34;flag{&#34;</span> <span style=color:#f92672>in</span> text:  
+</span></span><span style=display:flex><span>                    print(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>✅ FLAG FOUND!&#34;</span>)  
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>break</span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Trigger next line  </span>
+</span></span><span style=display:flex><span>            s<span style=color:#f92672>.</span>sendall(<span style=color:#e6db74>b</span><span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>)  
+</span></span><span style=display:flex><span>            time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>0.2</span>)  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>except</span> socket<span style=color:#f92672>.</span>timeout:  
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>pass</span>  
+</span></span><span style=display:flex><span><span style=color:#66d9ef>except</span> <span style=color:#a6e22e>KeyboardInterrupt</span>:  
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>Exited manually.&#34;</span>)
+</span></span></code></pre></div><h1 id=after-running-the-script>After Running the Script:</h1><p>Just run the script and visually grab the flag when it appears in the terminal.</p><p>As shown in your screenshot:</p><p><img src=https://miro.medium.com/v2/resize:fit:606/1*_11EwyXekzOByISSmsFM1g.png alt></p><ol start=2><li></li></ol><h2 id=naham-commencement-2025>Naham-Commencement 2025</h2><blockquote><p>Solved</p></blockquote><p>In this challenge there is a login page which we need to access to get the flag. Seeing the source code I found that the <code>username</code> and <code>passowrd</code> is in the <code>main.js</code>.</p><pre tabindex=0><code>function a(t) {
+    let r = &#39;&#39;;
+    for (let i = 0; i &lt; t.length; i++) {
+        const c = t[i];
+        if (/[a-zA-Z]/.test(c)) {
+            const d = c.charCodeAt(0);
+            const o = (d &gt;= 97) ? 97 : 65;
+            const x = (d - o + 16) % 26 + o;
+            r += String.fromCharCode(x);
+        } else {
+            r += c;
+        }
+    }
+    return r;
+}
+
+function b(t, k) {
+    let r = &#39;&#39;;
+    let j = 0;
+    for (let i = 0; i &lt; t.length; i++) {
+        const c = t[i];
+        if (/[a-zA-Z]/.test(c)) {
+            const u = c === c.toUpperCase();
+            const l = c.toLowerCase();
+            const d = l.charCodeAt(0) - 97;
+            const m = k[j % k.length].toLowerCase();
+            const n = m.charCodeAt(0) - 97;
+            const e = (d + n) % 26;
+            let f = String.fromCharCode(e + 97);
+            if (u) {
+                f = f.toUpperCase();
+            }
+            r += f;
+            j++;
+        } else {
+            r += c;
+        }
+    }
+    return r;
+}
+
+function c(s) {
+    return btoa(s);
+}
+
+document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+    const x1 = &#34;dqxqcius&#34;;
+    const x2 = &#34;YeaTtgUnzezBqiwa2025&#34;;
+    const x3 = &#34;ZHF4cWNpdXM=&#34;;
+    const k = &#34;nahamcon&#34;;
+
+
+    const f = document.getElementById(&#39;loginForm&#39;);
+    const u = document.getElementById(&#39;username&#39;);
+    const p = document.getElementById(&#39;password&#39;);
+    const s = document.getElementById(&#39;spinner&#39;);
+    const d = document.getElementById(&#39;result&#39;);
+
+    f.addEventListener(&#39;submit&#39;, function (e) {
+        e.preventDefault();
+
+        const q = u.value;
+        const w = p.value;
+
+
+        const q1 = a(q);
+
+        const w1 = b(w, k);
+
+        if (q1 !== x1 || w1 !== x2) {
+            d.textContent = &#34;Access denied. Client-side validation failed. Try again.&#34;;
+            d.className = &#34;error&#34;;
+            d.style.display = &#34;block&#34;;
+            return;
+        }
+
+        s.style.display = &#34;block&#34;;
+        d.style.display = &#34;none&#34;;
+
+        const g = new FormData();
+        g.append(&#39;username&#39;, q);
+        g.append(&#39;password&#39;, w);
+
+        fetch(&#39;/login&#39;, {
+            method: &#39;POST&#39;,
+            body: g
+        })
+            .then(h =&gt; h.json())
+            .then(z =&gt; {
+                s.style.display = &#34;none&#34;;
+                d.style.display = &#34;block&#34;;
+
+                if (z.success) {
+                    console.log(&#34;? Server authentication successful!&#34;);
+                    d.innerHTML = `
+                    &lt;p&gt;${z.message}&lt;/p&gt;
+                    &lt;p class=&#34;flag&#34;&gt;??${z.flag}??&lt;/p&gt;
+                `;
+                    d.className = &#34;success&#34;;
+                } else {
+                    console.log(&#34;❌ Server authentication failed&#34;);
+                    d.textContent = z.message;
+                    d.className = &#34;error&#34;;
+                }
+            })
+            .catch(err =&gt; {
+                console.error(&#34;? Network error:&#34;, err);
+                s.style.display = &#34;none&#34;;
+                d.style.display = &#34;block&#34;;
+                d.textContent = &#34;An error occurred while processing your request.&#34;;
+                d.className = &#34;error&#34;;
+            });
+    });
+
+});
+</code></pre><p>It is just that those are encrypted. Tried a bunch of algorithms, then figured it out <code>username</code> was encrypted with Caesar cipher and <code>password</code> was <code>Vigenère cipher</code>.</p><p><img src=https://i.imgur.com/P90IFbu.png alt=n></p><p><img src=https://i.imgur.com/bYM8awB.png alt></p><p>Putting them on the website we get the flag.</p><h3 id=nb><em><strong>NB</strong></em></h3><ul><li>Always check linked JavaScript files they often contain important logic or hidden data.</li><li>If credentials look encrypted, try simple cipher tools first before overthinking it.</li></ul><p>3</p><h3 id=osint><strong>OSINT</strong></h3><h1 id=taken-to-school-writeup>Taken to School Writeup</h1><h2 id=nahamcon-2025>Nahamcon 2025</h2><blockquote><p>Solved</p></blockquote><p>We are given a log file, which contains logs in the following format</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-makefile data-lang=makefile><span style=display:flex><span><span style=color:#a6e22e>2024-12-22T13</span><span style=color:#f92672>:</span>50:15 CEF:0|PaloAltoNetworks|PAN-OS|10.5|35535|Trojan Signature Match|5|src=143.76.180.184 dst=192.168.117.75 spt=17345 dpt=443 proto=HTTPS act=detected fileName=syllabus_history101.pdf eventHash=7ad13c20d30a2a9fe0d2ecdf1d7b46d2
+</span></span><span style=display:flex><span><span style=color:#a6e22e>2024-12-22T00</span><span style=color:#f92672>:</span>13:32 CEF:0|PaloAltoNetworks|PAN-OS|10.2|65282|Ransomware Signature Match|4|src=216.76.238.34 dst=192.168.115.221 spt=31880 dpt=443 proto=HTTPS act=blocked fileName=student_grades_q1.xlsx
+</span></span><span style=display:flex><span><span style=color:#a6e22e>2024-12-22T07</span><span style=color:#f92672>:</span>49:45 CEF:0|Gigamon|GigaVUE|9.7|22445|Network Logon Attempt|5|src=130.142.140.231 dst=192.168.114.78 spt=64970 dpt=445 proto=SMB act=quarantined cs1Label=username cs1=student.ajackson cs2Label=password cs2=SpringBreak23 eventHash=92abbeeeec9c3844789bcee9ab72b2c3
+</span></span><span style=display:flex><span><span style=color:#a6e22e>2024-12-22T00</span><span style=color:#f92672>:</span>10:43 CEF:0|Gigamon|GigaVUE|9.3|29961|Network Logon Attempt|9|src=109.56.138.63 dst=192.168.118.79 spt=47125 dpt=445 proto=SMB act=allowed cs1Label=username cs1=student.kpatel cs2Label=password cs2=LabReport<span style=color:#75715e>#9 eventHash=1dc6d1ee184edc4d3c789f532db56715
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>2024-12-22T09</span><span style=color:#f92672>:</span>18:48 CEF:0|Gigamon|GigaVUE|10.6|41903|Remote Desktop Logon|6|src=69.134.85.151 dst=192.168.112.11 spt=16805 dpt=3389 proto=TCP act=quarantined cs1Label=username cs1=coach.harris cs2Label=password cs2=Football!23 eventHash=c784094956103e601b4732561f085e61
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>......</span>
+</span></span></code></pre></div><p>Now, I endlessly thought as per the challenge description that it would be something to do with student hacking servers or something or maybe something suspicious along the lines(?)</p><p>but no, then it clicked to me its OSINT challenge, and we have IPs, and who knows everything malicious about IPs, that’s right, our good ol’ VT (VirusTotal)</p><p>Got its API key, asked claude-4 to write me a script to check for maliciousness of an IP, within the restrictions of the free API usage rate limits, it took about 125 min to run the complete script and gave me 5 malicious IPs out of which one was the correct one, so hit and trial for 5 IPs events hash and the IP being <code>91.218.50.11</code> gets us the flag -</p><p><code>flag{5b16c7044a22ed3845a0ff408da8afa9}</code></p><p><em>juicy!</em></p><p><strong>Key Learning from the Challenge</strong></p><ul><li><strong>Challenge hinted at OSINT</strong> — not just pattern matching, but external verification.</li><li>Log entries included <strong>public IPs</strong>, which can be cross-referenced.</li><li>Used <strong>VirusTotal API</strong> to check each IP’s reputation for malicious activity.</li><li>Identified <strong>5 suspicious IPs</strong>, and from there isolated the one that matched the scenario.</li><li>Submitted its <code>eventHash</code> as the flag.</li></ul><p>Note - script to solve</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e>#!/usr/bin/env python3</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>VirusTotal IP Bulk Checker with Rate Limiting
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Checks IP addresses for maliciousness using VirusTotal API v3
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Respects rate limits: 4 requests/min, 1000/day, 31K/month
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>by claude &lt;3
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> requests
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> time
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> json
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> csv
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> datetime <span style=color:#f92672>import</span> datetime
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> typing <span style=color:#f92672>import</span> List, Dict, Optional
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> argparse
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> sys
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>VirusTotalIPChecker</span>:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, api_key: str):
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>api_key <span style=color:#f92672>=</span> api_key
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>base_url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;https://www.virustotal.com/api/v3/ip_addresses&#34;</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>headers <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#34;x-apikey&#34;</span>: api_key}
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Rate limiting configuration</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>requests_per_minute <span style=color:#f92672>=</span> <span style=color:#ae81ff>4</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>daily_quota <span style=color:#f92672>=</span> <span style=color:#ae81ff>1000</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>monthly_quota <span style=color:#f92672>=</span> <span style=color:#ae81ff>31000</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Tracking variables</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>requests_made <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>daily_requests <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>start_time <span style=color:#f92672>=</span> time<span style=color:#f92672>.</span>time()
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>last_request_time <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Results storage</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>results <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>wait_for_rate_limit</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Ensure we don&#39;t exceed 4 requests per minute&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        current_time <span style=color:#f92672>=</span> time<span style=color:#f92672>.</span>time()
+</span></span><span style=display:flex><span>        time_since_last <span style=color:#f92672>=</span> current_time <span style=color:#f92672>-</span> self<span style=color:#f92672>.</span>last_request_time
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Wait at least 15 seconds between requests (4 per minute = 60/4 = 15 seconds)</span>
+</span></span><span style=display:flex><span>        min_interval <span style=color:#f92672>=</span> <span style=color:#ae81ff>60</span> <span style=color:#f92672>/</span> self<span style=color:#f92672>.</span>requests_per_minute
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> time_since_last <span style=color:#f92672>&lt;</span> min_interval:
+</span></span><span style=display:flex><span>            sleep_time <span style=color:#f92672>=</span> min_interval <span style=color:#f92672>-</span> time_since_last
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;⏳ Rate limiting: waiting </span><span style=color:#e6db74>{</span>sleep_time<span style=color:#e6db74>:</span><span style=color:#e6db74>.1f</span><span style=color:#e6db74>}</span><span style=color:#e6db74> seconds...&#34;</span>)
+</span></span><span style=display:flex><span>            time<span style=color:#f92672>.</span>sleep(sleep_time)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>last_request_time <span style=color:#f92672>=</span> time<span style=color:#f92672>.</span>time()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>check_quotas</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Check if we&#39;re approaching quota limits&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>daily_requests <span style=color:#f92672>&gt;=</span> self<span style=color:#f92672>.</span>daily_quota:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;❌ Daily quota limit reached (1000 requests). Please wait until tomorrow.&#34;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>False</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>requests_made <span style=color:#f92672>&gt;=</span> self<span style=color:#f92672>.</span>monthly_quota:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;❌ Monthly quota limit reached (31K requests). Please wait until next month.&#34;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>False</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Warn when approaching limits</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>daily_requests <span style=color:#f92672>&gt;=</span> self<span style=color:#f92672>.</span>daily_quota <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.9</span>:
+</span></span><span style=display:flex><span>            remaining <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>daily_quota <span style=color:#f92672>-</span> self<span style=color:#f92672>.</span>daily_requests
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;⚠️ Warning: Only </span><span style=color:#e6db74>{</span>remaining<span style=color:#e6db74>}</span><span style=color:#e6db74> daily requests remaining&#34;</span>)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>lookup_ip</span>(self, ip_address: str) <span style=color:#f92672>-&gt;</span> Optional[Dict]:
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Look up a single IP address in VirusTotal&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> self<span style=color:#f92672>.</span>check_quotas():
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>wait_for_rate_limit()
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;🔍 Checking </span><span style=color:#e6db74>{</span>ip_address<span style=color:#e6db74>}</span><span style=color:#e6db74>... (Request </span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>requests_made <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span><span style=color:#e6db74>}</span><span style=color:#e6db74>)&#34;</span>)
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#75715e># For API v3, IP is in the URL path</span>
+</span></span><span style=display:flex><span>            url <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>base_url<span style=color:#e6db74>}</span><span style=color:#e6db74>/</span><span style=color:#e6db74>{</span>ip_address<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>            response <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, headers<span style=color:#f92672>=</span>self<span style=color:#f92672>.</span>headers, timeout<span style=color:#f92672>=</span><span style=color:#ae81ff>30</span>)
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            self<span style=color:#f92672>.</span>requests_made <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>            self<span style=color:#f92672>.</span>daily_requests <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> response<span style=color:#f92672>.</span>status_code <span style=color:#f92672>==</span> <span style=color:#ae81ff>200</span>:
+</span></span><span style=display:flex><span>                data <span style=color:#f92672>=</span> response<span style=color:#f92672>.</span>json()
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>return</span> self<span style=color:#f92672>.</span>parse_response(ip_address, data)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>elif</span> response<span style=color:#f92672>.</span>status_code <span style=color:#f92672>==</span> <span style=color:#ae81ff>404</span>:
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;ℹ️ No information available for </span><span style=color:#e6db74>{</span>ip_address<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>return</span> {<span style=color:#e6db74>&#34;ip&#34;</span>: ip_address, <span style=color:#e6db74>&#34;status&#34;</span>: <span style=color:#e6db74>&#34;no_data&#34;</span>, <span style=color:#e6db74>&#34;malicious&#34;</span>: <span style=color:#66d9ef>False</span>}
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>elif</span> response<span style=color:#f92672>.</span>status_code <span style=color:#f92672>==</span> <span style=color:#ae81ff>403</span>:
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;❌ Authentication error for </span><span style=color:#e6db74>{</span>ip_address<span style=color:#e6db74>}</span><span style=color:#e6db74>: Check your API key&#34;</span>)
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Response: </span><span style=color:#e6db74>{</span>response<span style=color:#f92672>.</span>text<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>return</span> {<span style=color:#e6db74>&#34;ip&#34;</span>: ip_address, <span style=color:#e6db74>&#34;status&#34;</span>: <span style=color:#e6db74>&#34;auth_error&#34;</span>, <span style=color:#e6db74>&#34;error_code&#34;</span>: <span style=color:#ae81ff>403</span>}
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>elif</span> response<span style=color:#f92672>.</span>status_code <span style=color:#f92672>==</span> <span style=color:#ae81ff>429</span>:
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>&#34;⚠️ Rate limit exceeded. Waiting longer...&#34;</span>)
+</span></span><span style=display:flex><span>                time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>60</span>)  <span style=color:#75715e># Wait 1 minute and retry</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>return</span> self<span style=color:#f92672>.</span>lookup_ip(ip_address)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;❌ Error checking </span><span style=color:#e6db74>{</span>ip_address<span style=color:#e6db74>}</span><span style=color:#e6db74>: HTTP </span><span style=color:#e6db74>{</span>response<span style=color:#f92672>.</span>status_code<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Response: </span><span style=color:#e6db74>{</span>response<span style=color:#f92672>.</span>text<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>return</span> {<span style=color:#e6db74>&#34;ip&#34;</span>: ip_address, <span style=color:#e6db74>&#34;status&#34;</span>: <span style=color:#e6db74>&#34;error&#34;</span>, <span style=color:#e6db74>&#34;error_code&#34;</span>: response<span style=color:#f92672>.</span>status_code}
+</span></span><span style=display:flex><span>                
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>except</span> requests<span style=color:#f92672>.</span>exceptions<span style=color:#f92672>.</span>RequestException <span style=color:#66d9ef>as</span> e:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;❌ Network error checking </span><span style=color:#e6db74>{</span>ip_address<span style=color:#e6db74>}</span><span style=color:#e6db74>: </span><span style=color:#e6db74>{</span>e<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> {<span style=color:#e6db74>&#34;ip&#34;</span>: ip_address, <span style=color:#e6db74>&#34;status&#34;</span>: <span style=color:#e6db74>&#34;network_error&#34;</span>, <span style=color:#e6db74>&#34;error&#34;</span>: str(e)}
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>parse_response</span>(self, ip_address: str, data: Dict) <span style=color:#f92672>-&gt;</span> Dict:
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Parse VirusTotal v3 response and extract key information&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        attributes <span style=color:#f92672>=</span> data<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;data&#34;</span>, {})<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;attributes&#34;</span>, {})
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        result <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;ip&#34;</span>: ip_address,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;status&#34;</span>: <span style=color:#e6db74>&#34;success&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;malicious&#34;</span>: <span style=color:#66d9ef>False</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;suspicious&#34;</span>: <span style=color:#66d9ef>False</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;harmless&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;malicious_count&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;suspicious_count&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;undetected&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;total_scans&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;detected_engines&#34;</span>: [],
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;asn&#34;</span>: attributes<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;asn&#34;</span>, <span style=color:#e6db74>&#34;&#34;</span>),
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;country&#34;</span>: attributes<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;country&#34;</span>, <span style=color:#e6db74>&#34;&#34;</span>),
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;owner&#34;</span>: attributes<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;as_owner&#34;</span>, <span style=color:#e6db74>&#34;&#34;</span>),
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;reputation&#34;</span>: attributes<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;reputation&#34;</span>, <span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Parse last_analysis_stats for v3 API</span>
+</span></span><span style=display:flex><span>        stats <span style=color:#f92672>=</span> attributes<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;last_analysis_stats&#34;</span>, {})
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> stats:
+</span></span><span style=display:flex><span>            result[<span style=color:#e6db74>&#34;harmless&#34;</span>] <span style=color:#f92672>=</span> stats<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;harmless&#34;</span>, <span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>            result[<span style=color:#e6db74>&#34;malicious_count&#34;</span>] <span style=color:#f92672>=</span> stats<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;malicious&#34;</span>, <span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>            result[<span style=color:#e6db74>&#34;suspicious_count&#34;</span>] <span style=color:#f92672>=</span> stats<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;suspicious&#34;</span>, <span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>            result[<span style=color:#e6db74>&#34;undetected&#34;</span>] <span style=color:#f92672>=</span> stats<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;undetected&#34;</span>, <span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>            result[<span style=color:#e6db74>&#34;total_scans&#34;</span>] <span style=color:#f92672>=</span> sum(stats<span style=color:#f92672>.</span>values())
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Mark as malicious if any engines detected it</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> result[<span style=color:#e6db74>&#34;malicious_count&#34;</span>] <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>:
+</span></span><span style=display:flex><span>                result[<span style=color:#e6db74>&#34;malicious&#34;</span>] <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>elif</span> result[<span style=color:#e6db74>&#34;suspicious_count&#34;</span>] <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>:
+</span></span><span style=display:flex><span>                result[<span style=color:#e6db74>&#34;suspicious&#34;</span>] <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Get detection details</span>
+</span></span><span style=display:flex><span>        last_analysis_results <span style=color:#f92672>=</span> attributes<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;last_analysis_results&#34;</span>, {})
+</span></span><span style=display:flex><span>        detected_engines <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> engine, details <span style=color:#f92672>in</span> last_analysis_results<span style=color:#f92672>.</span>items():
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> details<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;category&#34;</span>) <span style=color:#f92672>in</span> [<span style=color:#e6db74>&#34;malicious&#34;</span>, <span style=color:#e6db74>&#34;suspicious&#34;</span>]:
+</span></span><span style=display:flex><span>                detected_engines<span style=color:#f92672>.</span>append(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>engine<span style=color:#e6db74>}</span><span style=color:#e6db74>:</span><span style=color:#e6db74>{</span>details<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;category&#39;</span>)<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        result[<span style=color:#e6db74>&#34;detected_engines&#34;</span>] <span style=color:#f92672>=</span> detected_engines
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Check reputation score (negative is bad)</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> result[<span style=color:#e6db74>&#34;reputation&#34;</span>] <span style=color:#f92672>&lt;</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>10</span>:
+</span></span><span style=display:flex><span>            result[<span style=color:#e6db74>&#34;suspicious&#34;</span>] <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> result
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>bulk_check</span>(self, ip_list: List[str], output_file: str <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>, resume_from: int <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>) <span style=color:#f92672>-&gt;</span> List[Dict]:
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Check multiple IPs with progress tracking and resume capability&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        total_ips <span style=color:#f92672>=</span> len(ip_list)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;🚀 Starting bulk check of </span><span style=color:#e6db74>{</span>total_ips<span style=color:#e6db74>}</span><span style=color:#e6db74> IP addresses&#34;</span>)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;📊 Rate limits: </span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>requests_per_minute<span style=color:#e6db74>}</span><span style=color:#e6db74>/min, </span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>daily_quota<span style=color:#e6db74>}</span><span style=color:#e6db74>/day, </span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>monthly_quota<span style=color:#e6db74>}</span><span style=color:#e6db74>/month&#34;</span>)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> resume_from <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;📍 Resuming from IP #</span><span style=color:#e6db74>{</span>resume_from<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>            ip_list <span style=color:#f92672>=</span> ip_list[resume_from:]
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        estimated_time <span style=color:#f92672>=</span> (len(ip_list) <span style=color:#f92672>*</span> <span style=color:#ae81ff>15</span>) <span style=color:#f92672>/</span> <span style=color:#ae81ff>60</span>  <span style=color:#75715e># 15 seconds per IP</span>
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;⏱️ Estimated completion time: </span><span style=color:#e6db74>{</span>estimated_time<span style=color:#e6db74>:</span><span style=color:#e6db74>.1f</span><span style=color:#e6db74>}</span><span style=color:#e6db74> minutes&#34;</span>)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;-&#34;</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>60</span>)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> i, ip <span style=color:#f92672>in</span> enumerate(ip_list, start<span style=color:#f92672>=</span>resume_from):
+</span></span><span style=display:flex><span>            result <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>lookup_ip(ip)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> result:
+</span></span><span style=display:flex><span>                self<span style=color:#f92672>.</span>results<span style=color:#f92672>.</span>append(result)
+</span></span><span style=display:flex><span>                
+</span></span><span style=display:flex><span>                <span style=color:#75715e># Show status</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>if</span> result<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;malicious&#34;</span>) <span style=color:#f92672>or</span> result<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;suspicious&#34;</span>):
+</span></span><span style=display:flex><span>                    status_emoji <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;🔴&#34;</span> <span style=color:#66d9ef>if</span> result<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;malicious&#34;</span>) <span style=color:#66d9ef>else</span> <span style=color:#e6db74>&#34;🟡&#34;</span>
+</span></span><span style=display:flex><span>                    print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>status_emoji<span style=color:#e6db74>}</span><span style=color:#e6db74> </span><span style=color:#e6db74>{</span>ip<span style=color:#e6db74>}</span><span style=color:#e6db74> - FLAGGED&#34;</span>)
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>                    print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;✅ </span><span style=color:#e6db74>{</span>ip<span style=color:#e6db74>}</span><span style=color:#e6db74> - Clean&#34;</span>)
+</span></span><span style=display:flex><span>                
+</span></span><span style=display:flex><span>                <span style=color:#75715e># Save progress periodically</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>if</span> output_file <span style=color:#f92672>and</span> (i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>) <span style=color:#f92672>%</span> <span style=color:#ae81ff>10</span> <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>:
+</span></span><span style=display:flex><span>                    self<span style=color:#f92672>.</span>save_results(output_file)
+</span></span><span style=display:flex><span>                    print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;💾 Progress saved (</span><span style=color:#e6db74>{</span>i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span><span style=color:#e6db74>}</span><span style=color:#e6db74>/</span><span style=color:#e6db74>{</span>total_ips<span style=color:#e6db74>}</span><span style=color:#e6db74>)&#34;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;⏹️ Stopped at IP #</span><span style=color:#e6db74>{</span>i<span style=color:#e6db74>}</span><span style=color:#e6db74> due to quota limits&#34;</span>)
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>break</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> output_file:
+</span></span><span style=display:flex><span>            self<span style=color:#f92672>.</span>save_results(output_file)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> self<span style=color:#f92672>.</span>results
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>save_results</span>(self, filename: str):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Save results to CSV file&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> self<span style=color:#f92672>.</span>results:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;No results to save&#34;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>with</span> open(filename, <span style=color:#e6db74>&#39;w&#39;</span>, newline<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;&#39;</span>, encoding<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;utf-8&#39;</span>) <span style=color:#66d9ef>as</span> csvfile:
+</span></span><span style=display:flex><span>            fieldnames <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#39;ip&#39;</span>, <span style=color:#e6db74>&#39;status&#39;</span>, <span style=color:#e6db74>&#39;malicious&#39;</span>, <span style=color:#e6db74>&#39;suspicious&#39;</span>, <span style=color:#e6db74>&#39;malicious_count&#39;</span>, <span style=color:#e6db74>&#39;suspicious_count&#39;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#39;harmless&#39;</span>, <span style=color:#e6db74>&#39;undetected&#39;</span>, <span style=color:#e6db74>&#39;total_scans&#39;</span>, <span style=color:#e6db74>&#39;asn&#39;</span>, <span style=color:#e6db74>&#39;country&#39;</span>, <span style=color:#e6db74>&#39;owner&#39;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#39;reputation&#39;</span>, <span style=color:#e6db74>&#39;detected_engines&#39;</span>
+</span></span><span style=display:flex><span>            ]
+</span></span><span style=display:flex><span>            writer <span style=color:#f92672>=</span> csv<span style=color:#f92672>.</span>DictWriter(csvfile, fieldnames<span style=color:#f92672>=</span>fieldnames)
+</span></span><span style=display:flex><span>            writer<span style=color:#f92672>.</span>writeheader()
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>for</span> result <span style=color:#f92672>in</span> self<span style=color:#f92672>.</span>results:
+</span></span><span style=display:flex><span>                <span style=color:#75715e># Convert lists to strings for CSV</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;detected_engines&#39;</span> <span style=color:#f92672>in</span> result <span style=color:#f92672>and</span> isinstance(result[<span style=color:#e6db74>&#39;detected_engines&#39;</span>], list):
+</span></span><span style=display:flex><span>                    result[<span style=color:#e6db74>&#39;detected_engines&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;; &#39;</span><span style=color:#f92672>.</span>join(result[<span style=color:#e6db74>&#39;detected_engines&#39;</span>])
+</span></span><span style=display:flex><span>                writer<span style=color:#f92672>.</span>writerow(result)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;💾 Results saved to </span><span style=color:#e6db74>{</span>filename<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>generate_summary</span>(self) <span style=color:#f92672>-&gt;</span> Dict:
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Generate summary statistics&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> self<span style=color:#f92672>.</span>results:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> {<span style=color:#e6db74>&#34;error&#34;</span>: <span style=color:#e6db74>&#34;No results available&#34;</span>}
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        total <span style=color:#f92672>=</span> len(self<span style=color:#f92672>.</span>results)
+</span></span><span style=display:flex><span>        malicious <span style=color:#f92672>=</span> sum(<span style=color:#ae81ff>1</span> <span style=color:#66d9ef>for</span> r <span style=color:#f92672>in</span> self<span style=color:#f92672>.</span>results <span style=color:#66d9ef>if</span> r<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;malicious&#34;</span>))
+</span></span><span style=display:flex><span>        suspicious <span style=color:#f92672>=</span> sum(<span style=color:#ae81ff>1</span> <span style=color:#66d9ef>for</span> r <span style=color:#f92672>in</span> self<span style=color:#f92672>.</span>results <span style=color:#66d9ef>if</span> r<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;suspicious&#34;</span>))
+</span></span><span style=display:flex><span>        clean <span style=color:#f92672>=</span> sum(<span style=color:#ae81ff>1</span> <span style=color:#66d9ef>for</span> r <span style=color:#f92672>in</span> self<span style=color:#f92672>.</span>results <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> r<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;malicious&#34;</span>) <span style=color:#f92672>and</span> <span style=color:#f92672>not</span> r<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;suspicious&#34;</span>))
+</span></span><span style=display:flex><span>        errors <span style=color:#f92672>=</span> sum(<span style=color:#ae81ff>1</span> <span style=color:#66d9ef>for</span> r <span style=color:#f92672>in</span> self<span style=color:#f92672>.</span>results <span style=color:#66d9ef>if</span> r<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;status&#34;</span>) <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#34;success&#34;</span>)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        summary <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;total_checked&#34;</span>: total,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;malicious&#34;</span>: malicious,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;suspicious&#34;</span>: suspicious,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;clean&#34;</span>: clean,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;errors&#34;</span>: errors,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;malicious_percentage&#34;</span>: (malicious <span style=color:#f92672>/</span> total <span style=color:#f92672>*</span> <span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>if</span> total <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span> <span style=color:#66d9ef>else</span> <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;requests_made&#34;</span>: self<span style=color:#f92672>.</span>requests_made
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> summary
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>print_summary</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Print summary statistics&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        summary <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>generate_summary()
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#34;error&#34;</span> <span style=color:#f92672>in</span> summary:
+</span></span><span style=display:flex><span>            print(summary[<span style=color:#e6db74>&#34;error&#34;</span>])
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;=&#34;</span><span style=color:#f92672>*</span><span style=color:#ae81ff>60</span>)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;📊 SUMMARY REPORT&#34;</span>)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;=&#34;</span><span style=color:#f92672>*</span><span style=color:#ae81ff>60</span>)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Total IPs checked: </span><span style=color:#e6db74>{</span>summary[<span style=color:#e6db74>&#39;total_checked&#39;</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;🔴 Malicious: </span><span style=color:#e6db74>{</span>summary[<span style=color:#e6db74>&#39;malicious&#39;</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;🟡 Suspicious: </span><span style=color:#e6db74>{</span>summary[<span style=color:#e6db74>&#39;suspicious&#39;</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;✅ Clean: </span><span style=color:#e6db74>{</span>summary[<span style=color:#e6db74>&#39;clean&#39;</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;❌ Errors: </span><span style=color:#e6db74>{</span>summary[<span style=color:#e6db74>&#39;errors&#39;</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;🎯 Malicious rate: </span><span style=color:#e6db74>{</span>summary[<span style=color:#e6db74>&#39;malicious_percentage&#39;</span>]<span style=color:#e6db74>:</span><span style=color:#e6db74>.1f</span><span style=color:#e6db74>}</span><span style=color:#e6db74>%&#34;</span>)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;📡 API requests used: </span><span style=color:#e6db74>{</span>summary[<span style=color:#e6db74>&#39;requests_made&#39;</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;=&#34;</span><span style=color:#f92672>*</span><span style=color:#ae81ff>60</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>load_ips_from_file</span>(filename: str) <span style=color:#f92672>-&gt;</span> List[str]:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;Load IP addresses from a text file (one per line)&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>with</span> open(filename, <span style=color:#e6db74>&#39;r&#39;</span>) <span style=color:#66d9ef>as</span> f:
+</span></span><span style=display:flex><span>            ips <span style=color:#f92672>=</span> [line<span style=color:#f92672>.</span>strip() <span style=color:#66d9ef>for</span> line <span style=color:#f92672>in</span> f <span style=color:#66d9ef>if</span> line<span style=color:#f92672>.</span>strip()]
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> ips
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>FileNotFoundError</span>:
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;❌ File not found: </span><span style=color:#e6db74>{</span>filename<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>        sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>main</span>():
+</span></span><span style=display:flex><span>    parser <span style=color:#f92672>=</span> argparse<span style=color:#f92672>.</span>ArgumentParser(description<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Bulk IP maliciousness check using VirusTotal API&#34;</span>)
+</span></span><span style=display:flex><span>    parser<span style=color:#f92672>.</span>add_argument(<span style=color:#e6db74>&#34;--api-key&#34;</span>, required<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, help<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;VirusTotal API key&#34;</span>)
+</span></span><span style=display:flex><span>    parser<span style=color:#f92672>.</span>add_argument(<span style=color:#e6db74>&#34;--input-file&#34;</span>, required<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, help<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;File containing IP addresses (one per line)&#34;</span>)
+</span></span><span style=display:flex><span>    parser<span style=color:#f92672>.</span>add_argument(<span style=color:#e6db74>&#34;--output-file&#34;</span>, help<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;CSV file to save results (default: vt_results_TIMESTAMP.csv)&#34;</span>)
+</span></span><span style=display:flex><span>    parser<span style=color:#f92672>.</span>add_argument(<span style=color:#e6db74>&#34;--resume-from&#34;</span>, type<span style=color:#f92672>=</span>int, default<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>, help<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Resume from specific IP number (0-based)&#34;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    args <span style=color:#f92672>=</span> parser<span style=color:#f92672>.</span>parse_args()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Load IP addresses</span>
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;📁 Loading IPs from </span><span style=color:#e6db74>{</span>args<span style=color:#f92672>.</span>input_file<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>    ip_list <span style=color:#f92672>=</span> load_ips_from_file(args<span style=color:#f92672>.</span>input_file)
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;✅ Loaded </span><span style=color:#e6db74>{</span>len(ip_list)<span style=color:#e6db74>}</span><span style=color:#e6db74> IP addresses&#34;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Set output file if not specified</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> args<span style=color:#f92672>.</span>output_file:
+</span></span><span style=display:flex><span>        timestamp <span style=color:#f92672>=</span> datetime<span style=color:#f92672>.</span>now()<span style=color:#f92672>.</span>strftime(<span style=color:#e6db74>&#34;%Y%m</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>_%H%M%S&#34;</span>)
+</span></span><span style=display:flex><span>        args<span style=color:#f92672>.</span>output_file <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;vt_results_</span><span style=color:#e6db74>{</span>timestamp<span style=color:#e6db74>}</span><span style=color:#e6db74>.csv&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Initialize checker</span>
+</span></span><span style=display:flex><span>    checker <span style=color:#f92672>=</span> VirusTotalIPChecker(args<span style=color:#f92672>.</span>api_key)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Perform bulk check</span>
+</span></span><span style=display:flex><span>        results <span style=color:#f92672>=</span> checker<span style=color:#f92672>.</span>bulk_check(ip_list, args<span style=color:#f92672>.</span>output_file, args<span style=color:#f92672>.</span>resume_from)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Print summary</span>
+</span></span><span style=display:flex><span>        checker<span style=color:#f92672>.</span>print_summary()
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>✅ Analysis complete! Results saved to: </span><span style=color:#e6db74>{</span>args<span style=color:#f92672>.</span>output_file<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>KeyboardInterrupt</span>:
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\n</span><span style=color:#e6db74>⏹️ Process interrupted by user&#34;</span>)
+</span></span><span style=display:flex><span>        checker<span style=color:#f92672>.</span>save_results(args<span style=color:#f92672>.</span>output_file)
+</span></span><span style=display:flex><span>        checker<span style=color:#f92672>.</span>print_summary()
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Partial results saved to: </span><span style=color:#e6db74>{</span>args<span style=color:#f92672>.</span>output_file<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
+</span></span><span style=display:flex><span>    main()
+</span></span></code></pre></div><ol start=4><li></li></ol><h1 id=my-first-ctf-writeup>My First CTF Writeup</h1><h2 id=nahamcon-2025-1>Nahamcon 2025</h2><blockquote><p>Solved</p></blockquote><p>Hint was ROT cipher, if we try to access <code>/flag.txt</code> it prints a message : <code>Ha, you wish!</code>. So the idea here was that we can use ROT cipher one <code>flag.txt</code> and one of the variants should work. To generate the wordlist of each variant I used chatgpt :</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-makefile data-lang=makefile><span style=display:flex><span><span style=color:#a6e22e>ROT01</span><span style=color:#f92672>:</span> gmbh.uyu
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT02</span><span style=color:#f92672>:</span> hnci.vzv
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT03</span><span style=color:#f92672>:</span> iodj.waw
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT04</span><span style=color:#f92672>:</span> jpek.xbx
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT05</span><span style=color:#f92672>:</span> kqfl.ycy
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT06</span><span style=color:#f92672>:</span> lrgm.zdz
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT07</span><span style=color:#f92672>:</span> mshn.aea
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT08</span><span style=color:#f92672>:</span> ntio.bfb
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT09</span><span style=color:#f92672>:</span> oujp.cgc
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT10</span><span style=color:#f92672>:</span> pvkq.dhd
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT11</span><span style=color:#f92672>:</span> qwlr.eie
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT12</span><span style=color:#f92672>:</span> rxms.fjf
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT13</span><span style=color:#f92672>:</span> synt.gkg
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT14</span><span style=color:#f92672>:</span> tzou.hlhl
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT15</span><span style=color:#f92672>:</span> uapv.imim
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT16</span><span style=color:#f92672>:</span> vbqw.jnjn
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT17</span><span style=color:#f92672>:</span> wcrx.koko
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT18</span><span style=color:#f92672>:</span> xdsy.lplp
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT19</span><span style=color:#f92672>:</span> yetz.mqmq
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT20</span><span style=color:#f92672>:</span> zfua.nrnr
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT21</span><span style=color:#f92672>:</span> agvb.osos
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT22</span><span style=color:#f92672>:</span> bhwc.ptpt
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT23</span><span style=color:#f92672>:</span> cixd.ququ
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT24</span><span style=color:#f92672>:</span> djye.rvrv
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ROT25</span><span style=color:#f92672>:</span> ekzf.swsw
+</span></span></code></pre></div><p>Then I used the list with <a href=https://github.com/thewhiteh4t/FinalRecon>FinalRecon</a>, alternatively you can use tools like <code>gobuster</code> or <code>ffuf</code> and then i got the flag.juicy! juicy!</p><p><strong>Key Learning and Takeaways</strong></p><ul><li>The Hint : The hint which was the image in this case suggested us to think laterally : what if the filename itself is ROT-encoded?</li><li>ROT Ciphers : ROT ciphers (like ROT13) are super basic, they just shift letters around. This challenge showed how a fundamental cipher, when applied in an unexpected place (like the filename), can totally throw you off.</li><li>ChatGPT for Wordlists : Instead of manually generating all 25 ROT variations of “flag.txt,” using ChatGPT to quickly spit out that wordlist was an efficient shortcut. It’s a great example of how AI can help automate tedious tasks in CTFs.</li></ul><hr><p><em>Having a limited time and also being busy i was able to solve that.hope you enjoyed the journey.</em></p><hr></span></article></div></main></div><footer><div class="flex flex-col justify-center p-10"><p class="text-center text-slate-700 dark:text-slate-400">&copy;
+2025
+Richie-Havoc</p><p class="text-center text-sm text-slate-700 dark:text-slate-400">Powered by <a class="hover:underline hover:decoration-indigo-500 hover:text-indigo-500" href=https://gohugo.io target=_blank rel="noopener noreferrer">Hugo</a> & <a class="hover:underline hover:decoration-indigo-500 hover:text-indigo-500" href=https://github.com/chrede88/qubt target=_blank rel="noopener noreferrer">Qubt</a></p></div></footer></body></html>

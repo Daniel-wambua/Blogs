@@ -1,0 +1,4 @@
+This is a Brave Creators publisher verification file.
+
+Domain: havocsec.me
+Token: 13b3eb11ffb263df9939e8e39c550977768d251f1f72a1666cb913e0c9741ac1

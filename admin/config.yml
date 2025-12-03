@@ -1,0 +1,458 @@
+backend:
+  name: github
+  repo: Daniel-wambua/blogz
+  branch: main
+  base_url: https://blogz-epv61pjuj-freehavoc5-gmailcoms-projects.vercel.app
+  auth_endpoint: api/auth
+  # Note: This is the PRIVATE source repo where content is edited
+media_folder: static/uploads
+public_folder: /uploads
+publish_mode: editorial_workflow
+site_url: https://havocsec.me
+logo_url: https://havocsec.me/icon.png
+collections:
+- name: blog
+  label: Blog Posts
+  folder: content/blog
+  path: '{{slug}}/index'
+  media_folder: ''
+  public_folder: ''
+  create: true
+  slug: '{{slug}}'
+  editor:
+    preview: true
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - label: Subtitle
+    name: subtitle
+    widget: string
+    required: false
+  - label: Summary
+    name: summary
+    widget: text
+    required: false
+  - label: Date
+    name: date
+    widget: datetime
+    format: YYYY-MM-DD
+  - label: Draft
+    name: draft
+    widget: boolean
+    default: false
+    required: false
+  - label: Card Image
+    name: cardimage
+    widget: image
+    required: false
+    media_folder: /assets
+    public_folder: ""
+    media_library:
+      config:
+        max_file_size: 512000
+  - label: Feature Image
+    name: featureimage
+    widget: image
+    required: false
+    media_folder: /assets
+    public_folder: ""
+    media_library:
+      config:
+        max_file_size: 512000
+  - label: Caption
+    name: caption
+    widget: string
+    required: false
+  - label: Tags
+    name: tags
+    widget: list
+    required: false
+    allow_add: true
+    field:
+      label: Tag
+      name: tag
+      widget: string
+  - label: Authors
+    name: authors
+    widget: hidden
+    default: &id001
+    - Havoc: icon.png
+    required: false
+  - label: Body
+    name: body
+    widget: markdown
+    media_folder: /content/blog/{{slug}}/images
+    public_folder: images
+- name: ctf
+  label: CTF Writeups
+  folder: content/CTF
+  path: '{{slug}}/index'
+  media_folder: ''
+  public_folder: ''
+  create: true
+  slug: '{{slug}}'
+  editor:
+    preview: true
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - label: Subtitle
+    name: subtitle
+    widget: string
+    required: false
+  - label: Summary
+    name: summary
+    widget: text
+    required: false
+  - label: Date
+    name: date
+    widget: datetime
+    format: YYYY-MM-DD
+  - label: Draft
+    name: draft
+    widget: boolean
+    default: false
+    required: false
+  - label: Card Image
+    name: cardimage
+    widget: image
+    required: false
+    media_folder: /assets
+    public_folder: ""
+    media_library:
+      config:
+        max_file_size: 512000
+  - label: Feature Image
+    name: featureimage
+    widget: image
+    required: false
+    media_folder: /assets
+    public_folder: ""
+    media_library:
+      config:
+        max_file_size: 512000
+  - label: Caption
+    name: caption
+    widget: string
+    required: false
+  - label: Tags
+    name: tags
+    widget: list
+    required: false
+    allow_add: true
+    field:
+      label: Tag
+      name: tag
+      widget: string
+  - label: Authors
+    name: authors
+    widget: hidden
+    default: *id001
+    required: false
+  - label: Body
+    name: body
+    widget: markdown
+    media_folder: /content/CTF/{{slug}}/images
+    public_folder: images
+- name: htb
+  label: HTB Writeups
+  folder: content/pentesting/htb
+  path: '{{slug}}/index'
+  media_folder: ''
+  public_folder: ''
+  create: true
+  slug: '{{slug}}'
+  editor:
+    preview: true
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - label: Subtitle
+    name: subtitle
+    widget: string
+    required: false
+  - label: Summary
+    name: summary
+    widget: text
+    required: false
+  - label: Date
+    name: date
+    widget: datetime
+    format: YYYY-MM-DD
+  - label: HTB Status
+    name: htbStatus
+    widget: select
+    options:
+    - active
+    - retired
+    default: active
+  - label: Retire Date
+    name: retireDate
+    widget: datetime
+    format: YYYY-MM-DD
+    required: false
+  - label: Draft
+    name: draft
+    widget: boolean
+    default: false
+    required: false
+  - label: Card Image
+    name: cardimage
+    widget: image
+    required: false
+    media_folder: /assets
+    public_folder: ""
+    media_library:
+      config:
+        max_file_size: 512000
+  - label: Feature Image
+    name: featureimage
+    widget: image
+    required: false
+    media_folder: /assets
+    public_folder: ""
+    media_library:
+      config:
+        max_file_size: 512000
+  - label: Caption
+    name: caption
+    widget: string
+    required: false
+  - label: Tags
+    name: tags
+    widget: list
+    required: false
+    allow_add: true
+    field:
+      label: Tag
+      name: tag
+      widget: string
+  - label: Authors
+    name: authors
+    widget: hidden
+    default: *id001
+    required: false
+  - label: Body
+    name: body
+    widget: markdown
+    media_folder: /content/pentesting/htb/{{slug}}/images
+    public_folder: images
+- name: chitchat
+  label: Chitchat
+  folder: content/chitchat
+  path: '{{slug}}/index'
+  media_folder: ''
+  public_folder: ''
+  create: true
+  slug: '{{slug}}'
+  editor:
+    preview: true
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - label: Subtitle
+    name: subtitle
+    widget: string
+    required: false
+  - label: Summary
+    name: summary
+    widget: text
+    required: false
+  - label: Date
+    name: date
+    widget: datetime
+    format: YYYY-MM-DD
+  - label: Draft
+    name: draft
+    widget: boolean
+    default: false
+    required: false
+  - label: Card Image
+    name: cardimage
+    widget: image
+    required: false
+    media_folder: /assets
+    public_folder: ""
+    media_library:
+      config:
+        max_file_size: 512000
+  - label: Feature Image
+    name: featureimage
+    widget: image
+    required: false
+    media_folder: /assets
+    public_folder: ""
+    media_library:
+      config:
+        max_file_size: 512000
+  - label: Caption
+    name: caption
+    widget: string
+    required: false
+  - label: Tags
+    name: tags
+    widget: list
+    required: false
+    allow_add: true
+    field:
+      label: Tag
+      name: tag
+      widget: string
+  - label: Authors
+    name: authors
+    widget: hidden
+    default: *id001
+    required: false
+  - label: Body
+    name: body
+    widget: markdown
+    media_folder: /content/chitchat/{{slug}}/images
+    public_folder: images
+- name: tryhackme
+  label: TryHackMe Writeups
+  folder: content/pentesting/tryhackme
+  path: '{{slug}}/index'
+  media_folder: ''
+  public_folder: ''
+  create: true
+  slug: '{{slug}}'
+  editor:
+    preview: true
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - label: Subtitle
+    name: subtitle
+    widget: string
+    required: false
+  - label: Summary
+    name: summary
+    widget: text
+    required: false
+  - label: Date
+    name: date
+    widget: datetime
+    format: YYYY-MM-DD
+  - label: Draft
+    name: draft
+    widget: boolean
+    default: false
+    required: false
+  - label: Card Image
+    name: cardimage
+    widget: image
+    required: false
+    media_folder: /assets
+    public_folder: ""
+    media_library:
+      config:
+        max_file_size: 512000
+  - label: Feature Image
+    name: featureimage
+    widget: image
+    required: false
+    media_folder: /assets
+    public_folder: ""
+    media_library:
+      config:
+        max_file_size: 512000
+  - label: Caption
+    name: caption
+    widget: string
+    required: false
+  - label: Tags
+    name: tags
+    widget: list
+    required: false
+    allow_add: true
+    field:
+      label: Tag
+      name: tag
+      widget: string
+  - label: Authors
+    name: authors
+    widget: hidden
+    default: *id001
+    required: false
+  - label: Body
+    name: body
+    widget: markdown
+    media_folder: /content/pentesting/tryhackme/{{slug}}/images
+    public_folder: images
+- name: offsec
+  label: OFFSEC Notes
+  folder: content/pentesting/offsec
+  path: '{{slug}}/index'
+  media_folder: ''
+  public_folder: ''
+  create: true
+  slug: '{{slug}}'
+  editor:
+    preview: true
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - label: Subtitle
+    name: subtitle
+    widget: string
+    required: false
+  - label: Summary
+    name: summary
+    widget: text
+    required: false
+  - label: Date
+    name: date
+    widget: datetime
+    format: YYYY-MM-DD
+  - label: Draft
+    name: draft
+    widget: boolean
+    default: false
+    required: false
+  - label: Card Image
+    name: cardimage
+    widget: image
+    required: false
+    media_folder: /assets
+    public_folder: ""
+    media_library:
+      config:
+        max_file_size: 512000
+  - label: Feature Image
+    name: featureimage
+    widget: image
+    required: false
+    media_folder: /assets
+    public_folder: ""
+    media_library:
+      config:
+        max_file_size: 512000
+  - label: Caption
+    name: caption
+    widget: string
+    required: false
+  - label: Tags
+    name: tags
+    widget: list
+    required: false
+    allow_add: true
+    field:
+      label: Tag
+      name: tag
+      widget: string
+  - label: Authors
+    name: authors
+    widget: hidden
+    default: *id001
+    required: false
+  - label: Body
+    name: body
+    widget: markdown
+    media_folder: /content/pentesting/offsec/{{slug}}/images
+    public_folder: images
